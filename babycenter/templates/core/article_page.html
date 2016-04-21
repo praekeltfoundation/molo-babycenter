@@ -12,7 +12,6 @@
 <div class="pagi"><a href="{% pageurl self.get_parent_section %}">&lt; {% trans "Back" %}</a></div>
 <div class="articles nav {{self.get_parent_section.get_effective_extra_style_hints}}">
   <h3 class="article-title">{{self.title}}</h3>
-  <p>{{self.subtitle}}</p>
   {% if self.image %}
   <div class="banner">{% image self.image width-240 %}</div>
   {% endif %}
