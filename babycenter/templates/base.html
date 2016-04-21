@@ -1,5 +1,5 @@
 
-{% load wagtailcore_tags compress static wagtailuserbar core_tags i18n %}
+{% load wagtailcore_tags compress static wagtailuserbar core_tags babycenter_tags i18n %}
 {% load wagtailsettings_tags wagtailimages_tags %}
 {% get_settings %}
 
@@ -86,7 +86,7 @@
             {% endif %}
         </div>
 
-        {% breadcrumbs %}
+        {% nav_bar %}
 
         {% block content %}{% endblock %}
 
