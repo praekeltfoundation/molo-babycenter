@@ -13,8 +13,7 @@
       {% if article.image %}
       <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
       {% endif %}
-      <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
-      <p>{{article.subtitle}}</p>
+      <a href="{% pageurl article %}"><strong>{{article.title}}: </strong>{{article.subtitle}}</a>
     </li>
   </ul>
   {% endfor %}
