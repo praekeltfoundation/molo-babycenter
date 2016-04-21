@@ -1,5 +1,5 @@
 
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% if sections %}
 {% for section in sections %}
@@ -17,6 +17,11 @@
     </li>
   </ul>
   {% endfor %}
+  {% if section.featured_articles_in_homepage|length < section.articles|length %}
+  <div class="pagi">
+    <a href="{% pageurl section %}">{% trans "More" %} {{section.title}} &gt;</a>
+  </div>
+  {% endif %}
 </div>
 {% endfor%}
 {% endif %}
