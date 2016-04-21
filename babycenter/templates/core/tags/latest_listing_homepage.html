@@ -10,11 +10,13 @@
       {% if article.image %}
       <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
       {% endif %}
-      <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
-      <p>{{article.subtitle}}</p>
+      {% with article.get_parent as category %}
+      <a href="{% pageurl category %}" class="category-{{category.slug}}">{{category.title}}</a>
+      {% endwith %}
+      <a href="{% pageurl article %}"><h3>{{article.title}}:</h3>
+      <p>{{article.subtitle}}</p></a>
     </li>
   </ul>
   {% endfor %}
 </div>
 {% endif %}
-
