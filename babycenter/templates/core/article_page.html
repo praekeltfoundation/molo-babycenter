@@ -41,9 +41,14 @@
 
 <h1>{% trans "More Information" %}</h1>
 {# If there is a previous article, it is a More Information article #}
-{% with self.get_prev_sibling as prev %} {% if prev %}
+{# If there isn't, the first article of the previous section is #}
+{% with prev=self.get_prev_sibling prev_section=self.get_parent_section.get_prev_sibling.get_last_child %}
+{% if prev %}
 <p><a href="{% pageurl prev %}">{{prev.title}}</a></p>
-{% endif %} {% endwith %}
+{% elif prev_section %}
+<p><a href="{% pageurl prev_section %}">{{prev_section.title}}</a></p>
+{% endif %}
+{% endwith %}
 
 {# If there is a next article, it is a More Information article. #}
 {# If there isn't, the first article of the next section is #}
