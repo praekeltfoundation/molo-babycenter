@@ -38,6 +38,24 @@
   {% endfor %}
 </article>
 <p class="date">{{self.first_published_at | date:"j F Y"}}</p>
-</div>
+
+<h1>{% trans "More Information" %}</h1>
+{# If there is a previous article, it is a More Information article #}
+{% with self.get_prev_sibling as prev %} {% if prev %}
+<p><a href="{% pageurl prev %}">{{prev.title}}</a></p>
+{% endif %} {% endwith %}
+
+{# If there is a next article, it is a More Information article. #}
+{# If there isn't, the first article of the next section is #}
+{% with next=self.get_next_sibling next_section=self.get_parent_section.get_next_sibling.get_first_child %}
+{% if next %}
+<p><a href="{% pageurl next %}">{{next.title}}</a></p>
+{% elif next_section %}
+<p><a href="{% pageurl next_section %}">{{next_section.title}}</a></p>
+{% endif %}
+{% endwith %}
+
+<p class="pagi"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></p>
+
 {% endblock %}
 
