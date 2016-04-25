@@ -1,5 +1,5 @@
 
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% if sections %}
 {% for section in sections %}
@@ -13,11 +13,15 @@
       {% if article.image %}
       <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
       {% endif %}
-      <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
-      <p>{{article.subtitle}}</p>
+      <a href="{% pageurl article %}"><strong>{{article.title}}: </strong>{{article.subtitle}}</a>
     </li>
   </ul>
   {% endfor %}
+  {% if section.featured_articles_in_homepage|length < section.articles|length %}
+  <div class="pagi">
+    <a href="{% pageurl section %}">{% trans "More" %} {{section.title}} &gt;</a>
+  </div>
+  {% endif %}
 </div>
 {% endfor%}
 {% endif %}

@@ -1,5 +1,5 @@
 
-{% load wagtailcore_tags compress static wagtailuserbar core_tags i18n %}
+{% load wagtailcore_tags compress static wagtailuserbar core_tags babycenter_tags i18n %}
 {% load wagtailsettings_tags wagtailimages_tags %}
 {% get_settings %}
 
@@ -72,20 +72,21 @@
         {% wagtailuserbar %}
 
 
-        <div class="logo">
         {% if languages %}
-          {% if settings.core.SiteSettings.logo %}
-            {% image settings.core.SiteSettings.logo height-30 %}
-          {% endif %}
-
-          {% trans "Site Language:" %}
+        <div class="locale">
           {% for language in languages %}
             <a href="{% url 'locale_set' language.code %}">{{language.title}} </a>
+            {% if not forloop.last %} | {% endif %}
           {% endfor %}
+        </div>
         {% endif %}
+        <div class="logo">
+            {% if settings.core.SiteSettings.logo %}
+              <a href="/">{% image settings.core.SiteSettings.logo height-30 %}</a>
+            {% endif %}
         </div>
 
-        {% breadcrumbs %}
+        {% nav_bar %}
 
         {% block content %}{% endblock %}
 
@@ -107,6 +108,9 @@
           </ul>
         {% endif %}
         {% endblock %}
+
+        {% nav_bar %}
+        &copy; {% trans "2016 BabyCenter" %}
     </body>
 </html>
 

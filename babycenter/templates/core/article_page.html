@@ -2,14 +2,16 @@
 {% extends "base.html" %}
 
 {% load static core_tags %}
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
 {% block content %}
+
+<h1><a href="{% pageurl self.get_parent_section %}">{{self.get_parent_section}}</a></h1>
+<div class="pagi"><a href="{% pageurl self.get_parent_section %}">&lt; {% trans "Back" %}</a></div>
 <div class="articles nav {{self.get_parent_section.get_effective_extra_style_hints}}">
   <h3 class="article-title">{{self.title}}</h3>
-  <p>{{self.subtitle}}</p>
   {% if self.image %}
   <div class="banner">{% image self.image width-240 %}</div>
   {% endif %}
@@ -35,6 +37,30 @@
       {% endif %}
   {% endfor %}
 </article>
-</div>
+<p class="date">{{self.first_published_at | date:"j F Y"}}</p>
+
+<h1>{% trans "More Information" %}</h1>
+{# If there is a previous article, it is a More Information article #}
+{# If there isn't, the first article of the previous section is #}
+{% with prev=self.get_prev_sibling prev_section=self.get_parent_section.get_prev_sibling.get_last_child %}
+{% if prev %}
+<p><a href="{% pageurl prev %}">{{prev.title}}</a></p>
+{% elif prev_section %}
+<p><a href="{% pageurl prev_section %}">{{prev_section.title}}</a></p>
+{% endif %}
+{% endwith %}
+
+{# If there is a next article, it is a More Information article. #}
+{# If there isn't, the first article of the next section is #}
+{% with next=self.get_next_sibling next_section=self.get_parent_section.get_next_sibling.get_first_child %}
+{% if next %}
+<p><a href="{% pageurl next %}">{{next.title}}</a></p>
+{% elif next_section %}
+<p><a href="{% pageurl next_section %}">{{next_section.title}}</a></p>
+{% endif %}
+{% endwith %}
+
+<p class="pagi"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></p>
+
 {% endblock %}
 
