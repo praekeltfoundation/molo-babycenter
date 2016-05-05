@@ -69,22 +69,34 @@
 
     <body class="{% block body_class %}{% endblock %}">
 
+        {% if settings.core.SiteSettings.ga_tag_manager %}
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{settings.core.SiteSettings.ga_tag_manager}}"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{{settings.core.SiteSettings.ga_tag_manager}}');</script>
+        <!-- End Google Tag Manager -->
+        {% endif %}
+
         {% wagtailuserbar %}
 
 
-        {% if languages %}
-        <div class="locale">
-          {% for language in languages %}
-            <a href="{% url 'locale_set' language.code %}">{{language.title}} </a>
-            {% if not forloop.last %} | {% endif %}
-          {% endfor %}
-        </div>
-        {% endif %}
         <div class="logo">
-            {% if settings.core.SiteSettings.logo %}
-              <a href="/">{% image settings.core.SiteSettings.logo height-30 %}</a>
-            {% endif %}
+        {% if languages %}
+          {% if settings.core.SiteSettings.logo %}
+            {% image settings.core.SiteSettings.logo height-30 %}
+          {% endif %}
+
+          {% trans "Site Language:" %}
+          {% for language in languages %}
+            <a href="{% url 'locale_set' language.locale %}?next={{request.path}}">{{language}} </a>
+          {% endfor %}
+        {% endif %}
         </div>
+
 
         {% nav_bar %}
 
@@ -100,17 +112,10 @@
         {% endblock %}
 
         {% block footer %}
-        {% if language_page.footers %}
-          <ul>
-          {% for page in language_page.footers %}
-          <li><a href="{% pageurl page %}">{{page.title}}</a></li>
-          {% endfor %}
-          </ul>
-        {% endif %}
+          {% footer_page %}
         {% endblock %}
 
         {% nav_bar %}
         &copy; {% trans "2016 BabyCenter" %}
     </body>
 </html>
-
