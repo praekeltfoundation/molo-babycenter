@@ -70,7 +70,7 @@ INSTALLED_APPS = (
     'wagtailmodeladmin',
     'wagtail.contrib.settings',
 
-
+    'molo.usermetadata',
     'mptt',
 
     'raven.contrib.django.raven_compat',
@@ -93,7 +93,7 @@ MIDDLEWARE_CLASSES = (
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
     'wagtailmodeladmin.middleware.ModelAdminMiddleware',
     'molo.core.middleware.AdminLocaleMiddleware',
-
+    'molo.usermetadata.middleware.PersonaMiddleware'
 
 )
 
