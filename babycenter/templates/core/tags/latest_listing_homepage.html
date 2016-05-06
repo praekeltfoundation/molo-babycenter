@@ -1,21 +1,16 @@
-
-{% load wagtailcore_tags wagtailimages_tags i18n %}
+{% load wagtailcore_tags i18n %}
 
 {% if articles %}
-<div class="articles nav">
-  <h2 class="list-header">{% trans "Recommended" %}</h2>
+<h1 class="heading heading--orange l-indent">{% trans "Recommended" %}</h1>
+<ul class="article-list">
   {% for article in articles %}
-  <ul class="list-block">
-    <li>
-      {% if article.image %}
-      <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
-      {% endif %}
-      {% with article.get_parent as category %}
-      <a href="{% pageurl category %}" class="category-{{category.slug}}">{{category.title}}</a>
-      {% endwith %}
-      <a href="{% pageurl article %}"><strong>{{article.title}}: </strong>{{article.subtitle}}</a>
-    </li>
-  </ul>
+  <li class="article-list__item article-list__item{{section.get_parent_section.get_effective_extra_style_hints}}">
+    <a href="{% pageurl article %}">
+      <h3 class="article-list__section">{{article.get_parent_section.title}}</h3>
+      <h2 class="article-list__title">{{article.title}}</h2>
+      <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
+    </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
 {% endif %}
