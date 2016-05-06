@@ -19,9 +19,7 @@
     <body>
       <div class="languages l-indent">
         {% for language in languages %}
-        <a class="navigation__item navigation__item{{section.get_effective_extra_style_hints}}" href="{% pageurl section %}">
-          {{section.title}}
-        </a>
+        <a href="{% url 'locale_set' language.locale %}?next={{request.path}}">{{language}}</a>
         {% endfor %}
       </div>
 
