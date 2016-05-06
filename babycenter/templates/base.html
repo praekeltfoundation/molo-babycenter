@@ -29,22 +29,13 @@
         {% endblock %}
       </a>
 
-      <div class="navigation l-indent">
-        {% for section in self.sections %}
-          <a class="navigation__item" href="{% pageurl section %}">{{section.title}}</a>
-        {% endfor %}
-      </div>
+      {% include "base_navigation.html" %}
+
 
       {% block content %}
       {% endblock %}
 
-      <div class="navigation l-indent">
-        {% for section in self.sections %}
-        <a class="navigation__item navigation__item{{section.get_effective_extra_style_hints}}" href="{% pageurl section %}">
-          {{section.title}}
-        </a>
-        {% endfor %}
-      </div>
+      {% include "base_navigation.html" %}
 
       {% block search %}
         {% if languages %}
