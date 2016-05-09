@@ -1,9 +1,7 @@
 
 {% load wagtailcore_tags compress static wagtailuserbar core_tags i18n %}
 {% load wagtailsettings_tags wagtailimages_tags %}
-{% get_settings %}
-
-
+{% load babycenter_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +17,7 @@
     <body>
       <div class="languages l-indent">
         {% for language in languages %}
-        <a href="{% url 'locale_set' language.locale %}?next={{request.path}}">{{language}}</a>
+          <a href="{% url 'locale_set' language.locale %}?next={{request.path}}">{{language}}</a>
         {% endfor %}
       </div>
 
@@ -29,13 +27,13 @@
         {% endblock %}
       </a>
 
-      {% include "base_navigation.html" %}
 
+      {% include "_base_menu.html" %}
 
       {% block content %}
       {% endblock %}
 
-      {% include "base_navigation.html" %}
+      {% include "_base_menu.html" %}
 
       {% block search %}
         {% if languages %}
