@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% load static core_tags %}
@@ -8,59 +7,56 @@
 
 {% block content %}
 
-<h1><a href="{% pageurl self.get_parent_section %}">{{self.get_parent_section}}</a></h1>
-<div class="pagi"><a href="{% pageurl self.get_parent_section %}">&lt; {% trans "Back" %}</a></div>
-<div class="articles nav {{self.get_parent_section.get_effective_extra_style_hints}}">
-  <h3 class="article-title">{{self.title}}</h3>
-  {% if self.image %}
-  <div class="banner">{% image self.image width-240 %}</div>
-  {% endif %}
+{% with section=self.get_parent_section %}
+<a href="{% pageurl section %}">
+  <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
+    {{section.title}}
+  </h2>
+  <h2 class="l-ident heading heading--back">
+    &lt; {% trans "Back" %}
+  </h2>
+</a>
+{% endwith %}
 
-<article>
-  {% for block in self.body %}
+<div class="l-indent article article{{self.get_parent_section.get_effective_extra_style_hints}}">
+  <h1 class="article__title">{{self.title}}</h1>
+
+  <article>
+    {% for block in self.body %}
       {% if block.block_type == 'heading' %}
-          <h1>{{ block.value }}</h1>
-      {% else %}
-      {% if block.block_type == 'image' %}
-        {% image block.value width-240 %}
-      {% else %}
-      {% if block.block_type == 'numbered_list' %}
+          <h4>{{ block.value }}</h4>
+      {% elif block.block_type == 'image' %}
+        {% image block.value width-320 class="article__image" %}
+      {% elif block.block_type == 'numbered_list' %}
         <ol>
-        {% for item in block.value %}
+          {% for item in block.value %}
           <li>{{item}}</li>
-        {% endfor %}
+          {% endfor %}
         </ol>
       {% else %}
           {{ block }}
       {% endif %}
-      {% endif %}
-      {% endif %}
-  {% endfor %}
-</article>
-<p class="date">{{self.first_published_at | date:"j F Y"}}</p>
+    {% endfor %}
+  </article>
 
-<h1>{% trans "More Information" %}</h1>
-{# If there is a previous article, it is a More Information article #}
-{# If there isn't, the first article of the previous section is #}
-{% with prev=self.get_prev_sibling prev_section=self.get_parent_section.get_prev_sibling.get_last_child %}
-{% if prev %}
-<p><a href="{% pageurl prev %}">{{prev.title}}</a></p>
-{% elif prev_section %}
-<p><a href="{% pageurl prev_section %}">{{prev_section.title}}</a></p>
-{% endif %}
+  <p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
+</div>
+
+{% with section=self.get_parent_section %}
+<h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
+  {% trans "More Information" %}
+</h2>
 {% endwith %}
 
-{# If there is a next article, it is a More Information article. #}
-{# If there isn't, the first article of the next section is #}
-{% with next=self.get_next_sibling next_section=self.get_parent_section.get_next_sibling.get_first_child %}
-{% if next %}
-<p><a href="{% pageurl next %}">{{next.title}}</a></p>
-{% elif next_section %}
-<p><a href="{% pageurl next_section %}">{{next_section.title}}</a></p>
-{% endif %}
-{% endwith %}
+<ul class="more-info__links">
+  {% if self.get_prev_sibling %}
+  <li><a href="{% pageurl self.get_prev_sibling %}">{{self.get_prev_sibling.title}}</a></li>
+  {% endif %}
+  {% if self.get_next_sibling %}
+  <li><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
+  {% endif %}
+  <li><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</li>
+</ul>
 
-<p class="pagi"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></p>
 
 {% endblock %}
-
