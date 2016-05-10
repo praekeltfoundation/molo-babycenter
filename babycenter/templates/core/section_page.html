@@ -1,52 +1,21 @@
-
 {% extends "base.html" %}
 
-{% load static core_tags %}
-{% load wagtailcore_tags wagtailimages_tags %}
-
-{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
+{% load core_tags i18n %}
+{% load wagtailcore_tags %}
 
 {% block content %}
-    <div class="articles nav {{self.get_effective_extra_style_hints}}">
-      <h2 class="list-header">
-        {% if self.image %}
-          <a href="{% pageurl self %}">{% image self.image width-60 %}</a>
-        {% endif %}
-        {{self.title}}
-      </h2>
-      {% load_child_sections_for_section self as sections %}
-      {% for section in sections %}
-        <h2 class="list-header">
-          {% if section.image %}
-            <a href="{% pageurl section %}">{% image section.image width-60 %}</a>
-          {% endif %}
-          <a href="{% pageurl section %}">{{section.title}}</a>
-          <ul class="list-block">
-            <li>
-              {% if section.description %}<p>{{section.description}}</p>{% endif %}
-              {% load_descendant_articles_for_section section featured_in_section=True as featured_articles %}
-              {% if featured_articles %}
-              {% for article in featured_articles %}
-                <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
-                <p>{{article.subtitle}}</p>
-              {% endfor %}
-              {% endif %}
-            </li>
-          </ul>
-        </h2>
-      {% endfor %}
-      {% load_child_articles_for_section self as articles %}
-      {% for article in articles %}
-      <ul class="list-block">
-        <li>
-          {% if article.image %}
-          <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
-          {% endif %}
-          <h3><a href="{% pageurl article %}">{{article.title}}</a></h3>
-          <p>{{article.subtitle}}</p>
-          <p class="date">{{article.first_published_at | date:"j F Y"}}</p>
-        </li>
-      </ul>
-      {% endfor %}
-    </div>
+  <h1 class="l-indent heading heading{{self.get_effective_extra_style_hints}}">
+    {{self.title}}
+  </h1>
+  {% load_descendant_articles_for_section self featured_in_section=True as featured_articles %}
+  <ul class="article-list">
+  {% for article in featured_articles %}
+    <li class="article-list__item">
+      <a href="{% pageurl article %}">
+        <h3 class="article-list__title article-list__title{{self.get_effective_extra_style_hints}}">{{article.title}}</h3>
+      </a>
+      <p class="article-list__subtitle">{{article.subtitle}}</p>
+    </li>
+  {% endfor %}
+  </ul>
 {% endblock %}
