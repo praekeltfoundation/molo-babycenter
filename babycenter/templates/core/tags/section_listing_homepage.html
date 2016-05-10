@@ -1,28 +1,17 @@
+{% load wagtailcore_tags core_tags i18n %}
 
-{% load wagtailcore_tags wagtailimages_tags core_tags i18n %}
-
-{% if sections %}
 {% for section in sections %}
-<div class="articles nav {{section.get_effective_extra_style_hints}}">
-  <h2 class="list-header">
+  <h1 class="heading heading{section.get_effective_extra_style_hints} l-indent">
     <a href="{% pageurl section %}">{{section.title}}</a>
-  </h2>
+  </h1>
   {% load_descendant_articles_for_section section featured_in_homepage=True as featured_articles %}
-  {% for article in featured_articles %}
-  <ul class="list-block">
+  <ul class="article-list article-list{{section.get_effective_extra_style_hints}}">
+    {% for article in featured_articles %}
     <li>
-      {% if article.image %}
-      <a href="{% pageurl article %}">{% image article.image width-60 %}</a>
-      {% endif %}
-      <a href="{% pageurl article %}"><strong>{{article.title}}: </strong>{{article.subtitle}}</a>
+      <h2 class="article-list__title">{{article.title}}</h2>
+      <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
     </li>
+    {% endfor %}
+    <li class="article-list__item article-list__item--more"><a href="{% pageurl section %}">{% trans "More" %} {{section.title}} &gt;</a></li>
   </ul>
-  {% endfor %}
-  {% if section.featured_articles_in_homepage|length < section.articles|length %}
-  <div class="pagi">
-    <a href="{% pageurl section %}">{% trans "More" %} {{section.title}} &gt;</a>
-  </div>
-  {% endif %}
-</div>
-{% endfor%}
-{% endif %}
+{% endfor %}
