@@ -1,0 +1,50 @@
+input,
+textarea {
+  //font-family: "Exo 2", sans-serif;
+  color: $shade_grey_color;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+.error {
+  color: red;
+}
+
+.input-error {
+  border: solid 1px red;
+}
+
+.btn {
+  padding: 0.75em 1em;
+  border: none;
+}
+
+.btn-wide {
+  display: block;
+  text-align: center;
+}
+
+input.btn-wide {
+  width: 100%;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.label-wide, .input-wide {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}

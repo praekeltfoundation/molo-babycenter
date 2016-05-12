@@ -1,0 +1,21 @@
+.l-row {
+  clear: both;
+  @include clearfix;
+}
+
+.l-half {
+  width: 50%;
+  &:first-child {
+    float: left;
+  }
+  &:last-child {
+    float: right;
+  }
+}
+
+@import "_locale";
+@import "_header";
+@import "_menu";
+@import "_search";
+@import "_form";
+@import "_footer";

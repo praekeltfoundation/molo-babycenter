@@ -1,8 +1,29 @@
-/* ==|== primary styles ===================================================== */
+
+html,body {
+   -webkit-overflow-scrolling : touch;
+  -webkit-tap-highlight-color : lighten(#333, 75%);
+}
 
 body {
+  font-family: $bodyFont_sans_serif;
+  line-height: 1.25;
   position: relative;
+  @include no-m;
 }
+
+a {
+  word-wrap: break-word;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+:not(a):focus {
+  outline: none;
+}
+
+//@include links($shade_grey_color);
 
 * {
   box-sizing: border-box;
@@ -10,14 +31,14 @@ body {
 }
 
 ::-moz-selection {
-  background-color: lighten($colorFirst, 65%);
-  color: $colorFirst;
+  background-color: $turquoise_shade_color;
+  color: $turquoise_color;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: lighten($colorFirst, 65%);
-  color: $colorFirst;
+  background-color: $turquoise_shade_color;
+  color: $turquoise_color;
   text-shadow: none;
 }
 
@@ -47,13 +68,22 @@ img {
   }
 }
 
-
 svg:not(:root) {
   overflow: hidden;
 }
 
-// https://github.com/mrmrs/fluidity
+// Typography
 
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+//https://github.com/mrmrs/fluidity
 canvas, iframe, video, svg {
   max-width: 100%;
   height: auto;
@@ -84,98 +114,41 @@ canvas, iframe, video, svg {
   width : device-width;
 }
 
-html {
-  -webkit-overflow-scrolling : touch;
-  -webkit-tap-highlight-color : lighten(#333, 75%);
+
+// dark grey
+.highlight-primary {
+  color: $dark_grey_color;
+  p {
+    color: $shade_grey_color;
+  }
 }
 
-/* ==|== Links ==== */
-
-:not(a):focus {
-  outline: none;
-}
-
-html {
-  font-family: $font-family-sans-serif;
-  line-height: 1.25;
-}
-
-body {
-  @include no-m;
-}
-
-body {
+// dark grey
+.highlight-secondary {
+  color: $shade_grey_color;
+  li {
+    border: none;
+  }
   a {
-    word-wrap: break-word;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-// Typography
-
-h1, h2, h3, h4 {
-  margin-top: 0;
+// blue
+.highlight-tertiary {
+  color: $blue_color;
 }
 
-// layout
-
-.l-row {
-  clear: both;
-  @include clearfix;
+// light grey
+.highlight-quaternary {
+  color: $light_grey_color;
 }
 
-.l-half {
-  width: 50%;
-  &:first-child {
-    float: left;
-  }
-  &:last-child {
-    float: right;
-  }
-}
+// Reset
+//__________________________________________________________
 
-// forms and validation
-
-input {
-  padding: 0.5em;
-  font-size: 0.9em;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-
-.error {
-  color: red;
-}
-
-.input-error {
-  border: solid 1px red;
-}
-
-.btn {
-  padding: 0.75em 1em;
-  border: none;
-}
-
-.btn-wide {
-  display: block;
-  text-align: center;
-}
-
-input.btn-wide {
-  width: 100%;
-  font-size: 0.9em;
-  cursor: pointer;
-}
-
-textarea {
-  display: block;
-  width: 100%;
-  font-size: 0.9em;
-}
-
-.label-wide, .input-wide {
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-}
+@import "h5bp";

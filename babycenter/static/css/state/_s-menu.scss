@@ -1,0 +1,12 @@
+.menu a {
+  &:after {
+      color: $shade_grey_color;
+      content: "|";
+      font-size: 12px;
+      padding: 0 5px;
+  }
+  &:last-child:after {
+    display: none;
+  }
+
+}
