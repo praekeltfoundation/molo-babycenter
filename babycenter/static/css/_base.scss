@@ -8,7 +8,8 @@ body {
   font-family: $bodyFont_sans_serif;
   line-height: 1.25;
   position: relative;
-  @include no-m;
+  color: $shade_grey_color;
+  @include no-margin;
 }
 
 * {

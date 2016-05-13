@@ -74,11 +74,11 @@
 
 // layout
 
-@mixin no-m {
+@mixin no-margin {
   margin: 0;
 }
 
-@mixin no-mp {
+@mixin no-margin-padding {
   margin: 0;
   padding: 0;
 }

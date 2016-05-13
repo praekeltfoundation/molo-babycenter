@@ -7,13 +7,12 @@
 //Home page
 
 .article-list {
-  margin: 0;
-  padding: 0;
+   @include no-margin-padding;
 }
 
 .article-list__item {
     padding: 14px 16px;
-    margin: 0;
+     @include no-margin;
     border: 0;
     border-bottom: 1px solid #e6e6e6;
     word-wrap: break-word;
@@ -31,16 +30,25 @@
   .article-list__section--#{$name} {
     color: $color;
   }
+
+  .article-list__item--more--#{$name} {
+    color: $color;
+    a {
+       color: $color;
+      font-weight: bold;
+    }
+  }
 }
 
 .article-list__title {
    margin: 0 0 5px;
    font-size: 17px;
+   color: $shade_grey_color ;
 }
 
 .article-list__subtitle {
    margin: 0 0 5px;
-  font-size: 12px;
+   font-size: 12px;
 }
 
 .article-list__image  {
@@ -52,7 +60,7 @@
 
 .article__title  {
    padding: 0.5em;
-   margin: 0;
+   @include no-margin;
 }
 
 .article__subtitle  {

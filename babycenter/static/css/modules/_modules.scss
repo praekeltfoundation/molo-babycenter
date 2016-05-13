@@ -1,7 +1,7 @@
 
 .list-inline {
 	@include no-bull;
-	@include no-m;
+	@include no-margin;
 	padding: 0.5em 1em;
 	> li {
 		@include l-ib;
@@ -23,7 +23,7 @@
 }
 
 .list-block {
-	@include no-mp;
+	@include no-margin-padding;
 	> li {
 		@include l-db;
 		border-top: none;
@@ -37,19 +37,19 @@
 		@include l-db;
 	}
 	h2, h3 {
-		@include no-m;
+		@include no-margin;;
 		font-size: 1em;
         padding-bottom: 0;
 	}
 	p {
-		@include no-m;
+		@include no-margin;;
         padding-left: 1.5em;
         padding-top: 0;
 	}
 }
 
 .list-header {
-	@include no-m;
+	@include no-margin;;
 	padding: 0.5em;
 	font-size: 1em;
 	line-height: 1;
