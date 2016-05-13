@@ -1,18 +1,75 @@
+@import "m-heading";
 
-article {
-  a {
-    padding: 0.5em;
-  }
-  p{
-    padding: 0.5em 1em;
-  }
-  h1 {
-    padding: 0.5em;
+.article {
+  position: relative;
+}
+
+//Home page
+
+.article-list {
+  margin: 0;
+  padding: 0;
+}
+
+.article-list__item {
+    padding: 14px 16px;
     margin: 0;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+    word-wrap: break-word;
+}
+
+.article-list__section {
+//Do the category color variables thingy
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 12px;
+    margin: 0 0 5px;
+}
+
+@each $name, $color in $headings_colors {
+  .article-list__section--#{$name} {
+    color: $color;
   }
-  img {
+}
+
+.article-list__title {
+   margin: 0 0 5px;
+   font-size: 17px;
+}
+
+.article-list__subtitle {
+   margin: 0 0 5px;
+  font-size: 12px;
+}
+
+.article-list__image  {
+    width: 100%;
+    border: 1px solid red;
+}
+
+//Article page
+
+.article__title  {
+   padding: 0.5em;
+   margin: 0;
+}
+
+.article__subtitle  {
+  padding: 0.5em 1em;
+}
+
+.article__image {
     width: 100%;
     max-width: 100%;
   	padding: 0.5em;
-  }
 }
+
+  //Article block
+  .article-block {
+    padding: 0.5em 1em;
+  }
+
+  .article-block-title {
+   display: block;
+  }

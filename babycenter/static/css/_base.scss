@@ -11,23 +11,19 @@ body {
   @include no-m;
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 a {
   word-wrap: break-word;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+  color: $shade_grey_color;
 }
 
 :not(a):focus {
   outline: none;
-}
-
-//@include links($shade_grey_color);
-
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -151,4 +147,4 @@ canvas, iframe, video, svg {
 // Reset
 //__________________________________________________________
 
-@import "h5bp";
+@import "reset/h5bp";

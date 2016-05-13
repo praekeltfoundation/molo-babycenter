@@ -1,0 +1,20 @@
+//Article listing
+.heading {
+  margin: 0;
+  font-size: 19px;
+}
+
+.heading--information {
+  color: #fff;
+    background: $grey_color;
+}
+
+@each $name, $color in $headings_colors {
+  .heading--#{$name} {
+    color: #fff;
+    background: $color;
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -20,6 +20,7 @@ $dark_turquoise_color         :   #124f52 !default; // dark turquoise
 $yellow_color                 :   #c4d131 !default; // yellow
 $green_color                  :   #69be28 !default; //green
 $red_color                    :   #e52d47; // red
+$orange_color                 :   #f7a11a; //orange
 
 
 $turquoise_shade_color        :   lighten($turquoise_color, 65%);
@@ -32,8 +33,9 @@ $bodyFont_serif             : Georgia, "Times New Roman", Times, serif;
 
 //Colors array
 $headings_colors : (
-    recommend  : $yellow_color,
-    baby       : $green_color
+    recommend   : $orange_color,
+    baby        : $green_color,
+    pregnancy   : $turquoise_color
 );
 
 

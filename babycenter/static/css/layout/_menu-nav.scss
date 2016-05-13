@@ -3,10 +3,6 @@
   padding: 10px 16px;
   font-size: 14px;
   font-weight: bold;
-  color: #ffc20f;
   text-align: center;
-
-  a {
-
-  }
+  @include links($shade_grey_color);
 }

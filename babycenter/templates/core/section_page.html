@@ -4,7 +4,7 @@
 {% load wagtailcore_tags %}
 
 {% block content %}
-  <h1 class="l-indent heading heading{{self.get_effective_extra_style_hints}}">
+  <h1 class="l-indent heading heading--{{self.get_effective_extra_style_hints}}">
     {{self.title}}
   </h1>
   {% load_descendant_articles_for_section self featured_in_section=True as featured_articles %}

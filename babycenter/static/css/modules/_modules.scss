@@ -1,8 +1,3 @@
-@import "../variables/variables";
-
-@import "m-nav";
-@import "m-articles";
-
 
 .list-inline {
 	@include no-bull;
@@ -116,3 +111,18 @@ a.over-text {
 .logo {
     padding: 10px;
 }
+
+.nav_separation {
+      &:after {
+        color: $shade_grey_color;
+        content: "|";
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    &:last-child:after {
+      display: none;
+    }
+}
+
+@import "_m-articles";
+@import "m-languages-menu";

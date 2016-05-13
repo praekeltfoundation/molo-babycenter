@@ -9,10 +9,10 @@
 
 {% with section=self.get_parent_section %}
 <a href="{% pageurl section %}">
-  <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
+  <h2 class="l-indent heading heading--{{section.get_effective_extra_style_hints}}">
     {{section.title}}
   </h2>
-  <h2 class="l-ident heading heading--back">
+  <h2 class="l-indent heading heading--back">
     &lt; {% trans "Back" %}
   </h2>
 </a>
@@ -21,10 +21,10 @@
 <div class="l-indent article article{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
 
-  <article>
+  <article class="article-block">
     {% for block in self.body %}
       {% if block.block_type == 'heading' %}
-          <h4>{{ block.value }}</h4>
+          <h4 class="article-block-title">{{ block.value }}</h4>
       {% elif block.block_type == 'image' %}
         {% image block.value width-320 class="article__image" %}
       {% elif block.block_type == 'numbered_list' %}
@@ -43,7 +43,7 @@
 </div>
 
 {% with section=self.get_parent_section %}
-<h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
+<h2 class="l-indent heading heading--information">
   {% trans "More Information" %}
 </h2>
 {% endwith %}

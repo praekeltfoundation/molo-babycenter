@@ -1,3 +1,12 @@
+
+.l-indent {
+  padding: 9px 16px;
+}
+
+.l-indent--deep {
+  padding: 14px 24px;
+}
+
 .l-row {
   clear: both;
   @include clearfix;
@@ -13,9 +22,9 @@
   }
 }
 
-@import "_locale";
+@import "_languages";
 @import "_header";
-@import "_menu";
+@import "_menu-nav";
 @import "_search";
 @import "_form";
 @import "_footer";
