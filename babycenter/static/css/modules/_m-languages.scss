@@ -4,6 +4,7 @@
     border-bottom: 1px solid $light_grey_color;
     background: $shade_white_color;
     a {
+      font-size: 12px;
       @include m-nav_anchor_separator($grey_color);
     }
 }
