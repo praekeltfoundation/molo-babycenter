@@ -1,6 +1,6 @@
 
 .menu {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   a {
       @include m-nav_anchor_separator($shade_grey_color);
