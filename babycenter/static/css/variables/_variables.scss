@@ -24,11 +24,12 @@ $orange_color                 :   #f7a11a; //orange
 
 
 $turquoise_shade_color        :   lighten($turquoise_color, 65%);
+$tap-highlight-color          :   lighten($grey_color, 75%);
 
 
 // Typography
 
-$bodyFont_sans_serif        : "Open Sans", Helvetica, Arial, sans-serif;
+$bodyFont_sans_serif        : Helvetica, Arial, sans-serif;
 $bodyFont_serif             : Georgia, "Times New Roman", Times, serif;
 
 //Colors array

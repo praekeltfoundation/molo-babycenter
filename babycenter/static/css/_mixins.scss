@@ -1,22 +1,33 @@
+@mixin m-nav_anchor_separator($color) {
+      &:after {
+        color: $color;
+        content: "|";
+        font-size: 12px;
+        padding: 0 5px;
+      }
+      &:first-child:before, &:last-child:after{
+        display: none;
+      }
+}
+
 @mixin links($linkcolor) {
-  a {
     color: $linkcolor;
+
     &:visited {
       color: $linkcolor;
     }
     &:hover {
-      text-decoration: none;
       color: darken($linkcolor, 10);
     }
     &:focus {
       outline: thin dotted;
       color: darken($linkcolor, 10);
     }
+
     &:hover,
     &:active {
       outline: 0;
     }
-  }
 }
 
 @mixin fancy-list-headers($background, $highlight, $gem: false) {
@@ -62,41 +73,7 @@
 
 }
 
-// text helper classes
-
-@mixin uc {
-  text-transform: uppercase;
-}
-
-@mixin no-bull {
-  list-style: none;
-}
-
-// layout
-
-@mixin no-margin {
-  margin: 0;
-}
-
-@mixin no-margin-padding {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin l-db {
- display: block;
-}
-
-@mixin l-ib {
-  display: inline-block;
-
-}
-
-@mixin l-tac {
-  text-align: center;
-}
-
-// thumbs
+// Thumbs
 
 @mixin thumb-circle {
   img {
@@ -127,19 +104,6 @@
       float: left;
       margin: 0 1em 1em 0;
     }
-  }
-}
-
-@mixin clearfix {
-  *zoom: 1;
-  &:before {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
   }
 }
 

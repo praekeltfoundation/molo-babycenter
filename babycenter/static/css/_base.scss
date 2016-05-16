@@ -1,75 +1,41 @@
 
 html,body {
-   -webkit-overflow-scrolling : touch;
-  -webkit-tap-highlight-color : lighten(#333, 75%);
+  -webkit-overflow-scrolling : touch;
+  -webkit-tap-highlight-color : $tap-highlight-color;
+  @media screen and (min-width: 1024px) {
+    background: $grey_color;
+  }
 }
 
 body {
   font-family: $bodyFont_sans_serif;
-  line-height: 1.25;
   position: relative;
   color: $shade_grey_color;
-  @include no-margin;
+  font-size: 14px;
+  margin: 0 auto;
+  width: 100%;
+  background: $white_color;
+  @media screen and (min-width: 1024px) {
+    width: 320px;
+  }
 }
+
+
 
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  color: $shade_grey_color;
 }
 
 a {
   word-wrap: break-word;
   text-decoration: none;
-  color: $shade_grey_color;
 }
 
-:not(a):focus {
-  outline: none;
+h1 {
+  margin: 0;
 }
-
-::-moz-selection {
-  background-color: $turquoise_shade_color;
-  color: $turquoise_color;
-  text-shadow: none;
-}
-
-::selection {
-  background-color: $turquoise_shade_color;
-  color: $turquoise_color;
-  text-shadow: none;
-}
-
-/* Cancels out Firefox Mobile's gradient background */
-button {
-  background-image: none;
-}
-
-.main {
-  padding: 1em;
-}
-
-// img
-
-img {
-  border-width: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-  max-width: 100%;
-  height: auto;
-}
-
-.banner {
-  img {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-// Typography
 
 h1, h2, h3, h4 {
   margin-top: 0;
@@ -80,72 +46,4 @@ p {
   padding-bottom: 1em;
 }
 
-//https://github.com/mrmrs/fluidity
-canvas, iframe, video, svg {
-  max-width: 100%;
-  height: auto;
-}
 
-/* Wrap tables or pre elements in a div with this class */
-.overflow-container { overflow-y: scroll; }
-
-// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-
-@-webkit-viewport {
-  width : device-width;
-}
-
-@-moz-viewport {
-  width : device-width;
-}
-
-@-ms-viewport {
-  width : device-width;
-}
-
-@-o-viewport {
-  width : device-width;
-}
-
-@viewport {
-  width : device-width;
-}
-
-
-// dark grey
-.highlight-primary {
-  color: $dark_grey_color;
-  p {
-    color: $shade_grey_color;
-  }
-}
-
-// dark grey
-.highlight-secondary {
-  color: $shade_grey_color;
-  li {
-    border: none;
-  }
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-// blue
-.highlight-tertiary {
-  color: $blue_color;
-}
-
-// light grey
-.highlight-quaternary {
-  color: $light_grey_color;
-}
-
-// Reset
-//__________________________________________________________
-
-@import "reset/h5bp";

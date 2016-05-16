@@ -1,25 +1,24 @@
-@import "m-heading";
-
 .article {
   position: relative;
 }
 
-//Home page
+.article-nav-button {
+  display: block;
+  border-bottom: 1px solid $light_grey_color;
+  width: 100%;
+}
 
 .article-list {
-   @include no-margin-padding;
+  list-style: none;
+  @extend .m-remove-margin-padding;
 }
 
 .article-list__item {
     padding: 14px 16px;
-     @include no-margin;
-    border: 0;
     border-bottom: 1px solid #e6e6e6;
-    word-wrap: break-word;
 }
 
 .article-list__section {
-//Do the category color variables thingy
     font-size: 12px;
     text-transform: uppercase;
     line-height: 12px;
@@ -38,29 +37,31 @@
       font-weight: bold;
     }
   }
+
+  .article-nav-button--#{$name} {
+    color: $color;
+  }
 }
 
 .article-list__title {
    margin: 0 0 5px;
    font-size: 17px;
-   color: $shade_grey_color ;
+   color: $shade_grey_color;
+   display: inline;
 }
 
 .article-list__subtitle {
-   margin: 0 0 5px;
-   font-size: 12px;
+   font-weight: normal;
+   margin: 0;
+  display: inline;
 }
 
 .article-list__image  {
     width: 100%;
-    border: 1px solid red;
 }
-
-//Article page
 
 .article__title  {
    padding: 0.5em;
-   @include no-margin;
 }
 
 .article__subtitle  {
@@ -72,12 +73,17 @@
     max-width: 100%;
   	padding: 0.5em;
 }
+.article-block {
+  padding: 0.5em 1em;
+}
 
-  //Article block
-  .article-block {
-    padding: 0.5em 1em;
-  }
+.article-block-title {
+ display: block;
+}
 
-  .article-block-title {
-   display: block;
-  }
+.article__date {
+  text-transform: uppercase;
+  color: #ccc!important;
+}
+
+@import "m-heading";

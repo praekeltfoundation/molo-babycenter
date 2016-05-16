@@ -1,10 +1,10 @@
 {% load wagtailcore_tags i18n %}
 
 {% if articles %}
-<h1 class="heading heading--recommend l-indent">{% trans "Recommended" %}</h1>
+<h1 class="heading heading--recommend m-generic-padding">{% trans "Recommended" %}</h1>
 <ul class="article-list">
   {% for article in articles %}
-  <li class="article-list__item l-indent article-list__item{{section.get_parent_section.get_effective_extra_style_hints}}">
+  <li class="article-list__item l-indent">
     <a href="{% pageurl article %}">
       <h3 class="article-list__section article-list__section--{{article.get_parent_section.get_effective_extra_style_hints}}">{{article.get_parent_section.title}}</h3>
       <h2 class="article-list__title">{{article.title}}</h2>

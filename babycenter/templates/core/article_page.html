@@ -9,16 +9,16 @@
 
 {% with section=self.get_parent_section %}
 <a href="{% pageurl section %}">
-  <h2 class="l-indent heading heading--{{section.get_effective_extra_style_hints}}">
+  <h2 class="heading heading--{{section.get_effective_extra_style_hints}} m-generic-padding">
     {{section.title}}
   </h2>
-  <h2 class="l-indent heading heading--back">
+  <span class="article-nav-button article-nav-button--{{section.get_effective_extra_style_hints}} l-indent">
     &lt; {% trans "Back" %}
-  </h2>
+  </span>
 </a>
 {% endwith %}
 
-<div class="l-indent article article{{self.get_parent_section.get_effective_extra_style_hints}}">
+<div class="article article--{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
 
   <article class="article-block">
@@ -37,25 +37,32 @@
           {{ block }}
       {% endif %}
     {% endfor %}
+  <p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
   </article>
 
-  <p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
 </div>
 
 {% with section=self.get_parent_section %}
-<h2 class="l-indent heading heading--information">
+<h2 class="heading heading--{{section.get_effective_extra_style_hints}} m-generic-padding">
   {% trans "More Information" %}
 </h2>
 {% endwith %}
 
-<ul class="more-info__links">
+<!--more-info__links-->
+<ul class="article-list l-indent">
   {% if self.get_prev_sibling %}
-  <li><a href="{% pageurl self.get_prev_sibling %}">{{self.get_prev_sibling.title}}</a></li>
+  <li class="article-list__item"><a href="{% pageurl self.get_prev_sibling %}">{{self.get_prev_sibling.title}}</a></li>
   {% endif %}
   {% if self.get_next_sibling %}
-  <li><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
+  <li class="article-list__item"><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
   {% endif %}
-  <li><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</li>
+{% with section=self.get_parent_section %}
+<a href="{% pageurl self.get_parent_section %}">
+  <span class="article-nav-button article-nav-button--{{section.get_effective_extra_style_hints}} l-indent">
+    {% trans "More" %}  &gt;
+  </span>
+</a>
+{% endwith %}
 </ul>
 
 

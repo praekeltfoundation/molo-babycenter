@@ -12,38 +12,35 @@
         {% block extra_css %}{% endblock %}
     </head>
     <body>
-
-    <div id="wrap">
-    <div class="languages l-indent">
+    <div class="languages m-generic-padding">
         {% for language in languages %}
             <a href="{% url 'locale_set' language.locale %}?next={{ request.path }}">{{ language }}</a>
         {% endfor %}
     </div>
 
-    <header id="header">
+    <div class="header">
       <a href="/" class="logo l-indent">
         {% block logo %}
         <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
         {% endblock %}
       </a>
-    </header>
-        {% include "_base_menu.html" %}
-    <div class="content-container">
+    </div>
+
+    {% include "_base_menu.html" %}
       {% block content %}
       {% endblock %}
-    </div>
-        {% include "_base_menu.html" %}
+        {% include "_base_footer_menu.html" %}
           {% block search %}
             {% if languages %}
               {% include "search/search_block.html" %}
             {% endif %}
           {% endblock %}
-    <footer id="footer">
+    <div class="footer l-generic-padding">
           {% block footer %}
             {% footer_page %}
           {% endblock %}
           <div class="copyright l-indent">&copy; {% now "Y" %} BabyCenter</div>
-    </footer>
+    </div>
       {% if settings.core.SiteSettings.ga_tag_manager %}
       <!-- Google Tag Manager -->
       <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{settings.core.SiteSettings.ga_tag_manager}}"
@@ -57,6 +54,5 @@
       {% endif %}
       {% block extra_js %}{% endblock %}
       {% wagtailuserbar %}
-    </div>
     </body>
 </html>

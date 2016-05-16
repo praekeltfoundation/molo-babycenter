@@ -1,0 +1,19 @@
+
+.menu {
+  font-size: 14px;
+  font-weight: bold;
+  a {
+      @include m-nav_anchor_separator($shade_grey_color);
+      @include links($shade_grey_color)
+   }
+}
+
+
+.footer-menu {
+  background: $shade_grey_color;
+  a {
+    @include m-nav_anchor_separator($white_color);
+    @include links($white_color)
+  }
+
+}
