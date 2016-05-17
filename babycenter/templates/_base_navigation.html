@@ -1,6 +1,6 @@
 {% load core_tags wagtailcore_tags i18n %}
 
-<div class="menu l-indent">
+<div class="navigation l-indent {{extra_classname}}">
   <a href="/">{% trans "Home" %}</a>
   {% for section in request.site.root_page.specific.sections %}
   <a href="{% pageurl section %}">{{section.title}}</a>

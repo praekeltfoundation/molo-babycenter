@@ -27,12 +27,12 @@
         </a>
       </div>
 
-      {% include "_base_menu.html" %}
+      {% include "_base_navigation.html" %}
 
       {% block content %}
       {% endblock %}
 
-      {% include "_base_menu.html" %}
+      {% include "_base_navigation.html" with extra_classname="navigation--dark"  %}
 
       {% block search %}
         {% if languages %}
