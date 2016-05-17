@@ -12,7 +12,7 @@
   <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
     {{section.title}}
   </h2>
-  <h2 class="l-ident heading heading--back">
+  <h2 class="l-indent heading heading--back heading{{section.get_effective_extra_style_hints}}">
     &lt; {% trans "Back" %}
   </h2>
 </a>
@@ -39,24 +39,23 @@
     {% endfor %}
   </article>
 
-  <p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
+  <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
 </div>
 
 {% with section=self.get_parent_section %}
 <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
   {% trans "More Information" %}
 </h2>
-{% endwith %}
-
-<ul class="more-info__links">
+<ul class="article__links article__links{{section.get_effective_extra_style_hints}}">
   {% if self.get_prev_sibling %}
-  <li><a href="{% pageurl self.get_prev_sibling %}">{{self.get_prev_sibling.title}}</a></li>
+  <li class="article__link l-indent l-indent--tall"><a href="{% pageurl self.get_prev_sibling %}">{{self.get_prev_sibling.title}}</a></li>
   {% endif %}
   {% if self.get_next_sibling %}
-  <li><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
+  <li class="article__link l-indent l-indent--tall"><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
   {% endif %}
-  <li><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</li>
+  <li class="article__link article__link--more l-indent l-indent--tall"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</li>
 </ul>
+{% endwith %}
 
 
 {% endblock %}
