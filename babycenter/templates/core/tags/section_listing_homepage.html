@@ -1,7 +1,7 @@
 {% load wagtailcore_tags core_tags i18n %}
 
 {% for section in sections %}
-  <h1 class="heading heading{{section.get_effective_extra_style_hints}} l-indent">
+  <h1 class="heading heading{{section.get_effective_extra_style_hints}} l-indent f-big">
     <a href="{% pageurl section %}">{{section.title}}</a>
   </h1>
   {% load_descendant_articles_for_section section featured_in_homepage=True as featured_articles %}
