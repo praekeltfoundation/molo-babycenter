@@ -7,3 +7,9 @@
     color: #fff;
   }
 }
+
+@each $name, $color in $color_list {
+  .heading--#{$name} {
+    background-color: $color;
+  }
+}
