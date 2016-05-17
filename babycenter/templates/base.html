@@ -19,12 +19,13 @@
         {% endfor %}
       </div>
 
-      <a href="/" class="logo l-indent">
-        {% block logo %}
-        <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
-        {% endblock %}
-      </a>
-
+      <div class="logo l-indent">
+        <a href="/">
+          {% block logo %}
+          <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
+          {% endblock %}
+        </a>
+      </div>
 
       {% include "_base_menu.html" %}
 
