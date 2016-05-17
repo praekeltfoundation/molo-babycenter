@@ -1,0 +1,39 @@
+
+.article-list__item {
+  border-bottom: 1px #e6e6e6 solid;
+
+  a {
+    color: #666;
+  }
+}
+
+.article-list__item--more {
+  font-weight: bold;
+}
+
+.article-list__title {
+  font-weight: bold;
+  display: inline;
+
+  &:after {
+    content: ": ";
+  }
+}
+
+.article-list__subtitle {
+  display: inline;
+}
+
+.article-list__section {
+  text-transform: uppercase;
+}
+
+@each $name, $color in $color_list {
+  .article-list__item--#{$name} .article-list__section {
+    color: $color;
+  }
+
+  .article-list--#{$name} .article-list__item--more a {
+    color: $color;
+  }
+}

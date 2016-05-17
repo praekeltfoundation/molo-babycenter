@@ -1,0 +1,17 @@
+.languages {
+  background: #eee;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+
+  a {
+    &:after {
+      content: " | ";
+      color: #ddd;
+    }
+    &:last-child:after {
+      content: "";
+    }
+
+    color: #999;
+  }
+}

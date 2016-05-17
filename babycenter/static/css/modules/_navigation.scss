@@ -1,0 +1,20 @@
+.navigation {
+  a {
+    &:after {
+      content: " | ";
+      color: #ddd;
+    }
+    &:last-child:after {
+      content: "";
+    }
+    color: #666;
+    font-weight: bold;
+  }
+}
+
+.navigation--dark {
+  background: #666;
+  a {
+    color: #fff;
+  }
+}
