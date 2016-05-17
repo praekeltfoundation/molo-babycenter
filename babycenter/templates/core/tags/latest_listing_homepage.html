@@ -2,7 +2,7 @@
 
 {% if articles %}
 <h1 class="heading heading--orange l-indent">{% trans "Recommended" %}</h1>
-<ul class="article-list">
+<ul class="article-list l-indent">
   {% for article in articles %}
   <li class="article-list__item article-list__item{{section.get_parent_section.get_effective_extra_style_hints}}">
     <a href="{% pageurl article %}">
