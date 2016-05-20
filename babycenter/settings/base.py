@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     'mptt',
 
     'raven.contrib.django.raven_compat',
+    'djcelery',
     'django_cas_ng',
     'compressor',
 ]
