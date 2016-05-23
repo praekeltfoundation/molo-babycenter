@@ -11,7 +11,9 @@
     &:last-child:after {
       content: "";
     }
-
-    color: #999;
+    .active {
+      color: #999;
+    }
+    color: $orange;
   }
 }
