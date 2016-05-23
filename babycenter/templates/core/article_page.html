@@ -57,7 +57,7 @@
   {% if self.get_next_sibling %}
   <li class="article__link l-indent l-indent--tall"><a href="{% pageurl self.get_next_sibling %}">{{self.get_next_sibling.title}}</a></li>
   {% endif %}
-  <li class="article__link article__link--more l-indent l-indent--tall"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</li>
+  <li class="article__link article__link--more l-indent l-indent--tall"><a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></li>
 </ul>
 {% endwith %}
 
