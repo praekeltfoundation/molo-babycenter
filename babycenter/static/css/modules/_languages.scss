@@ -4,6 +4,10 @@
   border-bottom: 1px solid #ddd;
 
   a {
+    color: $orange;
+    .active {
+      color: #999;
+    }
     &:after {
       content: " | ";
       color: #ddd;
@@ -11,7 +15,5 @@
     &:last-child:after {
       content: "";
     }
-
-    color: #999;
   }
 }

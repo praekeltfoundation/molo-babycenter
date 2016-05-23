@@ -4,32 +4,25 @@
 
 {% block content %}
 {% if search_results %}
-  <div class="search">
-    <h3>{{search_query}}</h3>
-  </div>
+  <h3 class="heading heading--orange l-indent l-indent--tall">{{search_query}}</h3>
+  <ul class="article-list">
   {% for page in search_results %}
     {% with parent_section=page.get_parent_section ancestor=page.get_parent_section.get_ancestors.last %}
-    {% if ancestor.sectionpage.image %}
+
+    <li class="article-list__item article-list__item{{page.get_parent_section.get_effective_extra_style_hints}} l-indent l-indent--tall">
       <a href="{% pageurl page %}">
         <div class="nav">
-          <h6>{{ancestor.title}}</h6>
-          <h3>{{page.title}}</h3>
-          <p>{{page.subtitle}}</p>
+          <h6 class="article-list__section f-small">{{parent_section.title}}</h6>
+          <h3 class="article-list__title">{{page.title}}</h3>
+          <p class="article-list__subtitle">{{page.subtitle}}</p>
         </div>
       </a>
-    {% else %}
-      <a href="{% pageurl page %}">
-        <div class="nav">
-          <h6>{{parent_section.title}}</h6>
-          <h3>{{page.title}}</h3>
-          <p>{{page.subtitle}}</p>
-        </div>
-      </a>
-    {% endif %}
+    </li>
     {% endwith %}
   {% endfor %}
+  </ul>
 
-  <div class="step-links">
+  <div class="step-links l-indent l-indent--tall">
     {% if search_results.has_previous %}
         <a href="?p={{ search_results.previous_page_number }}&amp;q={{search_query}}">&larr;</a>
     {% endif %}
@@ -42,7 +35,7 @@
   </div>
 
   {% else %}
-    <div>
+    <div class="l-indent l-indent--tall">
         <h3>{% trans "Search" %}</h3>
         <p>{% trans "No search results for " %}{{search_query}}.</p>
         <div class="nav">
