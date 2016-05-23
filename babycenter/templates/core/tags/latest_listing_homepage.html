@@ -1,4 +1,4 @@
-{% load wagtailcore_tags i18n %}
+{% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% if articles %}
 <h1 class="heading heading--orange l-indent f-big">{% trans "Recommended" %}</h1>
@@ -6,6 +6,11 @@
   {% for article in articles %}
   <li class="article-list__item article-list__item{{article.get_parent_section.get_effective_extra_style_hints}} l-indent l-indent--tall">
     <a href="{% pageurl article %}">
+
+      {% if article.image %}
+        {% image article.image width-45 height-45 class="article__image article__image--square" %}
+      {% endif %}
+
       <h3 class="article-list__section f-small">{{article.get_parent_section.title}}</h3>
       <h2 class="article-list__title">{{article.title}}</h2>
       <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
