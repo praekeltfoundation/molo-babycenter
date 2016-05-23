@@ -7,9 +7,9 @@
   <h1 class="l-indent heading heading{{self.get_effective_extra_style_hints}}">
     {{self.title}}
   </h1>
-  {% load_descendant_articles_for_section self featured_in_section=True as featured_articles %}
+  {% load_child_articles_for_section self as articles %}
   <ul class="article-list">
-  {% for article in featured_articles %}
+  {% for article in articles %}
     <li class="l-indent l-indent--tall article-list__item">
       <a href="{% pageurl article %}">
         <h3 class="article-list__title article-list__title{{self.get_effective_extra_style_hints}}">{{article.title}}</h3>

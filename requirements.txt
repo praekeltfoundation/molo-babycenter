@@ -1,5 +1,6 @@
-molo.core==3.0rc10
+molo.core==3.1.3
 gunicorn
 psycopg2
 django-extensions
 molo.usermetadata==1.0.2
+six>=1.9
