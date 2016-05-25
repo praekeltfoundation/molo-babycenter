@@ -1,4 +1,4 @@
-{% load wagtailcore_tags compress static wagtailuserbar core_tags i18n %}
+{% load wagtailcore_tags compress static wagtailuserbar core_tags i18n babycenter_tags %}
 {% load wagtailsettings_tags wagtailimages_tags %}
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,14 @@
         </a>
       </div>
 
-      {% include "_base_navigation.html" %}
+      <div class="navigation l-indent {{extra_classes}}">
+        <a href="/">{% trans "Home" %}</a>
+        {% load_sections as sections %}
+        {% for section in sections %}
+          <a href="{% pageurl section %}">{{section.title}}</a>
+        {% endfor %}
+      </div>
+
 
       {% block content %}
       {% endblock %}
