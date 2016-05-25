@@ -2,12 +2,7 @@
   background: #eee;
   text-align: right;
   border-bottom: 1px solid #ddd;
-
   a {
-    color: $orange;
-    .active {
-      color: #999;
-    }
     &:after {
       content: " | ";
       color: #ddd;
@@ -16,4 +11,10 @@
       content: "";
     }
   }
+}
+.language--inactive {
+  color: #999;
+}
+.language--active {
+    color: $orange;
 }
