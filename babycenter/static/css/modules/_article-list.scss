@@ -28,6 +28,10 @@
   text-transform: uppercase;
 }
 
+.article-list__content_container {
+  overflow: hidden;
+}
+
 @each $name, $color in $color_list {
   .article-list__item--#{$name} .article-list__section {
     color: $color;
