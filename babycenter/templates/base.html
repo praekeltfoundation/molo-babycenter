@@ -40,19 +40,12 @@
         </a>
       </div>
 
-      <div class="navigation l-indent {{extra_classes}}">
-        <a href="/">{% trans "Home" %}</a>
-        {% load_sections as sections %}
-        {% for section in sections %}
-          <a href="{% pageurl section %}">{{section.title}}</a>
-        {% endfor %}
-      </div>
-
+      {% include "_base_navigation.html" %}
 
       {% block content %}
       {% endblock %}
 
-      {% include "_base_navigation.html" with extra_classes="navigation--dark"  %}
+      {% include "_base_navigation.html" with extra_classes="navigation--dark" %}
 
       {% block search %}
         {% if languages %}

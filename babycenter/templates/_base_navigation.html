@@ -1,0 +1,9 @@
+{% load i18n wagtailcore_tags babycenter_tags %}
+
+<div class="navigation l-indent {{extra_classes}}">
+  <a href="/">{% trans "Home" %}</a>
+  {% load_sections as sections %}
+  {% for section in sections %}
+    <a href="{% pageurl section %}">{{section.title}}</a>
+  {% endfor %}
+</div>
