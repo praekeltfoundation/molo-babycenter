@@ -1,7 +1,7 @@
 {% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% if articles %}
-<h1 class="heading heading--orange l-indent l-indent--small f-big">{% trans "Recommended" %}</h1>
+<h1 class="heading heading--orange l-indent f-big">{% trans "Recommended" %}</h1>
 <ul class="article-list">
   {% for article in articles %}
   <li class="article-list__item article-list__item{{article.get_parent_section.get_effective_extra_style_hints}} l-indent l-indent--tall">

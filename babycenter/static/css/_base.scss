@@ -21,6 +21,10 @@ ul, ol, li {
   list-style: none;
 }
 
+ol a, li a {
+   color: #999;
+}
+
 img {
   vertical-align: top;
   margin: 0;
@@ -36,6 +40,11 @@ h1, h2, h3, h4, h5, h6 {
 .f-small {
   font-size: 12px;
 }
+
+.f-medium {
+  font-size: 14px;
+}
+
 .f-big {
   font-size: 19px;
 }
