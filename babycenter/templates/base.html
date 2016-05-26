@@ -29,7 +29,7 @@
       <div class="languages l-indent f-small">
         {% get_current_language as LANGUAGE_CODE %}
         {% for language in languages %}
-          <a href="{% url 'locale_set' language.locale %}?next={{request.path}}" class="language--inactive {% if LANGUAGE_CODE == language.locale %}language--active{% endif %}">{{language.locale|language_name_local}}</a>
+          <a href="{% url 'locale_set' language.locale %}?next={{request.path}}" class="{% if LANGUAGE_CODE == language.locale %}active{% endif %}">{{language.locale|language_name_local}}</a>
         {% endfor %}
       </div>
 
