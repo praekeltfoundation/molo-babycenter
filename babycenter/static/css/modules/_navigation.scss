@@ -1,14 +1,18 @@
 .navigation {
+  text-align: center;
   a {
+    color: #666;
+    font-weight: bold;
+    white-space: nowrap;
+
     &:after {
       content: " | ";
       color: #ddd;
     }
+
     &:last-child:after {
       content: "";
     }
-    color: #666;
-    font-weight: bold;
   }
 }
 
