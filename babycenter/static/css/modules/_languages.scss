@@ -2,12 +2,8 @@
   background: #eee;
   text-align: right;
   border-bottom: 1px solid #ddd;
-
   a {
-    color: $orange;
-    .active {
-      color: #999;
-    }
+    color: #999;
     &:after {
       content: " | ";
       color: #ddd;
@@ -15,5 +11,9 @@
     &:last-child:after {
       content: "";
     }
+  }
+
+  a.active {
+      color: $orange;
   }
 }
