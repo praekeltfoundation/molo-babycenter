@@ -28,7 +28,7 @@
     <body>
       <div class="languages l-indent f-small">
         {% for language in languages %}
-          <a href="{% url 'locale_set' language.locale %}?next={{request.path}}">{{language}}</a>
+          <a href="{% url 'locale_set' language.locale %}?next={{request.path}}?{{ request.GET.urlencode }}">{{language}}</a>
         {% endfor %}
       </div>
 
