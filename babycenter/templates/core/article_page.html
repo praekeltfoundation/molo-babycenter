@@ -46,18 +46,21 @@
 
   <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
 </div>
+    {% with section=self.get_parent_section %}
+        <h2 class="l-indent heading heading{{ section.get_effective_extra_style_hints }}">
+            {% trans "More Information" %}
+        </h2>
+        <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
+            {% for block in self.body %}
+                {% if block.block_type == 'page' %}
+                    <li class="article__link l-indent l-indent--tall">
+                        <a href="{% pageurl block.value %}">{{ block.value }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            <li class="article__link article__link--more l-indent l-indent--tall">
+                <a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></li>
+        </ul>
+    {% endwith %}
 
-{% with section=self.get_parent_section %}
-     <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">  {% trans "More Information" %} </h2> 
-    <ul class="article__links article__links{{section.get_effective_extra_style_hints}}"> {% for block in self.body %} 
-        {% if block.block_type == 'page' %} 
-            <li class="article__link l-indent l-indent--tall">
-                <a href="{% pageurl block.value %}">{{ block.value }}</a>
-            </li> 
-        {% endif %} {% endfor %} 
-        <li class="article__link article__link--more l-indent l-indent--tall">
-            <a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a>
-        </li> 
-    </ul> 
-{% endwith %}
 {% endblock %}
