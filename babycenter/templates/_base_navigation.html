@@ -1,8 +1,9 @@
-{% load core_tags wagtailcore_tags i18n %}
+{% load i18n wagtailcore_tags core_tags %}
 
 <div class="navigation f-medium l-indent  {{extra_classes}}">
   <a href="/">{% trans "Home" %}</a>
-  {% for section in request.site.root_page.specific.sections %}
-  <a href="{% pageurl section %}">{{section.title}}</a>
+  {% load_sections as sections %}
+  {% for section in sections %}
+    <a href="{% pageurl section %}">{{section.title}}</a>
   {% endfor %}
 </div>
