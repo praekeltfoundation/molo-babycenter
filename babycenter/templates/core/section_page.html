@@ -7,7 +7,7 @@
   <h1 class="l-indent heading heading{{self.get_effective_extra_style_hints}}">
     {{self.title}}
   </h1>
-  {% load_child_articles_for_section self as articles %}
+  {% load_child_articles_for_section self count=13 as articles %}
   <ul class="article-list">
   {% for article in articles %}
     <li class="l-indent l-indent--tall article-list__item">
@@ -18,4 +18,19 @@
     </li>
   {% endfor %}
   </ul>
+
+  {% if articles %}
+  <div class="step-links l-indent l-indent--tall">
+    {% if articles_paginated.has_previous %}
+        <a href="?p={{ articles_paginated.previous_page_number }}">&larr;</a>
+    {% endif %}
+    <span class="current">
+        Page {{ articles_paginated.number }} of {{ articles_paginated.paginator.num_pages }}
+    </span>
+    {% if articles_paginated.has_next %}
+        <a href="?p={{ articles_paginated.next_page_number }}">&rarr;</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
 {% endblock %}
