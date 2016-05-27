@@ -39,7 +39,9 @@
           {% endfor %}
         </ol>
       {% else %}
+        {% if not block.block_type == 'page'%}
           {{ block }}
+        {% endif %}
       {% endif %}
     {% endfor %}
   </article>
