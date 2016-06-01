@@ -1,4 +1,4 @@
-{% load wagtailcore_tags core_tags i18n %}
+{% load wagtailcore_tags wagtailimages_tags core_tags i18n %}
 
 {% for section in sections %}
   <h1 class="heading heading{{section.get_effective_extra_style_hints}} l-indent f-big">
@@ -8,7 +8,10 @@
   <ul class="article-list article-list{{section.get_effective_extra_style_hints}}">
     {% for article in featured_articles %}
     <li class="article-list__item l-indent l-indent--tall">
-       <a href="{% pageurl article %}">
+        <a href="{% pageurl article %}">
+            {% if section.image %}
+                {% image section.image width-80 class="article__image article__image--square" %}
+            {% endif %}
             <h2 class="article-list__title">{{article.title}}</h2>
             <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
         </a>
