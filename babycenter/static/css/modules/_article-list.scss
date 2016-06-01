@@ -4,6 +4,7 @@
 
   a {
     color: #666;
+
   }
 }
 
@@ -13,7 +14,8 @@
 
 .article-list__title {
   font-weight: bold;
-  display: inline;
+  display: block;
+
 
   &:after {
     content: ": ";
