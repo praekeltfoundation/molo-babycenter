@@ -1,11 +1,14 @@
 
 .article-list__item {
   border-bottom: 1px #e6e6e6 solid;
-
   a {
     color: #666;
 
   }
+}
+
+.article-list__item--category {
+  display: flex;
 }
 
 .article-list__item--more {
