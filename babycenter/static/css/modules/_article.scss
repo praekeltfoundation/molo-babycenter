@@ -11,7 +11,12 @@
 }
 
 .article__date {
-  color: #999;
+  color: #ccc;
+}
+
+.article__date--italic  {
+   font-style: italic;
+   margin: 0;
 }
 
 .article__image {

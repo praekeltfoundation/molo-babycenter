@@ -14,6 +14,7 @@
             {% endif %}
             <h2 class="article-list__title">{{article.title}}</h2>
             <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
+            <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
         </a>
     </li>
     {% endfor %}
