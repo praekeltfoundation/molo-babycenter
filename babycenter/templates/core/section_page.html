@@ -15,7 +15,7 @@
         <h3 class="article-list__title article-list__title{{self.get_effective_extra_style_hints}}">{{article.title}}</h3>
       </a>
       <p class="article-list__subtitle">{{article.subtitle}}</p>
-      <p class="section-article_date article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
+      <p class="article__date article__date--italic  f-small">{{self.first_published_at | date:"j F Y"}}</p>
     </li>
   {% endfor %}
   </ul>

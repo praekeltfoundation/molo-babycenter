@@ -14,12 +14,6 @@
 
 .article-list__title {
   font-weight: bold;
-  display: block;
-
-
-  &:after {
-    content: ": ";
-  }
 }
 
 .article-list__subtitle {
