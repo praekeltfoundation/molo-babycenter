@@ -11,6 +11,7 @@ ENV DJANGO_SETTINGS_MODULE babycenter.settings.docker
 WORKDIR /deploy/
 
 COPY babycenter /deploy/babycenter
+COPY locale /deploy/locale
 ADD manage.py /deploy/
 ADD requirements.txt /deploy/
 ADD setup.py /deploy/
