@@ -10,12 +10,13 @@ def get_pages(page, padding=2, edge_padding=2):
 
     start = []
     end = []
-    if (page.number > 2):
+    if (page.number > edge_padding):
         start = pages[:edge_padding]
-    if (page.number < 14):
+    if (page.number <= len(pages) - edge_padding):
         end = pages[-edge_padding:]
     before_current = list(set(pages[curr - padding:curr]) - set(start))
-    after_current = list(set(pages[page.number:page.number + padding]) - set(end))
+    after_current = list(set(
+        pages[page.number:page.number + padding]) - set(end))
 
     ellipses_before = curr > edge_padding + padding
     ellipses_after = page.number < len(pages) - (edge_padding + padding)
