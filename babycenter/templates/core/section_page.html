@@ -37,27 +37,27 @@
     {% endif %}
 
     {% get_pages articles_paginated as pages %}
-      {% for page in pages.start %}
-        <a href="?p={{ page }}">{{ page }}</a>
-      {% endfor %}
-      {% if pages.ellipses_before %}
-        ...
-      {% endif %}
-      {% for page in pages.before_current %}
-        <a href="?p={{ page }}">{{ page}}</a>
-      {% endfor %}
-      <span class="current">
-          {{ articles_paginated.number }}
-      </span>
-      {% for page in pages.after_current %}
-        <a href="?p={{ page }}">{{ page }}</a>
-      {% endfor %}
-      {% if pages.ellipses_after %}
-        ...
-      {% endif %}
-      {% for page in pages.end %}
-        <a href="?p={{ page }}">{{ page }}</a>
-      {% endfor %}
+    {% for page in pages.start %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
+    {% if pages.ellipses_before %}
+      ...
+    {% endif %}
+    {% for page in pages.before_current %}
+      <a href="?p={{ page }}">{{ page}}</a>
+    {% endfor %}
+    <span class="current">
+        {{ articles_paginated.number }}
+    </span>
+    {% for page in pages.after_current %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
+    {% if pages.ellipses_after %}
+      ...
+    {% endif %}
+    {% for page in pages.end %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
 
     {% if articles_paginated.has_next %}
         <a href="?p={{ articles_paginated.next_page_number }}">Next ></a>
