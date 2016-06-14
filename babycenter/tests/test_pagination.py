@@ -1,6 +1,4 @@
-from django.core.urlresolvers import reverse
 from django.test import TestCase, Client
-from django.contrib.auth.models import User
 from molo.core.tests.base import MoloTestCaseMixin
 
 from molo.core.models import SiteLanguage
@@ -56,7 +54,6 @@ class RegistrationViewTest(TestCase, MoloTestCaseMixin):
         self.assertContains(response, '<a href="?p=15">15</a>')
         self.assertContains(response, '<a href="?p=16">16</a>')
         self.assertContains(response, 'Next')
-
 
     def test_fifth_page_pagination(self):
         response = self.client.get('/sections/english-section/?p=5')
