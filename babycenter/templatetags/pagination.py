@@ -10,11 +10,15 @@ def get_pages(page, padding=2, edge_padding=2):
 
     start = []
     end = []
+    before_current = []
     if (page.number > edge_padding):
         start = pages[:edge_padding]
     if (page.number <= len(pages) - edge_padding):
         end = pages[-edge_padding:]
-    before_current = list(set(pages[curr - padding:curr]) - set(start))
+    if page.number == 2:
+        before_current.append(1)
+    else:
+        before_current = list(set(pages[curr - padding:curr]) - set(start))
     after_current = list(set(
         pages[page.number:page.number + padding]) - set(end))
 
