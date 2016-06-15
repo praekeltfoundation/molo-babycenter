@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load core_tags i18n %}
+{% load core_tags i18n pagination %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
@@ -33,13 +33,34 @@
   {% if articles %}
   <div class="step-links l-indent l-indent--tall">
     {% if articles_paginated.has_previous %}
-        <a href="?p={{ articles_paginated.previous_page_number }}">&larr;</a>
+      <a href="?p={{ articles_paginated.previous_page_number }}">< Prev</a>
     {% endif %}
+
+    {% get_pages articles_paginated as pages %}
+    {% for page in pages.start %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
+    {% if pages.ellipses_before %}
+      ...
+    {% endif %}
+    {% for page in pages.before_current %}
+      <a href="?p={{ page }}">{{ page}}</a>
+    {% endfor %}
     <span class="current">
-        Page {{ articles_paginated.number }} of {{ articles_paginated.paginator.num_pages }}
+        {{ articles_paginated.number }}
     </span>
+    {% for page in pages.after_current %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
+    {% if pages.ellipses_after %}
+      ...
+    {% endif %}
+    {% for page in pages.end %}
+      <a href="?p={{ page }}">{{ page }}</a>
+    {% endfor %}
+
     {% if articles_paginated.has_next %}
-        <a href="?p={{ articles_paginated.next_page_number }}">&rarr;</a>
+        <a href="?p={{ articles_paginated.next_page_number }}">Next ></a>
     {% endif %}
   </div>
   {% endif %}
