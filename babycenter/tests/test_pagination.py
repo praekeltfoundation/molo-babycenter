@@ -60,7 +60,6 @@ class RegistrationViewTest(TestCase, MoloTestCaseMixin):
         self.assertContains(response, 'Prev')
         self.assertContains(response, '<a href="?p=1">1</a>')
         self.assertContains(response, '<a href="?p=2">2</a>')
-        self.assertContains(response, '...')
         self.assertContains(response, '<a href="?p=3">3</a>')
         self.assertContains(response, '<a href="?p=4">4</a>')
         self.assertContains(response, '<a href="?p=6">6</a>')
