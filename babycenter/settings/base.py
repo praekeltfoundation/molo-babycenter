@@ -70,8 +70,10 @@ INSTALLED_APPS = [
     'wagtail.wagtailforms',
     'wagtailmodeladmin',
     'wagtail.contrib.settings',
+    'wagtailsurveys',
 
     'molo.usermetadata',
+    'molo.surveys',
     'mptt',
 
     'raven.contrib.django.raven_compat',
