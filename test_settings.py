@@ -1,4 +1,4 @@
-from babycenter.settings import *
+from babycenter.settings import *  # noqa
 
 DATABASES = {
     'default': {
