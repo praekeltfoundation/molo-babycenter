@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load core_tags i18n %}
+{% load core_tags i18n molo_survey_tags %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
@@ -43,5 +43,7 @@
     {% endif %}
   </div>
   {% endif %}
+
+{% surveys_list_for_pages page=self %}
 
 {% endblock %}

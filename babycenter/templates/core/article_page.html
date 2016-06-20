@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load static core_tags %}
+{% load static core_tags molo_survey_tags %}
 {% load wagtailcore_tags wagtailimages_tags i18n %}
 
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
@@ -61,5 +61,7 @@
                 <a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></li>
         </ul>
     {% endwith %}
+
+{% surveys_list_for_pages page=self %}
 
 {% endblock %}
