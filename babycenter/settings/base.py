@@ -201,6 +201,8 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ti', _('Tifinar')),
     ('ku', _('Kurdish')),
     ('ar', _('Aramaic')),
+    ('kr', _('Kreyòl')),
+
 ]
 
 EXTRA_LANG_INFO = {
