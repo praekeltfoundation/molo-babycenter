@@ -264,25 +264,13 @@ EXTRA_LANG_INFO = {
         'bidi': False,
         'code': 'yo',
         'name': 'Yoruba',
-        'name_local': 'Yoruba'
-    },
-    'nr': {
-        'bidi': False,
-        'code': 'nr',
-        'name': 'Ndebele',
-        'name_local': 'Ndebele'
-    },
-    'wo': {
-        'bidi': False,
-        'code': 'wo',
-        'name': 'Wolof',
-        'name_local': 'Wolof'
+        'name_local': 'Yorùbá'
     },
     'ig': {
         'bidi': False,
         'code': 'ig',
         'name': 'Igbo',
-        'name_local': 'Ibo'
+        'name_local': 'Igbo'
     },
     'ha': {
         'bidi': False,
@@ -294,25 +282,25 @@ EXTRA_LANG_INFO = {
         'bidi': False,
         'code': 'am',
         'name': 'Amharic',
-        'name_local': 'Amharic'
+        'name_local': 'አማርኛ'
     },
     'ms': {
         'bidi': False,
         'code': 'ms',
         'name': 'Malay',
-        'name_local': 'Malay'
+        'name_local': 'Malaysia'
     },
     'gn': {
         'bidi': False,
         'code': 'gn',
         'name': 'Guarani',
-        'name_local': 'Guarani'
+        'name_local': 'Karaiñe’ême'
     },
     'gu': {
         'bidi': False,
         'code': 'gu',
         'name': 'Gujarati',
-        'name_local': 'Gujarati'
+        'name_local': 'ગુજરાતી'
     },
     'fil': {
         'bidi': False,
@@ -327,40 +315,40 @@ EXTRA_LANG_INFO = {
         'name_local': 'N\'ko'
     },
     'sys': {
-        'bidi': False,
+        'bidi': True,
         'code': 'sys',
         'name': 'Syriac',
-        'name_local': 'Syriac'
+        'name_local': 'ગુજરાતી'
     },
     'dv': {
         'bidi': False,
         'code': 'dv',
         'name': 'Dhivehi',
-        'name_local': 'Thaana'
+        'name_local': 'Dhivehi'
     },
     'ber': {
         'bidi': False,
         'code': 'ber',
         'name': 'Berber',
-        'name_local': 'Tifinar'
+        'name_local': 'Tamaziɣt'
     },
     'ku': {
         'bidi': False,
         'code': 'ku',
         'name': 'Kurdish',
-        'name_local': 'Kurdish'
+        'name_local': 'Kurdî'
     },
     'arc': {
         'bidi': False,
         'code': 'arc',
         'name': 'Aramaic',
-        'name_local': 'Aramaic'
+        'name_local': 'ܐܪܡܝܐ‎'
     },
     'ht': {
         'bidi': False,
         'code': 'kr',
         'name': 'Creole Haitian',
-        'name_local': 'kreyol'
+        'name_local': 'Kreyòl ayisyen'
     },
 }
 
