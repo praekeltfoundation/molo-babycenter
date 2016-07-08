@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.search input {
+.search input[type="text"] {
   border: 1px #000 solid;
+  margin: 10px 0;
   width: 80%;
 }
