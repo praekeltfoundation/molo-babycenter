@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for base babycenter.
 
@@ -188,20 +189,20 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('nr', _('Ndebele')),
     ('wo', _('Wolof')),
     ('yo', _('Yoruba')),
-    ('ib', _('Ibo')),
+    ('ig', _('Igbo')),
     ('ha', _('Hausa')),
     ('am', _('Amharic')),
     ('ms', _('Malay')),
-    ('gr', _('Guarani')),
+    ('gn', _('Guarani')),
     ('gu', _('Gujarati')),
-    ('fi', _('Filipino')),
-    ('nq', _('N\'ko')),
-    ('sy', _('Syriac')),
-    ('th', _('Thaana')),
-    ('ti', _('Tifinar')),
+    ('fil', _('Filipino')),
+    ('nqo', _('N\'ko')),
+    ('sys', _('Syriac')),
+    ('dv', _('Dhivehi')),
+    ('ber', _('Berber')),
     ('ku', _('Kurdish')),
-    ('ar', _('Aramaic')),
-    ('kr', _('kreyol')),
+    ('arc', _('Aramaic')),
+    ('ht', _('Creole Haitian')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -277,10 +278,10 @@ EXTRA_LANG_INFO = {
         'name': 'Wolof',
         'name_local': 'Wolof'
     },
-    'ib': {
+    'ig': {
         'bidi': False,
-        'code': 'ib',
-        'name': 'Ibo',
+        'code': 'ig',
+        'name': 'Igbo',
         'name_local': 'Ibo'
     },
     'ha': {
@@ -295,15 +296,15 @@ EXTRA_LANG_INFO = {
         'name': 'Amharic',
         'name_local': 'Amharic'
     },
-    'ma': {
+    'ms': {
         'bidi': False,
-        'code': 'ma',
+        'code': 'ms',
         'name': 'Malay',
         'name_local': 'Malay'
     },
-    'gu': {
+    'gn': {
         'bidi': False,
-        'code': 'gu',
+        'code': 'gn',
         'name': 'Guarani',
         'name_local': 'Guarani'
     },
@@ -313,34 +314,34 @@ EXTRA_LANG_INFO = {
         'name': 'Gujarati',
         'name_local': 'Gujarati'
     },
-    'fi': {
+    'fil': {
         'bidi': False,
-        'code': 'fi',
+        'code': 'fil',
         'name': 'Filipino',
         'name_local': 'Filipino'
     },
-    'nk': {
+    'nqo': {
         'bidi': False,
-        'code': 'nk',
+        'code': 'nqo',
         'name': 'N\'ko',
         'name_local': 'N\'ko'
     },
-    'sy': {
+    'sys': {
         'bidi': False,
-        'code': 'sy',
+        'code': 'sys',
         'name': 'Syriac',
         'name_local': 'Syriac'
     },
-    'th': {
+    'dv': {
         'bidi': False,
-        'code': 'th',
-        'name': 'Thaana',
+        'code': 'dv',
+        'name': 'Dhivehi',
         'name_local': 'Thaana'
     },
-    'ti': {
+    'ber': {
         'bidi': False,
-        'code': 'ti',
-        'name': 'Tifinar',
+        'code': 'ber',
+        'name': 'Berber',
         'name_local': 'Tifinar'
     },
     'ku': {
@@ -349,16 +350,16 @@ EXTRA_LANG_INFO = {
         'name': 'Kurdish',
         'name_local': 'Kurdish'
     },
-    'ar': {
+    'arc': {
         'bidi': False,
-        'code': 'ar',
+        'code': 'arc',
         'name': 'Aramaic',
         'name_local': 'Aramaic'
     },
-    'kr': {
+    'ht': {
         'bidi': False,
         'code': 'kr',
-        'name': 'kreyol',
+        'name': 'Creole Haitian',
         'name_local': 'kreyol'
     },
 }
