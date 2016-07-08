@@ -19,8 +19,10 @@
   <h1 class="article__title">{{self.title}}</h1>
 
   {% if self.image %}
-    {% image self.image width-288 as article_image %}
-    <img src="{{ article_image.url }}" class="article__image" />
+    <div class="article__image">
+      {% image self.image width-288 as article_image %}
+      <img src="{{ article_image.url }}" />
+    </div>
   {% endif %}
 
   <article>
