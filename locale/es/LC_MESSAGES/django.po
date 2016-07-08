@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-03 12:11+0200\n"
+"POT-Creation-Date: 2016-07-08 14:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,36 +17,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: babycenter/settings/base.py:177
+#: babycenter/settings/base.py:182
 msgid "Zulu"
 msgstr ""
 
-#: babycenter/settings/base.py:178
+#: babycenter/settings/base.py:183
 msgid "Xhosa"
 msgstr ""
 
-#: babycenter/settings/base.py:179
+#: babycenter/settings/base.py:184
 msgid "Sotho"
 msgstr ""
 
-#: babycenter/settings/base.py:180
+#: babycenter/settings/base.py:185
 msgid "Venda"
 msgstr ""
 
-#: babycenter/settings/base.py:181
+#: babycenter/settings/base.py:186
 msgid "Tswana"
 msgstr ""
 
-#: babycenter/settings/base.py:182
+#: babycenter/settings/base.py:187
 msgid "Tsonga"
 msgstr ""
 
-#: babycenter/settings/base.py:183
+#: babycenter/settings/base.py:188
 msgid "Swati"
 msgstr ""
 
-#: babycenter/settings/base.py:184
+#: babycenter/settings/base.py:189
 msgid "Ndebele"
+msgstr ""
+
+#: babycenter/settings/base.py:190
+msgid "Wolof"
+msgstr ""
+
+#: babycenter/settings/base.py:191
+msgid "Yoruba"
+msgstr ""
+
+#: babycenter/settings/base.py:192
+msgid "Igbo"
+msgstr ""
+
+#: babycenter/settings/base.py:193
+msgid "Hausa"
+msgstr ""
+
+#: babycenter/settings/base.py:194
+msgid "Amharic"
+msgstr ""
+
+#: babycenter/settings/base.py:195
+msgid "Malay"
+msgstr ""
+
+#: babycenter/settings/base.py:196
+msgid "Guarani"
+msgstr ""
+
+#: babycenter/settings/base.py:197
+msgid "Gujarati"
+msgstr ""
+
+#: babycenter/settings/base.py:198
+msgid "Filipino"
+msgstr ""
+
+#: babycenter/settings/base.py:199
+msgid "N'ko"
+msgstr ""
+
+#: babycenter/settings/base.py:200
+msgid "Syriac"
+msgstr ""
+
+#: babycenter/settings/base.py:201
+msgid "Dhivehi"
+msgstr ""
+
+#: babycenter/settings/base.py:202
+msgid "Berber"
+msgstr ""
+
+#: babycenter/settings/base.py:203
+msgid "Kurdish"
+msgstr ""
+
+#: babycenter/settings/base.py:204
+msgid "Aramaic"
+msgstr ""
+
+#: babycenter/settings/base.py:205
+msgid "Creole Haitian"
 msgstr ""
 
 #: babycenter/templates/403.html:8
