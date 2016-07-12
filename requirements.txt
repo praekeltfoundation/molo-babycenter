@@ -1,4 +1,4 @@
-molo.core==3.2.3
+molo.core==3.2.6
 molo.surveys==1.0.0
 gunicorn
 psycopg2
