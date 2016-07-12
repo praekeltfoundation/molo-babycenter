@@ -3,6 +3,18 @@
   a {
     color: $orange;
   }
+
+  ul, ol, li {
+      list-style-position: inside;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
 }
 
 .article__title {
