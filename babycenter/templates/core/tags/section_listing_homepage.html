@@ -1,26 +1,34 @@
 {% load wagtailcore_tags wagtailimages_tags core_tags i18n %}
 
+{% if sections %}
 {% for section in sections %}
-  <h1 class="heading heading{{section.get_effective_extra_style_hints}} l-indent f-big">
-    <a href="{% pageurl section %}">{{section.title}}</a>
-  </h1>
-  {% load_descendant_articles_for_section section featured_in_homepage=True as featured_articles %}
-  <ul class="article-list article-list{{section.get_effective_extra_style_hints}}">
-    {% for article in featured_articles %}
-    <li class="article-list__item l-indent l-indent--tall">
-        <a href="{% pageurl article %}">
 
-            {% if article.image %}
-            <div class="article-list__image">
-              {% image article.image width-45 height-45  %}
-            </div>
-            {% endif %}
-            <h2 class="article-list__title">{{article.title}}</h2>
-            <h4 class="article-list__subtitle">{{article.subtitle}}</h4>
-            <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
-        </a>
-    </li>
-    {% endfor %}
-    <li class="article-list__item article-list__item--more l-indent"><a href="{% pageurl section %}">{% trans "More" %} {{section.title}} &gt;</a></li>
-  </ul>
+	{% load_child_sections_for_section section as sub_sections %}
+	{% if sub_sections %}
+	<h3 class="section-title section-title{{section.get_effective_extra_style_hints}}">{{section.title}}</h3>
+		{% for sub_section in sub_sections %}
+		<div class="section-list section-list{{section.get_effective_extra_style_hints}}">
+			{% load_descendant_articles_for_section sub_section featured_in_homepage=True as featured_articles %}
+			{% if featured_articles %}
+				<h4 class="section-list__title">{{sub_section.title}}</h4>
+				<ul class="article-list">
+					{% for article in featured_articles %}
+						<li class="article-list__item">{{article.title}}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+		{% endfor %}
+	{% endif %}
+
+{#{% load_descendant_articles_for_section section featured_in_homepage=True as articles %}#}
+{#{% if articles %}#}
+{#{{section.title}}#}
+{#{{sub_section.title}}#}
+{#{% for featured_article in articles %}#}
+{#{{featured_article.title}}#}
+{#{% endfor %}#}
+{#{% endif %}#}
 {% endfor %}
+{% endif %}
+
