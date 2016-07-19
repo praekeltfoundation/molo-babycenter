@@ -27,6 +27,10 @@
 	padding: 4px 16px;
 }
 
+.article__subtitle {
+	padding: 0 16px;
+}
+
 .article__date {
 	color: #ccc;
 }
@@ -39,10 +43,10 @@
 .article__image {
 	padding: 0 16px;
 	img {
+		display: block;
 		width: 100%;
 	}
 }
-
 
 .article__link {
 	border-bottom: 1px #e6e6e6 solid;
