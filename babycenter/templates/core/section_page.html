@@ -4,13 +4,13 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
-  <h1 class="l-indent heading heading{{self.get_effective_extra_style_hints}}">
+  <h1 class="heading heading{{self.get_effective_extra_style_hints}}">
     {{self.title}}
   </h1>
-  {% load_child_articles_for_section self count=13 as articles %}
+  {% load_child_articles_for_section self count=3 as articles %}
   <ul class="article-list">
   {% for article in articles %}
-    <li class="l-indent l-indent--tall article-list__item article-list__item--category">
+    <li class="article-list__item article-list__item--category">
       <a href="{% pageurl article %}">
 
           {% if article.image %}
@@ -27,7 +27,7 @@
   </ul>
 
   {% if articles %}
-  <div class="step-links l-indent l-indent--tall">
+  <div class="pagination">
     {% if articles_paginated.has_previous %}
       <a href="?p={{ articles_paginated.previous_page_number }}">< Prev</a>
     {% endif %}

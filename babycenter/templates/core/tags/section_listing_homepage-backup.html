@@ -10,8 +10,6 @@
 		<a href="{% pageurl section %}">{{section.title}}</a>
 	</h1>
 
-
-
 		<h3>{{sub_section.title}}</h3>
 		<ul class="article-list">
 		{% for article in featured_articles %}
@@ -36,3 +34,13 @@
 
 {% endfor %}
 {% endif %}
+
+
+{#{% load_descendant_articles_for_section section featured_in_homepage=True as articles %}#}
+{#{% if articles %}#}
+{#{{section.title}}#}
+{#{{sub_section.title}}#}
+{#{% for featured_article in articles %}#}
+{#{{featured_article.title}}#}
+{#{% endfor %}#}
+{#{% endif %}#}

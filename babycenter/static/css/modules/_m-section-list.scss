@@ -2,11 +2,35 @@
 	background: #B1B1B1;
 	color: #fff;
 	padding: 6px 20px;
+	a {
+		color: #fff;
+		display: block;
+	}
+}
+
+.section-title--orange {
+	background: $orange;
 }
 
 .section-list__title {
 	color: #fff;
 	background: rgba(177,177,177,0.7);
 	padding: 6px 20px;
+	a {
+		color: #fff;
+	}
+}
 
+.section-list__more {
+	padding: 10px 15px;
+	color: #fff;
+	font-weight: bold;
+	&:after {
+		content: ">";
+		padding: 0 10px;
+	}
+}
+
+.section-list__more--footer {
+	color: #666;
 }

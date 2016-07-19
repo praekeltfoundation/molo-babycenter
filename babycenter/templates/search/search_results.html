@@ -22,7 +22,7 @@
   {% endfor %}
   </ul>
 
-  <div class="step-links l-indent l-indent--tall">
+  <div class="pagination">
     {% if search_results.has_previous %}
         <a href="?p={{ search_results.previous_page_number }}&amp;q={{search_query}}">&larr;</a>
     {% endif %}

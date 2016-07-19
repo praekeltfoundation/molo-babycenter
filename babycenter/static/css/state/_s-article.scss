@@ -1,0 +1,11 @@
+@each $name, $color in $color_list {
+	.heading--back.heading--#{$name} {
+		background-color: transparent;
+		color: $color;
+		border-bottom: 1px #e6e6e6 solid;
+	}
+
+	.article__links--#{$name} .article__link--more a {
+		color: $color;
+	}
+}

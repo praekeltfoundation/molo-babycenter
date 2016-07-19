@@ -1,62 +1,56 @@
 
 .article  {
-  a {
-    color: $orange;
-  }
+	a {
+		color: $orange;
+	}
 
-  ul, ol, li {
-      list-style-position: inside;
-  }
+	ul, ol, li {
+			list-style-position: inside;
+	}
 
-  ul li {
-    list-style-type: disc;
-  }
+	ul li {
+		list-style-type: disc;
+	}
 
-  ol li {
-    list-style-type: decimal;
-  }
+	ol li {
+		list-style-type: decimal;
+	}
+}
+
+.article-content {
+	padding: 10px 20px;
 }
 
 .article__title {
-  margin: 16px 0;
-  font-weight: bold;
+	margin: 16px 0;
+	font-weight: bold;
+	padding: 4px 16px;
 }
 
 .article__date {
-  color: #ccc;
+	color: #ccc;
 }
 
 .article__date--italic  {
-   font-style: italic;
-   margin: 0;
+	 font-style: italic;
+	 margin: 0;
 }
 
 .article__image {
-  img {
-    width: 100%;
-  }
+	padding: 0 16px;
+	img {
+		width: 100%;
+	}
 }
-
 
 
 .article__link {
-  border-bottom: 1px #e6e6e6 solid;
-  a {
-    color: #666;
-  }
+	border-bottom: 1px #e6e6e6 solid;
+	padding: 16px;
+	a {
+		color: #666;
+	}
 }  
 .article__link--more {
-   font-weight: bold;
+	 font-weight: bold;
  }
-
-@each $name, $color in $color_list {
-  .heading--back.heading--#{$name} {
-    background-color: transparent;
-    color: $color;
-    border-bottom: 1px #e6e6e6 solid;
-  }
-
-  .article__links--#{$name} .article__link--more a {
-    color: $color;
-  }
-}
