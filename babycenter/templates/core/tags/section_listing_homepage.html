@@ -2,11 +2,10 @@
 
 {% if sections %}
 {% for section in sections %}
-
 	{% load_child_sections_for_section section count=3 as sub_sections %}
 	{% if sub_sections %}
 	<div class="section-list section-list{{section.get_effective_extra_style_hints}}">
-		<h2 class="section-title">
+		<h2 class="section__title">
 			<a href="{% pageurl section %}">{{section.title}}</a>
 		</h2>
 		{% for sub_section in sub_sections %}
@@ -34,10 +33,8 @@
 				</div>
 			{% endif %}
 		{% endfor %}
-
 	</div>
 	{% endif %}
-
 {% endfor %}
 {% endif %}
 

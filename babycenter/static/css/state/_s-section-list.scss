@@ -1,6 +1,6 @@
 @each $name, $color in $color_list {
 	.section-list--#{$name} {
-		.section-title {
+		.section__title {
 			background: $color;
 		}
 		.section-list__title {
