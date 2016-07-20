@@ -6,11 +6,8 @@
   {% for article in articles %}
   <li class="article-list__item article-list__item{{article.get_parent_section.get_effective_extra_style_hints}} l-indent l-indent--tall">
     <a href="{% pageurl article %}">
-
         {% if article.image %}
-        <div class="article-list__image">
-          {% image article.image width-45 height-45  %}
-        </div>
+          {% image article.image width-45 height-45 class="article-list__image"  %}
         {% endif %}
         <h3 class="article-list__section f-small">{{ article.get_parent_section.title }}</h3>
         <h2 class="article-list__title">{{ article.title }}</h2>

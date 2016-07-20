@@ -47,3 +47,5 @@ docs/_build
 media/
 
 *.pgfav
+
+.cache/

@@ -8,14 +8,12 @@
 {% block content %}
 
 {% with section=self.get_parent_section %}
-<a href="{% pageurl section %}">
-  <h2 class="l-indent heading heading{{section.get_effective_extra_style_hints}}">
-    {{section.title}}
+  <h2 class="heading heading{{section.get_effective_extra_style_hints}}">
+    <a href="{% pageurl section %}">{{section.title}}</a>
   </h2>
-</a>
 {% endwith %}
 
-<div class="l-indent article article{{self.get_parent_section.get_effective_extra_style_hints}}">
+<div class="article article{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
 
   {% if self.image %}
@@ -25,7 +23,7 @@
     </div>
   {% endif %}
 
-  <article>
+  <div class="article-content">
     {% for block in self.body %}
       {% if block.block_type == 'heading' %}
           <h4>{{ block.value }}</h4>
@@ -43,23 +41,24 @@
         {% endif %}
       {% endif %}
     {% endfor %}
-  </article>
-
-  <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
+    <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
+  </div>
 </div>
     {% with section=self.get_parent_section %}
-        <h2 class="l-indent heading heading{{ section.get_effective_extra_style_hints }}">
-            {% trans "More Information" %}
-        </h2>
+        
         <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
             {% for block in self.body %}
                 {% if block.block_type == 'page' %}
-                    <li class="article__link l-indent l-indent--tall">
+                    <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
+                        <a href="">{% trans "More Information" %}</a>
+                    </h2>
+                    <li class="article__link">
                         <a href="{% pageurl block.value %}">{{ block.value }}</a>
                     </li>
+
                 {% endif %}
             {% endfor %}
-            <li class="article__link article__link--more l-indent l-indent--tall">
+            <li class="article__link article__link--more">
                 <a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></li>
         </ul>
     {% endwith %}

@@ -7,14 +7,14 @@
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
 {% block content %}
-<div class="articles nav">
-  <h3 class="article-title">{{self.title}}</h3>
-  <p>{{self.subtitle}}</p>
+<div class="article">
+  <h3 class="article__title">{{self.title}}</h3>
+  <p class="article__subtitle">{{self.subtitle}}</p>
   {% if self.image %}
   <div class="banner">{% image self.image width-240 %}</div>
   {% endif %}
 
-<article>
+  <div class="article-content">
   {% for block in self.body %}
       {% if block.block_type == 'heading' %}
           <h1>{{ block.value }}</h1>
@@ -34,7 +34,7 @@
       {% endif %}
       {% endif %}
   {% endfor %}
-</article>
+  </div>
 </div>
 {% endblock %}
 
