@@ -8,11 +8,9 @@
 {% block content %}
 
 {% with section=self.get_parent_section %}
-<a href="{% pageurl section %}">
   <h2 class="heading heading{{section.get_effective_extra_style_hints}}">
-    {{section.title}}
+    <a href="{% pageurl section %}">{{section.title}}</a>
   </h2>
-</a>
 {% endwith %}
 
 <div class="article article{{self.get_parent_section.get_effective_extra_style_hints}}">
@@ -47,15 +45,17 @@
   </div>
 </div>
     {% with section=self.get_parent_section %}
-        <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
-            <a href="">{% trans "More Information" %}</a>
-        </h2>
+        
         <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
             {% for block in self.body %}
                 {% if block.block_type == 'page' %}
+                    <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
+                        <a href="">{% trans "More Information" %}</a>
+                    </h2>
                     <li class="article__link">
                         <a href="{% pageurl block.value %}">{{ block.value }}</a>
                     </li>
+
                 {% endif %}
             {% endfor %}
             <li class="article__link article__link--more">

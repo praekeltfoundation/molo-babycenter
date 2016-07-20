@@ -1,10 +1,8 @@
 molo.core==3.2.8
 molo.surveys==1.0.0
-molo.usermetadata==1.0.2
-django-extensions
-six>=1.9
-django-contrib-comments
-django-overextends
 gunicorn
 psycopg2
+django-extensions
+molo.usermetadata==1.0.2
+six>=1.9
 html5lib==0.9999999

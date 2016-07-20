@@ -7,11 +7,13 @@
 
 	{% if self.get_parent_section %}
 		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
-			{{self.get_parent_section}}
+			<a href="{% pageurl self.get_parent_section %}">{{self.get_parent_section}}</a>
 		</h1>
-		<h2 class="heading heading--subsection heading--subsection{{self.get_effective_extra_style_hints}}">{{self.title}}</h2>
+		<h2 class="heading heading--subsection heading--subsection{{self.get_effective_extra_style_hints}}">
+		{{self.title}}</h2>
 	{% else %}
-		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">{{self.title}}</h1>
+		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
+		{{self.title}}</h1>
 	{% endif %}
 
 	{% load_child_articles_for_section self count=13 as articles %}
@@ -73,7 +75,7 @@
 	</div>
 	{% endif %}
 
-{% load_child_sections_for_section self  count=3 as sections %}
+{% load_child_sections_for_section self as sections %}
 {% if sections %}
 	<div class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
 	{% for section in sections %}
