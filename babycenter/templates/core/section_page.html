@@ -7,6 +7,10 @@
 
 
 	<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
+		{% if self.get_parent_section %}
+			{{self.get_parent_section}}<br>
+		{% endif %}
+
 		{{self.title}}
 	</h1>
 
