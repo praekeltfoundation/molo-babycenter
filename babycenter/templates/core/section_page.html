@@ -71,7 +71,7 @@
 
 {% load_child_sections_for_section self as sections %}
 {% if sections %}
-	<ul class="subsection-list subsection-list{{self.get_effective_extra_style_hints}}">
+	<ul class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
 	{% for section in sections %}
 		<li class="subsection-list__item">
 			<a href="{% pageurl section %}" class="subsection-list__title">{{section.title}}</a>
