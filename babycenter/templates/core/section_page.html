@@ -5,16 +5,16 @@
 
 {% block content %}
 
+	{% if self.get_parent_section %}
+		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
+			{{self.get_parent_section}}
+		</h1>
+		<h2 class="heading heading--subsection heading--subsection{{self.get_effective_extra_style_hints}}">{{self.title}}</h2>
+	{% else %}
+		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">{{self.title}}</h1>
+	{% endif %}
 
-	<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
-		{% if self.get_parent_section %}
-			{{self.get_parent_section}}<br>
-		{% endif %}
-
-		{{self.title}}
-	</h1>
-
-	{% load_child_articles_for_section self count=2 as articles %}
+	{% load_child_articles_for_section self count=3 as articles %}
 	<ul class="article-list">
 	{% for article in articles %}
 		<li class="article-list__item article-list__item--category">
@@ -35,7 +35,7 @@
 	{% if articles %}
 	<div class="pagination">
 		{% if articles_paginated.has_previous %}
-			<a href="?p={{ articles_paginated.previous_page_number }}">< Prev</a>
+			<a href="?p={{ articles_paginated.previous_page_number }}">&lt; Prev</a>
 		{% endif %}
 
 		{% get_pages articles_paginated as pages %}
@@ -68,18 +68,38 @@
 		{% endfor %}
 		
 		{% if articles_paginated.has_next %}
-				<a href="?p={{ articles_paginated.next_page_number }}">Next ></a>
+				<a href="?p={{ articles_paginated.next_page_number }}">Next &gt;</a>
 		{% endif %}
 	</div>
 	{% endif %}
 
-{% load_child_sections_for_section self as sections %}
+{% load_child_sections_for_section self  count=3 as sections %}
 {% if sections %}
-	<ul class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
+	<div class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
 	{% for section in sections %}
 		<li class="subsection-list__item">
 			<a href="{% pageurl section %}" class="subsection-list__title">{{section.title}}</a>
 		</li>
+		{% load_descendant_articles_for_section section featured_in_section=True count=2 as featured_articles %}
+    {% if featured_articles %}
+    	<ul class="article-list">
+    		{% for article in featured_articles %}
+    			<li class="article-list__item">
+    				<a href="{% pageurl article %}">
+							{% if article.image %}
+							<div class="article-list__image">
+								{% image article.image width-45 height-45  %}
+							</div>
+							{% endif %}
+							<h2 class="article-list__title">{{article.title}}</h2>
+							<h4 class="article-list__subtitle">{{article.subtitle}}</h4>
+							<p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
+						</a>
+    			</li>
+    		{% endfor %}
+    	</ul>
+    {% endif %}
+
 	{% endfor %}
 	</ul>
 {% endif %}

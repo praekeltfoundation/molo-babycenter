@@ -48,7 +48,7 @@
 </div>
     {% with section=self.get_parent_section %}
         <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
-            {% trans "More Information" %}
+            <a href="">{% trans "More Information" %}</a>
         </h2>
         <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
             {% for block in self.body %}
