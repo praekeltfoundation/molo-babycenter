@@ -1,0 +1,11 @@
+@each $name, $color in $color_list {
+	.subsection-list--#{$name} {
+		.subsection-list__item {
+			border-bottom: 1px solid rgba($color,0.7);
+		}
+	
+		.subsection-list__title {
+			background: $color;
+		}
+	}
+}

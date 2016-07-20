@@ -33,6 +33,8 @@
 				</div>
 			{% endif %}
 		{% endfor %}
+		<a href="{% pageurl section %}" class="section-list__more section-list__more-cat section-list__more-cat{{section.get_effective_extra_style_hints}}">
+		{% trans "More about" %} {{section.title}}</a>
 	</div>
 	{% endif %}
 {% endfor %}
