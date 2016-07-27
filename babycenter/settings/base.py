@@ -58,6 +58,7 @@ INSTALLED_APPS = [
 
     'molo.core',
     'babycenter',
+    'google_analytics',
 
     'wagtail.wagtailcore',
     'wagtail.wagtailadmin',
