@@ -12,4 +12,8 @@
     background-color: $color;
     text-transform: capitalize;
   }
+
+  .heading--subsection--#{$name} {
+    background: rgba($color,0.7);
+  }
 }
