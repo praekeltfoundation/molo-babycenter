@@ -10,5 +10,10 @@
   
   .section-list__more--#{$name}  {
     color: $color;
+    border-top: 1px solid rgba(177,177,177,0.7);
+  }
+
+  .section-list__more--subsection--#{$name}{
+    color: $color;
   }
 }
