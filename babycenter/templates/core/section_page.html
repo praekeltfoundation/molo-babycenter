@@ -7,19 +7,18 @@
 
 	{% if self.get_parent_section %}
 		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
-			<a href="{% pageurl self.get_parent_section %}">{{self.get_parent_section}}</a>
+			<a href="{% pageurl self.get_parent_section %}">{{ self.get_parent_section }}</a>
 		</h1>
-		<h2 class="heading heading--subsection heading--subsection{{self.get_effective_extra_style_hints}}">
-		{{self.title}}</h2>
-	{% else %}
-		<h1 class="heading heading{{self.get_effective_extra_style_hints}}">
-		{{self.title}}</h1>
 	{% endif %}
+
+	<h1 class="heading heading{{self.get_effective_extra_style_hints}} {% if self.get_parent_section %}heading--subsection{% endif %}">
+		{{ self.title }}
+	</h1>
 
 	{% load_child_articles_for_section self count=13 as articles %}
 	<ul class="article-list">
 	{% for article in articles %}
-		<li class="article-list__item article-list__item--category">
+		<li class="article-list__item">
 			<a href="{% pageurl article %}">
 					{% if article.image %}
 					<div class="article-list__image">
@@ -28,7 +27,7 @@
 					{% endif %}
 					<h2 class="article-list__title">{{article.title}}</h2>
 					<h4 class="article-list__subtitle">{{article.subtitle}}</h4>
-					<p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
+					<p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
 			</a>
 		</li>
 	{% endfor %}
@@ -41,11 +40,11 @@
 		{% endif %}
 
 		{% get_pages articles_paginated as pages %}
-		
+
 		{% for page in pages.start %}
 			<a href="?p={{ page }}">{{ page }}</a>
 		{% endfor %}
-		
+
 
 		{% if pages.ellipses_before %}
 			...
@@ -64,11 +63,11 @@
 		{% if pages.ellipses_after %}
 			...
 		{% endif %}
-		
+
 		{% for page in pages.end %}
 			<a href="?p={{ page }}">{{ page }}</a>
 		{% endfor %}
-		
+
 		{% if articles_paginated.has_next %}
 				<a href="?p={{ articles_paginated.next_page_number }}">Next &gt;</a>
 		{% endif %}
@@ -77,11 +76,12 @@
 
 {% load_child_sections_for_section self as sections %}
 {% if sections %}
-	<div class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
+	<div class="section-list section-list--subsection section-list{{self.get_effective_extra_style_hints}}">
 	{% for section in sections %}
-		<li class="subsection-list__item">
-			<a href="{% pageurl section %}" class="subsection-list__title">{{section.title}}</a>
-		</li>
+			<h3 class="section__title section__title--subsection">
+				<a href="{% pageurl section %}">{{section.title}}</a>
+			</h3>
+
 		{% load_descendant_articles_for_section section featured_in_section=True count=2 as featured_articles %}
     {% if featured_articles %}
     	<ul class="article-list">
