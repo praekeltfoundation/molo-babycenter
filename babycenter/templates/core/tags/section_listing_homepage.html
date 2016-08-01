@@ -2,14 +2,14 @@
 
 {% for section in sections %}
 	<div class="section-list section-list{{section.get_effective_extra_style_hints}}">
-		{% load_descendant_articles_for_section section featured_in_homepage=True as articles %}
+		{% load_descendant_articles_for_section section count=None featured_in_homepage=True as articles %}
 		{% if articles %}
 			<h2 class="section__title">
 				<a href="{% pageurl section %}">{{ section.title }}</a>
 			</h2>
 			<ul class="article-list">
-				{% for article in articles %}
-					{# {% if article.get_parent_section = section %} #}
+				{% for article in articles %} 
+					{% if article.get_parent_section = section %}
 					<li class="article-list__item">
 						<a href="{% pageurl article %}">
 							{% if article.image %}
@@ -19,7 +19,7 @@
 							<span class="article-list__subtitle">{{ article.subtitle }}</span>
 						</a>
 					</li>
-					{# {% endif %} #}
+			   {% endif %}
 				{% endfor%}
 			</ul>
 
@@ -27,7 +27,7 @@
 			{% load_child_sections_for_section section as subsections %}
 			{% for subsection in subsections %}
 				<div class="section-list section-list--subsection section-list{{section.get_effective_extra_style_hints}}">
-					{% load_descendant_articles_for_section subsection featured_in_homepage=True as articles %}
+					{% load_descendant_articles_for_section subsection count=None featured_in_homepage=True as articles %}
 					{% if articles %}
 						<h2 class="section__title section__title--subsection">
 							<a href="{% pageurl section %}">{{ subsection.title }}</a>
@@ -45,11 +45,11 @@
 								</li>
 							{% endfor%}
 						</ul>
-					{% endif %}
 
-					<a href="{% pageurl subsection %}" class="section-list__more--subsection section-list__more{{section.get_effective_extra_style_hints}}">
-						{% trans "View More" %}
-					</a>
+          <a href="{% pageurl subsection %}" class="section-list__more--subsection section-list__more--subsection{{section.get_effective_extra_style_hints}}">
+            {% trans "View More" %}
+          </a>
+					{% endif %}
 				</div>
 			{% endfor %}
 
