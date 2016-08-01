@@ -19,7 +19,7 @@
 	{% load_child_articles_for_section self count=13 as articles %}
 	<ul class="article-list">
 	{% for article in articles %}
-		<li class="article-list__item article-list__item--category">
+		<li class="article-list__item">
 			<a href="{% pageurl article %}">
 					{% if article.image %}
 					<div class="article-list__image">
@@ -79,9 +79,10 @@
 {% if sections %}
 	<div class="subsection-list subsection-list{{self.get_effective_extra_style_hints | default:"--gray"}}">
 	{% for section in sections %}
-		<li class="subsection-list__item">
-			<a href="{% pageurl section %}" class="subsection-list__title">{{section.title}}</a>
-		</li>
+			<h3 class="section__title section__title--subsection">
+				<a href="{% pageurl section %}">{{section.title}}</a>
+			</h3>
+	
 		{% load_descendant_articles_for_section section featured_in_section=True count=2 as featured_articles %}
     {% if featured_articles %}
     	<ul class="article-list">
