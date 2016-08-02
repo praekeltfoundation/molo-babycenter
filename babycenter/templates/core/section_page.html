@@ -36,7 +36,7 @@
 	{% if articles %}
 	<div class="pagination">
 		{% if articles_paginated.has_previous %}
-			<a href="?p={{ articles_paginated.previous_page_number }}">&lt; Prev</a>
+			<a href="?p={{ articles_paginated.previous_page_number }}">&lt; {% trans "Prev" %}</a>
 		{% endif %}
 
 		{% get_pages articles_paginated as pages %}
@@ -69,7 +69,7 @@
 		{% endfor %}
 
 		{% if articles_paginated.has_next %}
-				<a href="?p={{ articles_paginated.next_page_number }}">Next &gt;</a>
+				<a href="?p={{ articles_paginated.next_page_number }}">{% trans "Next" %} &gt;</a>
 		{% endif %}
 	</div>
 	{% endif %}
