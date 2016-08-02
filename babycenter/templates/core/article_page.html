@@ -44,25 +44,25 @@
     <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
   </div>
 </div>
-    {% with section=self.get_parent_section %}
-        
-        <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
-            {% for block in self.body %}
-                {% if block.block_type == 'page' %}
-                    <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
-                        <a href="">{% trans "More Information" %}</a>
-                    </h2>
-                    <li class="article__link">
-                        <a href="{% pageurl block.value %}">{{ block.value }}</a>
-                    </li>
-
-                {% endif %}
-            {% endfor %}
-            <li class="article__link article__link--more">
-                <a href="{% pageurl self.get_parent_section %}">{% trans "More" %} &gt;</a></li>
-        </ul>
-    {% endwith %}
+{% with section=self.get_parent_section %}
+  <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
+  {% if self.body %}
+    <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
+      {% trans "More Information" %}
+    </h2> 
+    {% for block in self.body %}
+      {% if block.block_type == 'page'  %}
+          <li class="article__link">
+              <a href="{% pageurl block.value %}">{{ block.value }}</a>
+          </li>
+      {% endif %}
+    {% endfor %}
+      {% endif %}
+    <li class="article__link article__link--more">
+      <a href="{% pageurl section %}">{% trans "More" %} &gt;</a>
+    </li>
+  </ul>
+{% endwith %}
 
 {% surveys_list_for_pages page=self %}
-
 {% endblock %}
