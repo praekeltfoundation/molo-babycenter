@@ -1,115 +1,49 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-08 15:00+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-06-02 18:20+0000\n"
+"PO-Revision-Date: 2016-08-04 08:40+0000\n"
+"Last-Translator: Anne <anneballs@contentconsultants.co.uk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: may_MY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1470300033.033963\n"
 
-#: babycenter/settings/base.py:182
+#: babycenter/settings/base.py:177
 msgid "Zulu"
 msgstr ""
 
-#: babycenter/settings/base.py:183
+#: babycenter/settings/base.py:178
 msgid "Xhosa"
 msgstr ""
 
-#: babycenter/settings/base.py:184
+#: babycenter/settings/base.py:179
 msgid "Sotho"
 msgstr ""
 
-#: babycenter/settings/base.py:185
+#: babycenter/settings/base.py:180
 msgid "Venda"
 msgstr ""
 
-#: babycenter/settings/base.py:186
+#: babycenter/settings/base.py:181
 msgid "Tswana"
 msgstr ""
 
-#: babycenter/settings/base.py:187
+#: babycenter/settings/base.py:182
 msgid "Tsonga"
 msgstr ""
 
-#: babycenter/settings/base.py:188
+#: babycenter/settings/base.py:183
 msgid "Swati"
 msgstr ""
 
-#: babycenter/settings/base.py:189
+#: babycenter/settings/base.py:184
 msgid "Ndebele"
-msgstr ""
-
-#: babycenter/settings/base.py:190
-msgid "Wolof"
-msgstr ""
-
-#: babycenter/settings/base.py:191
-msgid "Yoruba"
-msgstr ""
-
-#: babycenter/settings/base.py:192
-msgid "Igbo"
-msgstr ""
-
-#: babycenter/settings/base.py:193
-msgid "Hausa"
-msgstr ""
-
-#: babycenter/settings/base.py:194
-msgid "Amharic"
-msgstr ""
-
-#: babycenter/settings/base.py:195
-msgid "Malay"
-msgstr ""
-
-#: babycenter/settings/base.py:196
-msgid "Guarani"
-msgstr ""
-
-#: babycenter/settings/base.py:197
-msgid "Gujarati"
-msgstr ""
-
-#: babycenter/settings/base.py:198
-msgid "Filipino"
-msgstr ""
-
-#: babycenter/settings/base.py:199
-msgid "N'ko"
-msgstr ""
-
-#: babycenter/settings/base.py:200
-msgid "Syriac"
-msgstr ""
-
-#: babycenter/settings/base.py:201
-msgid "Dhivehi"
-msgstr ""
-
-#: babycenter/settings/base.py:202
-msgid "Berber"
-msgstr ""
-
-#: babycenter/settings/base.py:203
-msgid "Kurdish"
-msgstr ""
-
-#: babycenter/settings/base.py:204
-msgid "Aramaic"
-msgstr ""
-
-#: babycenter/settings/base.py:205
-msgid "Creole Haitian"
 msgstr ""
 
 #: babycenter/templates/403.html:8
@@ -128,13 +62,14 @@ msgstr ""
 msgid "Sorry, this page could not be found."
 msgstr ""
 
-#: babycenter/templates/500.html:12 babycenter/templates/500.html:16
+#: babycenter/templates/500.html:12
+#: babycenter/templates/500.html:16
 msgid "Internal server error"
 msgstr ""
 
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
-msgstr ""
+msgstr "Maafkan kesilapan. Sila cuba sebentar lagi."
 
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
@@ -192,15 +127,15 @@ msgstr ""
 
 #: babycenter/templates/core/tags/latest_listing_homepage.html:4
 msgid "Recommended"
-msgstr ""
+msgstr "Lebih lanjut"
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr ""
+msgstr "Mencari sesuatu?"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
-msgstr ""
+msgstr "Carian"
 
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
@@ -209,11 +144,11 @@ msgstr ""
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
-msgstr ""
+msgstr "Tiada hasil carian"
 
 #: babycenter/templates/search/search_results.html:43
 msgid "I am looking for"
-msgstr ""
+msgstr "Saya ingin mencari"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
@@ -256,4 +191,84 @@ msgstr ""
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:41
 msgid "Add child page"
+msgstr ""
+
+#: babycenter/settings/base.py:191
+msgid "Wolof"
+msgstr ""
+
+#: babycenter/settings/base.py:192
+msgid "Yoruba"
+msgstr ""
+
+#: babycenter/settings/base.py:193
+msgid "Igbo"
+msgstr ""
+
+#: babycenter/settings/base.py:194
+msgid "Hausa"
+msgstr ""
+
+#: babycenter/settings/base.py:195
+msgid "Amharic"
+msgstr ""
+
+#: babycenter/settings/base.py:196
+msgid "Malay"
+msgstr ""
+
+#: babycenter/settings/base.py:197
+msgid "Guarani"
+msgstr ""
+
+#: babycenter/settings/base.py:198
+msgid "Gujarati"
+msgstr ""
+
+#: babycenter/settings/base.py:199
+msgid "Filipino"
+msgstr ""
+
+#: babycenter/settings/base.py:200
+msgid "N'ko"
+msgstr ""
+
+#: babycenter/settings/base.py:201
+msgid "Syriac"
+msgstr ""
+
+#: babycenter/settings/base.py:202
+msgid "Dhivehi"
+msgstr ""
+
+#: babycenter/settings/base.py:203
+msgid "Berber"
+msgstr ""
+
+#: babycenter/settings/base.py:204
+msgid "Kurdish"
+msgstr ""
+
+#: babycenter/settings/base.py:205
+msgid "Aramaic"
+msgstr ""
+
+#: babycenter/settings/base.py:206
+msgid "Creole Haitian"
+msgstr ""
+
+#: babycenter/templates/core/section_page.html:39
+msgid "Prev"
+msgstr "Terdahulu"
+
+#: babycenter/templates/core/section_page.html:72
+msgid "Next"
+msgstr "Berikut"
+
+#: babycenter/templates/core/tags/section_listing_homepage.html:50
+msgid "View More"
+msgstr ""
+
+#: babycenter/templates/core/tags/section_listing_homepage.html:57
+msgid "More about"
 msgstr ""
