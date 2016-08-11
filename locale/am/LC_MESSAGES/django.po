@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-04 08:47+0000\n"
-"Last-Translator: Anne <anneballs@contentconsultants.co.uk>\n"
+"PO-Revision-Date: 2016-08-11 10:37+0000\n"
+"Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: amh_ET\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1470300445.757043\n"
+"X-POOTLE-MTIME: 1470911848.096554\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
@@ -74,7 +74,7 @@ msgstr "ለተፈጠረው ስህተት ይቅርታ እንጠይቃለን። �
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
 msgid "Home"
-msgstr ""
+msgstr "መነሻ"
 
 #: babycenter/templates/admin/import_from_git.html:8
 msgid "Import content"
@@ -118,12 +118,12 @@ msgstr ""
 
 #: babycenter/templates/core/article_page.html:50
 msgid "More Information"
-msgstr ""
+msgstr "ተጨማሪ መረጃ"
 
 #: babycenter/templates/core/article_page.html:61
 #: babycenter/templates/core/tags/section_listing_homepage.html:21
 msgid "More"
-msgstr ""
+msgstr "ተጨማሪ"
 
 #: babycenter/templates/core/tags/latest_listing_homepage.html:4
 msgid "Recommended"
@@ -140,7 +140,7 @@ msgstr "ፈልግ"
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
 msgid "Search"
-msgstr ""
+msgstr "ፈልግ"
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
