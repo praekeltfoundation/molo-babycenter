@@ -194,7 +194,6 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ha', _('Hausa')),
     ('am', _('Amharic')),
     ('ms', _('Malay')),
-    ('grn_PY', _('Guarani')),
     ('gu', _('Gujarati')),
     ('fil', _('Filipino')),
     ('nqo', _('N\'ko')),
@@ -207,17 +206,11 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ar', _('Arabic')),
     ('id', _('Bahasa')),
     ('bn', _('Bengali')),
-    ('my', _('Burmese')),
     ('fr', _('French')),
     ('pt', _('Portuguese')),
     ('es', _('Spanish Spain')),
-    ('spa_AR', _('Spanish Argentina')),
-    ('spa_CO', _('Spanish Colombia')),
-    ('spa_MX', _('Spanish Mexico')),
     ('sw', _('Swahili')),
-    ('swa_TZ', _('Swahili Tanzania')),
     ('th', _('Thai')),
-    ('urd_PK', _('Urdu')),
     ('kn', _('Kannada')),
     ('ml', _('Malayalam')),
     ('mr', _('Marathi')),
@@ -228,7 +221,6 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ta', _('Tamil')),
     ('tg', _('Telugu')),
     ('tr', _('Turkish')),
-    ('hin_IN', _('Hindi')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -394,12 +386,6 @@ EXTRA_LANG_INFO = {
         'name': 'Bengali',
         'name_local': 'Bengali'
     },
-    'my': {
-        'bidi': False,
-        'code': 'my',
-        'name': 'Burmese',
-        'name_local': 'Burmese'
-    },
     'fr': {
         'bidi': False,
         'code': 'fre_FR',
@@ -418,47 +404,11 @@ EXTRA_LANG_INFO = {
         'name': 'Spanish Spain',
         'name_local': 'Spanish Spain'
     },
-    'spa_AR': {
-        'bidi': False,
-        'code': 'spa_AR',
-        'name': 'Spanish Argentina',
-        'name_local': 'Spanish Argentina'
-    },
-    'spa_CO': {
-        'bidi': False,
-        'code': 'spa_CO',
-        'name': 'Spanish Colombia',
-        'name_local': 'Spanish Colombia'
-    },
-    'spa_MX': {
-        'bidi': False,
-        'code': 'spa_MX',
-        'name': 'Spanish Mexico',
-        'name_local': 'Spanish Mexico'
-    },
-    'swa_KE': {
-        'bidi': False,
-        'code': 'swa_KE',
-        'name': 'Swahili',
-        'name_local': 'Swahili'
-    },
-    'swa_TZ': {
-        'bidi': False,
-        'code': 'swa_TZ',
-        'name': 'Swahili Tanzania',
-        'name_local': 'Swahili Tanzania'
-    },
     'th': {
         'bidi': False,
         'code': 'tha_TH',
         'name': 'Thai',
         'name_local': 'Thai'
-    },
-    'urd_PK': {
-        'bidi': False,
-        'code': 'urd_PK',
-        'name': 'Urdu',
-        'name_local': 'Urdu'
     },
     'kn': {
         'bidi': False,
@@ -525,12 +475,6 @@ EXTRA_LANG_INFO = {
         'code': 'tur_TR',
         'name': 'Turkish',
         'name_local': 'Turkish'
-    },
-    'hin_IN': {
-        'bidi': False,
-        'code': 'hin_IN',
-        'name': 'Hindi',
-        'name_local': 'Hindi'
     },
 }
 
