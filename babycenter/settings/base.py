@@ -207,7 +207,7 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ar', _('Arabic')),
     ('id', _('Bahasa')),
     ('bn', _('Bengali')),
-    ('bur_MM', _('Burmese')),
+    ('my', _('Burmese')),
     ('fr', _('French')),
     ('pt', _('Portuguese')),
     ('es', _('Spanish Spain')),
@@ -394,9 +394,9 @@ EXTRA_LANG_INFO = {
         'name': 'Bengali',
         'name_local': 'Bengali'
     },
-    'bur_MM': {
+    'my': {
         'bidi': False,
-        'code': 'bur_MM',
+        'code': 'my',
         'name': 'Burmese',
         'name_local': 'Burmese'
     },
