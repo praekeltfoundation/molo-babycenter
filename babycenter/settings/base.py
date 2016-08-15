@@ -203,28 +203,11 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ku', _('Kurdish')),
     ('arc', _('Aramaic')),
     ('ht', _('Creole Haitian')),
-    ('ar', _('Arabic')),
     ('id', _('Bahasa')),
     ('bn', _('Bengali')),
     ('my', _('Burmese')),
-    ('fr', _('French')),
-    ('pt', _('Portuguese')),
-    ('es', _('Spanish Spain')),
-    ('sw', _('Swahili')),
-    ('th', _('Thai')),
-    ('kn', _('Kannada')),
-    ('ml', _('Malayalam')),
-    ('mr', _('Marathi')),
-    ('ne', _('Nepali')),
-    ('pa', _('Punjabi')),
-    ('ru', _('Russian')),
     ('si', _('Sinhalese')),
-    ('ta', _('Tamil')),
-    ('tg', _('Telugu')),
-    ('tr', _('Turkish')),
     ('gn', _('Guarani')),
-    ('hi', _('Hindi')),
-    ('ur', _('Urdu')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -372,12 +355,6 @@ EXTRA_LANG_INFO = {
         'name': 'Creole Haitian',
         'name_local': 'Kreyòl ayisyen'
     },
-    'ar': {
-        'bidi': False,
-        'code': 'ara_AE',
-        'name': 'Aribic',
-        'name_local': 'Arabic'
-    },
     'id': {
         'bidi': False,
         'code': 'ind_ID',
@@ -390,107 +367,11 @@ EXTRA_LANG_INFO = {
         'name': 'Bengali',
         'name_local': 'Bengali'
     },
-    'fr': {
-        'bidi': False,
-        'code': 'fre_FR',
-        'name': 'French',
-        'name_local': 'French'
-    },
-    'pt': {
-        'bidi': False,
-        'code': 'por_PT',
-        'name': 'Portuguese',
-        'name_local': 'Portuguese'
-    },
-    'es': {
-        'bidi': False,
-        'code': 'spa_ES',
-        'name': 'Spanish Spain',
-        'name_local': 'Spanish Spain'
-    },
-    'th': {
-        'bidi': False,
-        'code': 'tha_TH',
-        'name': 'Thai',
-        'name_local': 'Thai'
-    },
-    'kn': {
-        'bidi': False,
-        'code': 'kan_IN',
-        'name': 'Kannada',
-        'name_local': 'Kannada'
-    },
-    'ml': {
-        'bidi': False,
-        'code': 'mal_IN',
-        'name': 'Malayalam',
-        'name_local': 'Malayalam'
-    },
-    'mr': {
-        'bidi': False,
-        'code': 'mar_IN',
-        'name': 'Marathi',
-        'name_local': 'Marathi'
-    },
-    'ne': {
-        'bidi': False,
-        'code': 'nep_NP',
-        'name': 'Nepali',
-        'name_local': 'Nepali'
-    },
-    'pa': {
-        'bidi': False,
-        'code': 'pan_IN',
-        'name': 'Punjabi',
-        'name_local': 'Punjabi'
-    },
-    'ru': {
-        'bidi': False,
-        'code': 'rus_RU',
-        'name': 'Russian',
-        'name_local': 'Russian'
-    },
     'si': {
         'bidi': False,
         'code': 'sin_LK',
         'name': 'Sinhalese',
         'name_local': 'Sinhalese'
-    },
-    'sw': {
-        'bidi': False,
-        'code': 'swa_KE',
-        'name': 'Swahili',
-        'name_local': 'Swahili'
-    },
-    'ta': {
-        'bidi': False,
-        'code': 'tam_IN',
-        'name': 'Tamil',
-        'name_local': 'Tamil'
-    },
-    'tg': {
-        'bidi': False,
-        'code': 'tel_IN',
-        'name': 'Telugu',
-        'name_local': 'Telugu'
-    },
-    'tr': {
-        'bidi': False,
-        'code': 'tur_TR',
-        'name': 'Turkish',
-        'name_local': 'Turkish'
-    },
-    'hi': {
-        'bidi': False,
-        'code': 'hin_IN',
-        'name': 'Hindi',
-        'name_local': 'Hindi'
-    },
-    'ur': {
-        'bidi': False,
-        'code': 'urd_PK',
-        'name': 'Urdu',
-        'name_local': 'Urdu'
     },
     'my': {
         'bidi': False,
