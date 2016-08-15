@@ -194,7 +194,6 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ha', _('Hausa')),
     ('am', _('Amharic')),
     ('ms', _('Malay')),
-    ('gn', _('Guarani')),
     ('gu', _('Gujarati')),
     ('fil', _('Filipino')),
     ('nqo', _('N\'ko')),
@@ -204,6 +203,11 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ku', _('Kurdish')),
     ('arc', _('Aramaic')),
     ('ht', _('Creole Haitian')),
+    ('id', _('Bahasa')),
+    ('bn', _('Bengali')),
+    ('my', _('Burmese')),
+    ('si', _('Sinhalese')),
+    ('gn', _('Guarani')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -293,13 +297,13 @@ EXTRA_LANG_INFO = {
     },
     'gn': {
         'bidi': False,
-        'code': 'gn',
+        'code': 'grn_PY',
         'name': 'Guarani',
         'name_local': 'Karaiñe’ême'
     },
     'gu': {
         'bidi': False,
-        'code': 'gu',
+        'code': 'guj_IN',
         'name': 'Gujarati',
         'name_local': 'ગુજરાતી'
     },
@@ -350,6 +354,30 @@ EXTRA_LANG_INFO = {
         'code': 'kr',
         'name': 'Creole Haitian',
         'name_local': 'Kreyòl ayisyen'
+    },
+    'id': {
+        'bidi': False,
+        'code': 'ind_ID',
+        'name': 'Bahasa',
+        'name_local': 'Bahasa'
+    },
+    'bn': {
+        'bidi': False,
+        'code': 'ben_IN',
+        'name': 'Bengali',
+        'name_local': 'Bengali'
+    },
+    'si': {
+        'bidi': False,
+        'code': 'sin_LK',
+        'name': 'Sinhalese',
+        'name_local': 'Sinhalese'
+    },
+    'my': {
+        'bidi': False,
+        'code': 'bur_MM',
+        'name': 'Burmese',
+        'name_local': 'Burmese'
     },
 }
 
