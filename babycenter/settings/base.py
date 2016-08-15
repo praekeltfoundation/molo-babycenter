@@ -316,7 +316,7 @@ EXTRA_LANG_INFO = {
         'bidi': False,
         'code': 'grn_PY',
         'name': 'Guarani',
-        'name_local': 'Guarani'
+        'name_local': 'Karaiñe’ême'
     },
     'gu': {
         'bidi': False,
