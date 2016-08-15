@@ -458,7 +458,7 @@ EXTRA_LANG_INFO = {
     },
     'sw': {
         'bidi': False,
-        'code': 'swa_TZ',
+        'code': 'swa_KE',
         'name': 'Swahili',
         'name_local': 'Swahili'
     },
