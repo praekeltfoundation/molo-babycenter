@@ -206,6 +206,7 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ar', _('Arabic')),
     ('id', _('Bahasa')),
     ('bn', _('Bengali')),
+    ('my', _('Burmese')),
     ('fr', _('French')),
     ('pt', _('Portuguese')),
     ('es', _('Spanish Spain')),
@@ -221,6 +222,9 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ta', _('Tamil')),
     ('tg', _('Telugu')),
     ('tr', _('Turkish')),
+    ('gn', _('Guarani')),
+    ('hi', _('Hindi')),
+    ('ur', _('Urdu')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -308,7 +312,7 @@ EXTRA_LANG_INFO = {
         'name': 'Malay',
         'name_local': 'Malaysia'
     },
-    'grn_PY': {
+    'gn': {
         'bidi': False,
         'code': 'grn_PY',
         'name': 'Guarani',
@@ -475,6 +479,24 @@ EXTRA_LANG_INFO = {
         'code': 'tur_TR',
         'name': 'Turkish',
         'name_local': 'Turkish'
+    },
+    'hi': {
+        'bidi': False,
+        'code': 'hin_IN',
+        'name': 'Hindi',
+        'name_local': 'Hindi'
+    },
+    'ur': {
+        'bidi': False,
+        'code': 'urd_PK',
+        'name': 'Urdu',
+        'name_local': 'Urdu'
+    },
+    'my': {
+        'bidi': False,
+        'code': 'bur_MM',
+        'name': 'Burmese',
+        'name_local': 'Burmese'
     },
 }
 
