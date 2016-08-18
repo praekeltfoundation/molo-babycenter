@@ -1,8 +1,7 @@
-molo.core==3.4.2
+molo.core==3.6.0
 molo.surveys==1.0.0
 gunicorn
 psycopg2
 django-extensions
 molo.usermetadata==1.0.2
 six>=1.9
-html5lib==0.9999999
