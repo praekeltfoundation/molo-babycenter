@@ -2,9 +2,17 @@
   background: red;
   color: #fff;
   padding: 5px 16px;
+  word-wrap: break-word;
+  text-align: center;
   a {
     color: #fff;
   }
+}
+
+.heading--banner {
+  background: transparent;
+  color: #666666;
+  font-weight: bold;
 }
 
 @each $name, $color in $color_list {

@@ -2,21 +2,21 @@
 
 {% if footers %}
 <div class="section-list">
-	{% for page in footers %}
-	<h2 class="section__title section__title--orange">
-		<a href="{% pageurl page %}">{{ page.title }}</a>
-	</h2>
-		<ul class="article-list">
-			<li class="article-list__item">
-				<a href="{% pageurl page %}">
-					{% if page.image %}
-					{% image page.image  width-45 class="article-list__image" %}
-					{% endif %}
-					<h4 class="article-list__title">{{ page.title }}</h4>
-					<span class="article-list__subtitle">{{ page.subtitle }}</span>
-				</a>
-			</li>
-		</ul>
-	{% endfor %}
+  {% for page in footers %}
+  <h2 class="section__title section__title--orange">
+    <a href="{% pageurl page %}">{{ page.title }}</a>
+  </h2>
+    <ul class="article-list">
+      <li class="article-list__item">
+        <a href="{% pageurl page %}">
+          {% if page.image %}
+          {% image page.image  width-45 class="article-list__image" %}
+          {% endif %}
+          <h4 class="article-list__title">{{ page.title }}</h4>
+          <span class="article-list__subtitle">{{ page.subtitle }}</span>
+        </a>
+      </li>
+    </ul>
+  {% endfor %}
 </div>
 {% endif %}

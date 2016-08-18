@@ -41,9 +41,13 @@
 
       <div class="logo l-indent">
         <a href="/">
-          {% block logo %}
-          <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
-          {% endblock %}
+          {% if settings.core.SiteSettings.logo %}
+            {% image settings.core.SiteSettings.logo height-65 %}
+          {% else %}
+            {% block logo %}
+              <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
+            {% endblock %}
+          {% endif %}
         </a>
       </div>
 
@@ -52,7 +56,7 @@
       {% block content %}
       {% endblock %}
 
-      {% include "_base_navigation.html" with extra_classes="navigation--dark" %}
+      {% include "_base_navigation.html" with extra_classes="navigation--footer" %}
 
       {% block search %}
         {% if languages %}
