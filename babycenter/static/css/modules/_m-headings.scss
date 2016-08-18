@@ -7,6 +7,15 @@
   }
 }
 
+.heading--banner {
+  background: transparent;
+  color: #666666;
+  text-align: center;
+  font-weight: bold;
+
+  font-size: $font-x-large;
+}
+
 @each $name, $color in $color_list {
   .heading--#{$name} {
     background-color: $color;
