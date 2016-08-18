@@ -41,9 +41,13 @@
 
       <div class="logo l-indent">
         <a href="/">
-          {% block logo %}
-          <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
-          {% endblock %}
+          {% if settings.core.SiteSettings.logo %}
+            {% image settings.core.SiteSettings.logo height-65 %}
+          {% else %}
+            {% block logo %}
+              <img src="{% static 'logo.jpg' %}" alt="{% trans "BabyCenter" %}" />
+            {% endblock %}
+          {% endif %}
         </a>
       </div>
 
