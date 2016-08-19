@@ -7,6 +7,7 @@
     &:after {
       content: " | ";
       color: #ddd;
+      padding: 5px 0;
     }
     &:last-child:after {
       content: "";

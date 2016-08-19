@@ -11,6 +11,7 @@
     <a href="{% pageurl section %}">{{section.title}}</a>
   </h2>
 
+<!--Not getting translated-->
 <div class="article article{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
 
@@ -42,6 +43,8 @@
     <p class="article__date f-small">{{self.first_published_at | date:"j F Y"}}</p>
   </div>
 </div>
+<!--Not getting translated-->
+
 {% with section=self.get_parent_section %}
   <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
   {% if self.body %}
