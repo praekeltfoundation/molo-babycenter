@@ -4,8 +4,8 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
+  {% if self.get_parent_section %}
   {% get_translation self.get_parent_section as section %}
-  {% if section %}
     <h1 class="heading heading{{self.get_effective_extra_style_hints}}">
       <a href="{% pageurl section %}">{{ section }}</a>
     </h1>
