@@ -6,12 +6,10 @@
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
 {% block content %}
-
-{% with section=self.get_parent_section %}
+{% get_translation self.get_parent_section as section %}
   <h2 class="heading heading{{section.get_effective_extra_style_hints}}">
     <a href="{% pageurl section %}">{{section.title}}</a>
   </h2>
-{% endwith %}
 
 <div class="article article{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
