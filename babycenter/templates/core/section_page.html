@@ -11,9 +11,12 @@
     </h1>
   {% endif %}
 
-  <h1 class="heading heading{{self.get_effective_extra_style_hints}} {% if self.get_parent_section %}heading--subsection{% endif %}">
+<!-- Not getting translated -->
+  <h1 class="heading heading{{self.get_effective_extra_style_hints}} {% if section %}heading--subsection{{self.get_effective_extra_style_hints}}{% endif %}">
     {{ self.title }}
   </h1>
+<!-- Not getting translated -->
+
 
   {% load_child_articles_for_section self count=13 as articles %}
   <ul class="article-list">

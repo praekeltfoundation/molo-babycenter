@@ -30,7 +30,7 @@
           {% load_descendant_articles_for_section subsection count=None featured_in_homepage=True as articles %}
           {% if articles %}
             <h2 class="section__title section__title--subsection">
-              <a href="{% pageurl section %}">{{ subsection.title }}</a>
+              <a href="{% pageurl subsection %}">{{ subsection.title }}</a>
             </h2>
             <ul class="article-list">
               {% for article in articles %}

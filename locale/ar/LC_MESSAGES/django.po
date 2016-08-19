@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-11 10:37+0000\n"
+"PO-Revision-Date: 2016-08-17 10:09+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ara_AE\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1470911876.321194\n"
+"X-POOTLE-MTIME: 1471428565.744099\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
@@ -267,8 +267,8 @@ msgstr "التالي"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:50
 msgid "View More"
-msgstr ""
+msgstr "المزيد"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:57
 msgid "More about"
-msgstr ""
+msgstr "المزيد"
