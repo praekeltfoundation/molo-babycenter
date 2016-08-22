@@ -25,7 +25,7 @@
 }
 
 .article-list__section {
-  text-transform: uppercase;
+  font-size: $font-medium;
 }
 
 @each $name, $color in $color_list {
