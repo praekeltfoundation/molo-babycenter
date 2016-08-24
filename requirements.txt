@@ -1,5 +1,5 @@
-molo.core==3.6.0
-molo.surveys==1.0.0
+molo.core==3.7.2
+molo.surveys==1.2.0
 gunicorn
 psycopg2
 django-extensions
