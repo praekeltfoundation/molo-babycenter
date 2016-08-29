@@ -207,7 +207,7 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('bn', _('Bengali')),
     ('my', _('Burmese')),
     ('si', _('Sinhalese')),
-    ('gn', _('Guarani')),
+    ('grn-PY', _('Guarani')),
 ]
 
 EXTRA_LANG_INFO = {
@@ -295,9 +295,9 @@ EXTRA_LANG_INFO = {
         'name': 'Malay',
         'name_local': 'Malaysia'
     },
-    'gn': {
+    'grn-PY': {
         'bidi': False,
-        'code': 'grn_PY',
+        'code': 'grn-PY',
         'name': 'Guarani',
         'name_local': 'Karaiñe’ême'
     },

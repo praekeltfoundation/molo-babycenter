@@ -131,7 +131,7 @@ msgstr ""
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr ""
+msgstr "This thing is working"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
