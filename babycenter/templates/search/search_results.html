@@ -13,8 +13,8 @@
       <a href="{% pageurl page %}">
         <div class="nav">
           <h6 class="article-list__section f-small">{{parent_section.title}}</h6>
-          <h3 class="article-list__title">{{page.title}}</h3>
-          <p class="article-list__subtitle">{{page.subtitle}}</p>
+          <h3 class="article-list__title">{{page.title}}{% if page.subtitle %}:</h3><p class="article-list__subtitle">{{page.subtitle}}</p>{% else %}</h3>
+          {% endif %}
         </div>
       </a>
     </li>
