@@ -12,8 +12,8 @@
           {% if page.image %}
           {% image page.image  width-45 class="article-list__image" %}
           {% endif %}
-          <h4 class="article-list__title">{{ page.title }}</h4>
-          <span class="article-list__subtitle">{{ page.subtitle }}</span>
+          <h4 class="article-list__title">{{ page.title }}{% if page.subtitle %}:</h2><span class="article-list__subtitle">{{ page.subtitle }}</span>{% else %}</h4>
+          {% endif %}
         </a>
       </li>
     </ul>
