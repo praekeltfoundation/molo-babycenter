@@ -16,8 +16,8 @@
               {% if article.image %}
                 {% image article.image  width-45 class="article-list__image" %}
               {% endif %}
-              <h4 class="article-list__title">{{ article.title }}</h4>
-              <span class="article-list__subtitle">{{ article.subtitle }}</span>
+              <h4 class="article-list__title">{{article.title}}{% if article.subtitle %}:</h4><span class="article-list__subtitle">{{ article.subtitle }}</span>{% else %}</h4>
+              {% endif %}
             </a>
           </li>
          {% endif %}
@@ -39,8 +39,8 @@
                     {% if article.image %}
                       {% image article.image  width-45 class="article-list__image" %}
                     {% endif %}
-                    <h4 class="article-list__title">{{ article.title }}</h4>
-                    <span class="article-list__subtitle">{{ article.subtitle }}</span>
+                    <h4 class="article-list__title">{{article.title}}{% if article.subtitle %}:</h4><span class="article-list__subtitle">{{ article.subtitle }}</span>{% else %}</h4>
+                    {% endif %}
                   </a>
                 </li>
               {% endfor%}
