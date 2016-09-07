@@ -64,7 +64,7 @@
         {% endif %}
       {% endblock %}
 
-      <div class="copyright l-indent">&copy; {% now "Y" %} BabyCenter</div>
+      <div class="copyright l-indent">&copy; {% now "Y" %} BabyCenter {% if 'bangladesh.babycenter.io' in request.get_host %}- Aponjon{% endif %}</div>
 
       {% if settings.core.SiteSettings.ga_tag_manager %}
       <!-- Google Tag Manager -->
