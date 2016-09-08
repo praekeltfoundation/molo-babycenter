@@ -31,7 +31,7 @@ urlpatterns += patterns(
     url(r'^meta/', include('molo.usermetadata.urls',
                            namespace='molo.usermetadata',
                            app_name='molo.usermetadata')),
-
+    url('^', include('django.contrib.auth.urls')),
     url(r'', include('molo.core.urls')),
     url(r'', include(wagtail_urls)),
 )
