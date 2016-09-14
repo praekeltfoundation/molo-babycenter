@@ -368,7 +368,7 @@ EXTRA_LANG_INFO = {
         'bidi': False,
         'code': 'ben_IN',
         'name': 'Bengali',
-        'name_local': 'Bengali'
+        'name_local': 'বাংলা'
     },
     'si': {
         'bidi': False,
