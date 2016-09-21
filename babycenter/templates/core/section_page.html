@@ -38,41 +38,48 @@
 
   {% if articles %}
   <div class="pagination">
+
     {% if articles_paginated.has_previous %}
       <a href="?p={{ articles_paginated.previous_page_number }}">&lt; {% trans "Prev" %}</a>
     {% endif %}
 
     {% get_pages articles_paginated as pages %}
 
-    {% for page in pages.start %}
-      <a href="?p={{ page }}">{{ page }}</a>
+     {% for page in pages.start %}
+        <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-
 
     {% if pages.ellipses_before %}
       ...
     {% endif %}
+
     {% for page in pages.before_current %}
       <a href="?p={{ page }}">{{ page}}</a>
     {% endfor %}
+
     <span class="current">
-        {% if articles_paginated.has_next %}
-          {{ articles_paginated.number }}
-        {% endif %}
+      {% if articles_paginated.has_next %}
+        {{ articles_paginated.number }}
+      {% elif articles_paginated.has_previous%}
+        {{ articles_paginated.number }}
+      {% endif %}
     </span>
+
     {% for page in pages.after_current %}
       <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
+
     {% if pages.ellipses_after %}
       ...
     {% endif %}
 
+
     {% for page in pages.end %}
       <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-
+  
     {% if articles_paginated.has_next %}
-        <a href="?p={{ articles_paginated.next_page_number }}">{% trans "Next" %} &gt;</a>
+      <a href="?p={{ articles_paginated.next_page_number }}">{% trans "Next" %} &gt;</a>
     {% endif %}
   </div>
   {% endif %}
