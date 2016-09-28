@@ -1,7 +1,8 @@
-
+.article-list {
+   word-wrap: break-word;
+}
 .article-list__item {
   padding: 10px 16px;
-  overflow: auto;
   border-bottom: 1px solid #e6e6e6;
   a {
     color: #666;
