@@ -1,61 +1,62 @@
 
 .article  {
-	a {
-		color: $orange;
-	}
+  a {
+    color: $orange;
+  }
 
-	ul, ol, li {
-			list-style-position: inside;
-	}
+  ul, ol, li {
+      list-style-position: inside;
+  }
 
-	ul li {
-		list-style-type: disc;
-	}
+  ul li {
+    list-style-type: disc;
+  }
 
-	ol li {
-		list-style-type: decimal;
-	}
+  ol li {
+    list-style-type: decimal;
+  }
 }
 
 .article-content {
-	padding: 10px 16px;
+  padding: 10px 16px;
+  word-wrap: break-word;
 }
 
 .article__title {
-	margin-top: 16px;
-	font-weight: bold;
-	padding: 4px 16px;
+  margin-top: 16px;
+  font-weight: bold;
+  padding: 4px 16px;
 }
 
 .article__subtitle {
-	padding: 0 16px;
+  padding: 0 16px;
 }
 
 .article__date {
-	color: #ccc;
-	padding-top: 10px;
+  color: #ccc;
+  padding-top: 10px;
 }
 
 .article__date--italic  {
-	 font-style: italic;
-	 margin: 0;
+   font-style: italic;
+   margin: 0;
 }
 
 .article__image {
-	padding: 0 16px;
-	img {
-		display: block;
-		width: 100%;
-	}
+  padding: 0 16px;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .article__link {
-	border-bottom: 1px #e6e6e6 solid;
-	padding: 16px;
-	a {
-		color: #666;
-	}
+  border-bottom: 1px #e6e6e6 solid;
+  padding: 16px;
+  a {
+    color: #666;
+  }
 }  
 .article__link--more {
-	 font-weight: bold;
+   font-weight: bold;
  }
