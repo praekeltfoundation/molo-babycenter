@@ -123,6 +123,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'molo.core.context_processors.locale',
                 'wagtail.contrib.settings.context_processors.settings',
+                'babycenter.processors.env',
             ],
         },
     },

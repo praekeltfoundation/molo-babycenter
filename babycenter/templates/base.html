@@ -23,12 +23,6 @@
         {% compress css %}
           <link rel="stylesheet" type="text/x-scss" href="{% static 'css/style.scss' %}">
         {% endcompress %}
-        {% get_current_language as LANGUAGE_CODE %}
-        {% if LANGUAGE_CODE|language_bidi == True %}
-        {% compress css %}
-          <link rel="stylesheet" type="text/x-scss" href="{% static 'css/style-rtl.scss' %}">
-        {% endcompress %}
-        {% endif %}
         {% block extra_css %}{% endblock %}
     </head>
 
