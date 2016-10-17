@@ -1,0 +1,1 @@
+{"version":3,"sources":["state_320.scss"],"names":[],"mappings":"AACA,yCACE,KACE,WAAW,KAEb,KACE,UAAW,MACX,OAAQ,EAAA","file":"../state_320.css","sourcesContent":["\n@media only screen and (min-width: 600px) {\n  html {\n    background:#333;\n  }\n  body {\n    max-width: 320px;\n    margin: 0 auto;\n  }\n}\n"]}

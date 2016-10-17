@@ -49,3 +49,5 @@ media/
 *.pgfav
 
 .cache/
+
+node_modules/

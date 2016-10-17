@@ -1,0 +1,28 @@
+{
+  "name": "molo-babycenter",
+  "version": "1.0.0",
+  "description": "babycenter =========================",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-gzip": "^1.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-watch": "^4.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praekelt/molo-babycenter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praekelt/molo-babycenter/issues"
+  },
+  "homepage": "https://github.com/praekelt/molo-babycenter#readme"
+}
