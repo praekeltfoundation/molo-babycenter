@@ -12,8 +12,7 @@ var gulp              =   require('gulp'),
 
 var sassPaths = [
     'babycenter/styles/style.scss',
-    'babycenter/styles/state/state.scss',
-    'babycenter/styles/state-rtl.scss',
+    'babycenter/styles/state_320/state_320.scss',
 ];
 
 var sassDest = {
