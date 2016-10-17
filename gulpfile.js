@@ -1,8 +1,8 @@
 'use strict';
 
-var gulp              =   require('gulp'), 
-    sass              =   require('gulp-sass'), 
-    watch             =   require('gulp-watch'), 
+var gulp              =   require('gulp'),
+    sass              =   require('gulp-sass'),
+    watch             =   require('gulp-watch'),
     cleanCSSMinify    =   require('gulp-clean-css'),
     rename            =   require('gulp-rename'),
     gzip              =   require('gulp-gzip'),

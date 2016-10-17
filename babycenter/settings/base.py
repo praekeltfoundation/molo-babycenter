@@ -31,6 +31,7 @@ SECRET_KEY = "gxy7=w5cnjbn!)tpyjhfn)t9a5ipdyx9@j8y^2*n3f*vsiw@cw"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+ENV = 'dev'
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,7 +124,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'molo.core.context_processors.locale',
                 'wagtail.contrib.settings.context_processors.settings',
-                'babycenter.processors.env',
+                'babycenter.processors.compress_settings',
             ],
         },
     },
