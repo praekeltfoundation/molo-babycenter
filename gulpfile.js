@@ -11,8 +11,9 @@ var gulp              =   require('gulp'),
     livereload        =   require('gulp-livereload');
 
 var sassPaths = [
-    'babycenter/styles/style.scss',
-    'babycenter/styles/state_320/state_320.scss',
+    'babycenter/client/css/style.scss',
+    'babycenter/client/css/state_320/state_320.scss',
+    'babycenter/client/css/versions.scss',
 ];
 
 var sassDest = {
@@ -47,7 +48,7 @@ gulp.task('styles:dev', function() {
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('babycenter/styles/*.scss', ['styles']);
+    gulp.watch('babycenter/client/css/*.scss', ['styles']);
 });
 
 gulp.task('styles', ['styles:dev', 'styles:prd']);
