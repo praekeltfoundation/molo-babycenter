@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'wagtailmedia',
     'wagtail.contrib.settings',
     'wagtailsurveys',
+    'wagtail.contrib.wagtailsitemaps',
 
     'molo.usermetadata',
     'molo.surveys',
