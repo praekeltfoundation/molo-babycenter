@@ -29,9 +29,7 @@
               LargeScreen = ((window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) >= 200);
 
           var smartStyles = '{% spaceless %}
-           {% compress css %}
-             <link rel="stylesheet" type="text/x-scss" href="{{ STATIC_URL }}css/{{ ENV }}/state_320.css">
-           {% endcompress %}
+             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/{{ ENV }}/state_320.css">
           {% endspaceless %}';
 
           if(CutsTheMustard === true) {
