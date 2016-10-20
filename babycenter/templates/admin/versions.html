@@ -4,7 +4,7 @@
 
 {% block extra_css %}
   {% compress css %}
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'css/versions.scss' %}">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/{{ ENV }}/versions.css">
   {% endcompress %}
 {% endblock %}
 
