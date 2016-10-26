@@ -106,7 +106,10 @@ MIDDLEWARE_CLASSES = [
     'molo.core.middleware.ForceDefaultLanguageMiddleware',
     'molo.core.middleware.AdminLocaleMiddleware',
 
-    'molo.usermetadata.middleware.PersonaMiddleware'
+    'molo.usermetadata.middleware.PersonaMiddleware',
+    'molo.core.middleware.NoScriptGASessionMiddleware',
+
+    'molo.core.middleware.MoloGoogleAnalyticsMiddleware',
 
 ]
 
@@ -162,7 +165,7 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
 
-CELERY_IMPORTS = ('molo.core.tasks')
+CELERY_IMPORTS = ('molo.core.tasks', 'google_analytics.tasks')
 BROKER_URL = environ.get('BROKER_URL', 'redis://localhost:6379/0')
 CELERY_RESULT_BACKEND = environ.get(
     'CELERY_RESULT_BACKEND', 'redis://localhost:6379/0')
@@ -452,3 +455,30 @@ ADMIN_LANGUAGE_CODE = environ.get('ADMIN_LANGUAGE_CODE', "en")
 FROM_EMAIL = environ.get('FROM_EMAIL', "support@moloproject.org")
 CONTENT_IMPORT_SUBJECT = environ.get(
     'CONTENT_IMPORT_SUBJECT', 'Molo Content Import')
+
+GOOGLE_ANALYTICS = {}
+GOOGLE_ANALYTICS_IGNORE_PATH = [
+    # health check used by marathon
+    '/health/',
+    # admin interfaces for wagtail and django
+    '/admin/', '/django-admin/',
+    # Universal Core content import URL
+    '/import/',
+    # browser troll paths
+    '/favicon.ico', '/robots.txt',
+    # when using nginx, we handle statics and media
+    # but including them here just incase
+    '/media/', '/static/',
+]
+
+CUSTOM_GOOGLE_ANALYTICS_IGNORE_PATH = environ.get(
+    'GOOGLE_ANALYTICS_IGNORE_PATH')
+if CUSTOM_GOOGLE_ANALYTICS_IGNORE_PATH:
+    GOOGLE_ANALYTICS_IGNORE_PATH += [
+        d.strip() for d in CUSTOM_GOOGLE_ANALYTICS_IGNORE_PATH.split(',')]
+
+
+CSRF_FAILURE_VIEW = 'molo.core.views.csrf_failure'
+
+FREE_BASICS_URL_FOR_CSRF_MESSAGE = environ.get(
+    'FREE_BASICS_URL_FOR_CSRF_MESSAGE', '')
