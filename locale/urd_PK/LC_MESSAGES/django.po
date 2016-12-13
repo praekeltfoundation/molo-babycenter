@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-17 10:16+0000\n"
+"PO-Revision-Date: 2016-08-17 10:27+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fil_PH\n"
+"Language: urd_PK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,12 +69,12 @@ msgstr ""
 
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
-msgstr "Paumanhin, mayroon yatang pagkakamali. Mangyaring subukan ulit."
+msgstr "معذرت، کوئی نقص معلوم ہو رہا ہے۔ برائے مہربانی جلد ہی دوبارہ کوشش کریں۔"
 
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
 msgid "Home"
-msgstr "Home"
+msgstr "ہوم"
 
 #: babycenter/templates/admin/import_from_git.html:8
 msgid "Import content"
@@ -118,37 +118,37 @@ msgstr ""
 
 #: babycenter/templates/core/article_page.html:50
 msgid "More Information"
-msgstr "Karagdagang impormasyon"
+msgstr "مزید معلومات"
 
 #: babycenter/templates/core/article_page.html:61
 #: babycenter/templates/core/tags/section_listing_homepage.html:21
 msgid "More"
-msgstr "Marami pa"
+msgstr "مزید"
 
 #: babycenter/templates/core/tags/latest_listing_homepage.html:4
 msgid "Recommended"
-msgstr "Magpakita pa sa akin ng karagdagang impormasyon tungkol sa"
+msgstr "مجھے اس کے متعلق مزید دکھائیں"
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr "May hinahanap ka ba?"
+msgstr "کیا آپ کو کسی چیز کی تلاش ہے؟"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
-msgstr "Hanapin"
+msgstr "تلاش "
 
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
 msgid "Search"
-msgstr "Hanapin"
+msgstr "تلاش"
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
-msgstr "Walang nahanap na resulta para sa"
+msgstr "ہم آپ کی مطلوبہ چیز کو تلاش نہیں کر سکتے"
 
 #: babycenter/templates/search/search_results.html:43
 msgid "I am looking for"
-msgstr "Naghahanap ako ng"
+msgstr "مجھے اس کی تلاش ہے"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
@@ -259,19 +259,19 @@ msgstr ""
 
 #: babycenter/templates/core/section_page.html:39
 msgid "Prev"
-msgstr "Nakaraan"
+msgstr "پچھلا"
 
 #: babycenter/templates/core/section_page.html:72
 msgid "Next"
-msgstr "Kasunod"
+msgstr "اگلا"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:50
 msgid "View More"
-msgstr "Marami pa"
+msgstr "مزید"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:57
 msgid "More about"
-msgstr "Marami pa"
+msgstr "مزید"
 
 #: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/base.html:113
 #: babycenter/temp_ve/core/test_templates/base.html:128

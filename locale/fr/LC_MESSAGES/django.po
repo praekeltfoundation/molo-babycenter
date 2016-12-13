@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-17 10:17+0000\n"
-"Last-Translator: Botswang <botswang@praekelt.com>\n"
+"PO-Revision-Date: 2016-10-20 12:56+0000\n"
+"Last-Translator: Lebohang <lebo@praekeltfoundation.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fre_FR\n"
 "MIME-Version: 1.0\n"
@@ -12,60 +12,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1471429030.628104\n"
+"X-POOTLE-MTIME: 1476968162.196241\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
-msgstr ""
+msgstr "Zulu"
 
 #: babycenter/settings/base.py:178
 msgid "Xhosa"
-msgstr ""
+msgstr "Xhosa"
 
 #: babycenter/settings/base.py:179
 msgid "Sotho"
-msgstr ""
+msgstr "Sotho"
 
 #: babycenter/settings/base.py:180
 msgid "Venda"
-msgstr ""
+msgstr "Venda"
 
 #: babycenter/settings/base.py:181
 msgid "Tswana"
-msgstr ""
+msgstr "Tswana"
 
 #: babycenter/settings/base.py:182
 msgid "Tsonga"
-msgstr ""
+msgstr "Tsonga"
 
 #: babycenter/settings/base.py:183
 msgid "Swati"
-msgstr ""
+msgstr "Swati"
 
 #: babycenter/settings/base.py:184
 msgid "Ndebele"
-msgstr ""
+msgstr "Ndebele"
 
 #: babycenter/templates/403.html:8
 msgid "Access Denied"
-msgstr ""
+msgstr "Accès non autorisé"
 
 #: babycenter/templates/403.html:9
 msgid "You do not have permssion to access this site."
-msgstr ""
+msgstr "Vous n'avez pas la permission d'accéder à cette page."
 
 #: babycenter/templates/404.html:8
 msgid "Page not found"
-msgstr ""
+msgstr "La page demandée a peut-être été déplacée, renommée ou supprimée."
 
 #: babycenter/templates/404.html:10
 msgid "Sorry, this page could not be found."
-msgstr ""
+msgstr "Oups, cette page ne semble plus exister."
 
 #: babycenter/templates/500.html:12
 #: babycenter/templates/500.html:16
 msgid "Internal server error"
-msgstr ""
+msgstr "Erreur interne du serveur"
 
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
@@ -199,15 +199,15 @@ msgstr ""
 
 #: babycenter/settings/base.py:192
 msgid "Yoruba"
-msgstr ""
+msgstr "Yoruba"
 
 #: babycenter/settings/base.py:193
 msgid "Igbo"
-msgstr ""
+msgstr "Igbo"
 
 #: babycenter/settings/base.py:194
 msgid "Hausa"
-msgstr ""
+msgstr "Hausa"
 
 #: babycenter/settings/base.py:195
 msgid "Amharic"
@@ -223,39 +223,39 @@ msgstr ""
 
 #: babycenter/settings/base.py:198
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: babycenter/settings/base.py:199
 msgid "Filipino"
-msgstr ""
+msgstr "Filipino"
 
 #: babycenter/settings/base.py:200
 msgid "N'ko"
-msgstr ""
+msgstr "N'ko"
 
 #: babycenter/settings/base.py:201
 msgid "Syriac"
-msgstr ""
+msgstr "Syriac"
 
 #: babycenter/settings/base.py:202
 msgid "Dhivehi"
-msgstr ""
+msgstr "Dhivehi"
 
 #: babycenter/settings/base.py:203
 msgid "Berber"
-msgstr ""
+msgstr "Berber"
 
 #: babycenter/settings/base.py:204
 msgid "Kurdish"
-msgstr ""
+msgstr "Kurdish"
 
 #: babycenter/settings/base.py:205
 msgid "Aramaic"
-msgstr ""
+msgstr "Aramaic"
 
 #: babycenter/settings/base.py:206
 msgid "Creole Haitian"
-msgstr ""
+msgstr "Creole Haitian"
 
 #: babycenter/templates/core/section_page.html:39
 msgid "Prev"
