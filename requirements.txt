@@ -5,3 +5,4 @@ psycopg2
 django-extensions
 molo.usermetadata==1.0.2
 six>=1.9
+wagtailmedia==0.1.1
