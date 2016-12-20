@@ -23,6 +23,7 @@
   {% endif %}
 
   <div class="article-content">
+  {% social_media_article %}
     {% for block in self.body %}
       {% if block.block_type == 'heading' %}
           <h4>{{ block.value }}</h4>
@@ -64,6 +65,12 @@
     </li>
   </ul>
 {% endwith %}
+
+% if settings.core.SiteSettings.enable_clickable_tags %}
+    {% for tag in self.tags_list %}
+        <a href="{% url 'tags_list' tag %}">{{tag}}</a>
+    {% endfor %}
+{% endif %}
 
 {% surveys_list_for_pages page=self %}
 {% endblock %}
