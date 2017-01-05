@@ -51,7 +51,7 @@
   {% if self.body %}
     <h2 class="heading heading{{ section.get_effective_extra_style_hints }}">
       {% trans "More Information" %}
-    </h2> 
+    </h2>
     {% for block in self.body %}
       {% if block.block_type == 'page'  %}
           <li class="article__link">
@@ -66,7 +66,7 @@
   </ul>
 {% endwith %}
 
-% if settings.core.SiteSettings.enable_clickable_tags %}
+{% if settings.core.SiteSettings.enable_clickable_tags %}
     {% for tag in self.tags_list %}
         <a href="{% url 'tags_list' tag %}">{{tag}}</a>
     {% endfor %}
