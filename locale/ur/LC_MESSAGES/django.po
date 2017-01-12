@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-11-27 22:38+0000\n"
+"PO-Revision-Date: 2017-01-12 15:05+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: urd_IN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1470146160.879975\n"
+"X-POOTLE-MTIME: 1484233536.210358\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
@@ -118,37 +118,37 @@ msgstr ""
 
 #: babycenter/templates/core/article_page.html:50
 msgid "More Information"
-msgstr ""
+msgstr "مزید معلومات"
 
 #: babycenter/templates/core/article_page.html:61
 #: babycenter/templates/core/tags/section_listing_homepage.html:21
 msgid "More"
-msgstr ""
+msgstr "مزید"
 
 #: babycenter/templates/core/tags/latest_listing_homepage.html:4
 msgid "Recommended"
-msgstr ""
+msgstr "مجھے اس کے متعلق مزید دکھائیں"
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr ""
+msgstr "کیا آپ کو کسی چیز کی تلاش ہے؟"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
-msgstr ""
+msgstr "تلاش "
 
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
 msgid "Search"
-msgstr ""
+msgstr "تلاش "
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
-msgstr ""
+msgstr "ہم آپ کی مطلوبہ چیز کو تلاش نہیں کر سکتے"
 
 #: babycenter/templates/search/search_results.html:43
 msgid "I am looking for"
-msgstr ""
+msgstr "مجھے اس کی تلاش ہے"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
@@ -267,7 +267,7 @@ msgstr ""
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:50
 msgid "View More"
-msgstr ""
+msgstr "مزید"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:57
 msgid "More about"

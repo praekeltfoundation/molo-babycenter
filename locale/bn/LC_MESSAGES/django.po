@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-17 10:14+0000\n"
+"PO-Revision-Date: 2017-01-12 12:19+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ben_IN\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1471428880.365889\n"
+"X-POOTLE-MTIME: 1484223577.883863\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
@@ -70,6 +70,8 @@ msgstr ""
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
 msgstr ""
+"দুঃখিত, মনে হচ্ছে কিছু একটা ভুল হয়েছে। দয়া করে কিছুক্ষণ পর আবার চেষ্টা "
+"করুন।"
 
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
@@ -131,24 +133,24 @@ msgstr "আমাকে (এটা ) সম্পর্কে কিছু দ�
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr ""
+msgstr "আপনি কি কিছু খুঁজছেন?"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
-msgstr ""
+msgstr "খুঁজুন"
 
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
 msgid "Search"
-msgstr ""
+msgstr "খুঁজুন"
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
-msgstr ""
+msgstr "...এর জন্য কোনো ফলাফল পাওয়া যায় নি"
 
 #: babycenter/templates/search/search_results.html:43
 msgid "I am looking for"
-msgstr ""
+msgstr "আমি (কিছু একটা) খুঁজছি"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
@@ -175,7 +177,7 @@ msgstr ""
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:29
 msgid "Move"
-msgstr ""
+msgstr "আরো"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:32
 msgid "Copy"
