@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-12 18:46+0200\n"
+"POT-Creation-Date: 2017-01-13 12:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,218 +16,240 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/403.html:8
+#: babycenter/settings/base.py:204
+msgid "Zulu"
+msgstr ""
+
+#: babycenter/settings/base.py:205
+msgid "Xhosa"
+msgstr ""
+
+#: babycenter/settings/base.py:206
+msgid "Sotho"
+msgstr ""
+
+#: babycenter/settings/base.py:207
+msgid "Venda"
+msgstr ""
+
+#: babycenter/settings/base.py:208
+msgid "Tswana"
+msgstr ""
+
+#: babycenter/settings/base.py:209
+msgid "Tsonga"
+msgstr ""
+
+#: babycenter/settings/base.py:210
+msgid "Swati"
+msgstr ""
+
+#: babycenter/settings/base.py:211
+msgid "Ndebele"
+msgstr ""
+
+#: babycenter/settings/base.py:212
+msgid "Wolof"
+msgstr ""
+
+#: babycenter/settings/base.py:213
+msgid "Yoruba"
+msgstr ""
+
+#: babycenter/settings/base.py:214
+msgid "Igbo"
+msgstr ""
+
+#: babycenter/settings/base.py:215
+msgid "Hausa"
+msgstr ""
+
+#: babycenter/settings/base.py:216
+msgid "Amharic"
+msgstr ""
+
+#: babycenter/settings/base.py:217
+msgid "Malay"
+msgstr ""
+
+#: babycenter/settings/base.py:218
+msgid "Gujarati"
+msgstr ""
+
+#: babycenter/settings/base.py:219
+msgid "Filipino"
+msgstr ""
+
+#: babycenter/settings/base.py:220
+msgid "N'ko"
+msgstr ""
+
+#: babycenter/settings/base.py:221
+msgid "Syriac"
+msgstr ""
+
+#: babycenter/settings/base.py:222
+msgid "Dhivehi"
+msgstr ""
+
+#: babycenter/settings/base.py:223
+msgid "Berber"
+msgstr ""
+
+#: babycenter/settings/base.py:224
+msgid "Kurdish"
+msgstr ""
+
+#: babycenter/settings/base.py:225
+msgid "Aramaic"
+msgstr ""
+
+#: babycenter/settings/base.py:226
+msgid "Creole Haitian"
+msgstr ""
+
+#: babycenter/settings/base.py:227
+msgid "Bahasa"
+msgstr ""
+
+#: babycenter/settings/base.py:228
+msgid "Bengali"
+msgstr ""
+
+#: babycenter/settings/base.py:229
+msgid "Burmese"
+msgstr ""
+
+#: babycenter/settings/base.py:230
+msgid "Sinhalese"
+msgstr ""
+
+#: babycenter/settings/base.py:231
+msgid "Guarani"
+msgstr ""
+
+#: babycenter/settings/base.py:415
+msgid "January"
+msgstr ""
+
+#: babycenter/settings/base.py:416
+msgid "February"
+msgstr ""
+
+#: babycenter/settings/base.py:417
+msgid "March"
+msgstr ""
+
+#: babycenter/settings/base.py:418
+msgid "April"
+msgstr ""
+
+#: babycenter/settings/base.py:419
+msgid "May"
+msgstr ""
+
+#: babycenter/settings/base.py:420
+msgid "June"
+msgstr ""
+
+#: babycenter/settings/base.py:421
+msgid "July"
+msgstr ""
+
+#: babycenter/settings/base.py:422
+msgid "August"
+msgstr ""
+
+#: babycenter/settings/base.py:423
+msgid "September"
+msgstr ""
+
+#: babycenter/settings/base.py:424
+msgid "October"
+msgstr ""
+
+#: babycenter/settings/base.py:425
+msgid "November"
+msgstr ""
+
+#: babycenter/settings/base.py:426
+msgid "December"
+msgstr ""
+
 #: babycenter/templates/403.html:8
 msgid "Access Denied"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/403.html:9
 #: babycenter/templates/403.html:9
 msgid "You do not have permssion to access this site."
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/404.html:8
 #: babycenter/templates/404.html:8
 msgid "Page not found"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/404.html:10
 #: babycenter/templates/404.html:10
 msgid "Sorry, this page could not be found."
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/500.html:12
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/500.html:16
 #: babycenter/templates/500.html:12 babycenter/templates/500.html:16
 msgid "Internal server error"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/500.html:18
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/base.html:113
-#: babycenter/temp_ve/core/test_templates/base.html:128
-msgid "Site Language:"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/core/tags/breadcrumbs.html:6
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
 msgid "Home"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/core/tags/latest_listing_homepage.html:6
-msgid "Latest"
+#: babycenter/templates/admin/import_from_git.html:8
+msgid "Import content"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:6
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:21
-msgid "Sign in"
+#: babycenter/templates/admin/import_from_git.html:11
+msgid "Import content from a Universal Core site"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:11
-msgid "LOGIN TO YOUR ACCOUNT!"
+#: babycenter/templates/admin/versions.html:8
+msgid "Plugin"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:12
-msgid "We’re excited to have you..."
+#: babycenter/templates/admin/versions.html:9
+msgid "PyPI Version"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:15
-msgid "Your username and password does not match. Please try again."
+#: babycenter/templates/admin/versions.html:10
+msgid "Runing Version"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:17
-msgid "Username"
+#: babycenter/templates/admin/versions.html:11
+msgid "Status"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:19
-msgid "4-digit pin"
+#: babycenter/templates/admin/versions.html:19
+msgid "UpToDate"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/login.html:25
-msgid "Forgotten your password?"
+#: babycenter/templates/admin/versions.html:22
+msgid "Not installed"
 msgstr ""
 
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_complete.html:7
-msgid "Your password has been set.  You may go ahead and log in now."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_complete.html:9
-msgid "Log in"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_confirm.html:10
-msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_confirm.html:14
-msgid "New password:"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_confirm.html:16
-msgid "Confirm password:"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_confirm.html:17
-msgid "Change my password"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_confirm.html:21
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a new password reset."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_done.html:7
-msgid ""
-"We've emailed you instructions for setting your password, if an account "
-"exists with the email you entered. You should receive them shortly."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_done.html:9
-msgid ""
-"If you don't receive an email, please make sure you've entered the address "
-"you registered with, and check your spam folder."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_form.html:6
-msgid ""
-"Forgotten your password? Enter your email address below, and we'll email "
-"instructions for setting a new one."
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_form.html:10
-msgid "Email address:"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/registration/password_reset_form.html:12
-msgid "Reset my password"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_block.html:6
-#: babycenter/templates/search/search_block.html:6
-msgid "Looking for something?"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_block.html:7
-#: babycenter/templates/search/search_block.html:7
-msgid "SEARCH"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_results.html:46
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_results.html:51
-#: babycenter/templates/search/search_results.html:39
-#: babycenter/templates/search/search_results.html:44
-msgid "Search"
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_results.html:47
-#: babycenter/templates/search/search_results.html:40
-msgid "No search results for "
-msgstr ""
-
-#: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/search/search_results.html:50
-#: babycenter/templates/search/search_results.html:43
-msgid "I am looking for"
-msgstr ""
-
-#: babycenter/temp_ve/core/views.py:35
-msgid "That page is not translatable."
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page.html:28
-msgid "Next Question"
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page.html:28
-msgid "Submit Survey"
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page.html:31
-msgid "You have already completed this survey."
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page.html:34
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page_landing.html:9
-msgid "Back to Home page"
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page.html:39
-msgid "Please log in to take this survey"
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page_landing.html:12
-msgid "Survey Results"
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/molo_survey_page_landing.html:14
-msgid ""
-"Your survey has been completed successfully. Please see your submission "
-"results below."
-msgstr ""
-
-#: babycenter/temp_ve/surveys/templates/surveys/surveys_list.html:10
-msgid "Take The Survey"
-msgstr ""
-
-#: babycenter/temp_ve/usermetadata/templates/persona.html:17
-msgid "Skip"
+#: babycenter/templates/admin/versions.html:24
+msgid "Compare"
 msgstr ""
 
 #: babycenter/templates/base.html:60
 msgid "BabyCenter"
 msgstr ""
 
-#: babycenter/templates/core/article_page.html:52
+#: babycenter/templates/core/article_page.html:53
 msgid "More Information"
 msgstr ""
 
-#: babycenter/templates/core/article_page.html:63
+#: babycenter/templates/core/article_page.html:64
 msgid "More"
 msgstr ""
 
@@ -249,4 +271,68 @@ msgstr ""
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:57
 msgid "More about"
+msgstr ""
+
+#: babycenter/templates/search/search_block.html:6
+msgid "Looking for something?"
+msgstr ""
+
+#: babycenter/templates/search/search_block.html:7
+msgid "SEARCH"
+msgstr ""
+
+#: babycenter/templates/search/search_results.html:39
+#: babycenter/templates/search/search_results.html:44
+msgid "Search"
+msgstr ""
+
+#: babycenter/templates/search/search_results.html:40
+msgid "No search results for "
+msgstr ""
+
+#: babycenter/templates/search/search_results.html:43
+msgid "I am looking for"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
+msgid "Edit this page"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
+msgid "Edit"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:23
+msgid "Draft"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:26
+msgid ""
+"This page is published but does not exist within a configured Site, so "
+"cannot be viewed."
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:26
+msgid "Live"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:29
+msgid "Move"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:32
+msgid "Copy"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:35
+msgid "Delete"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:38
+msgid "Unpublish"
+msgstr ""
+
+#: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:41
+msgid "Add child page"
 msgstr ""

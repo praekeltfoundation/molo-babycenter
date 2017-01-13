@@ -410,6 +410,21 @@ LOCALE_PATHS = [
     join(PROJECT_ROOT, "locale"),
 ]
 
+# Additional strings that need translations
+
+_("January")
+_("February")
+_("March")
+_("April")
+_("May")
+_("June")
+_("July")
+_("August")
+_("September")
+_("October")
+_("November")
+_("December")
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
