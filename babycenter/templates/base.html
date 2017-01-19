@@ -42,10 +42,11 @@
           </script>
         {% block extra_css %}{% endblock %}
           {% block Facebook_pixel %}{% endblock %}
+      {% get_current_language as LANGUAGE_CODE %}
     </head>
 
-    <body  {% if LANGUAGE_CODE|language_bidi == True %}dir="rtl"{% endif %}>
-      <div dir="ltr" class="languages l-indent f-small">
+    <body {% if LANGUAGE_CODE|language_bidi == True %}dir="rtl"{% endif %}>
+      <div class="languages l-indent f-small">
           {% for language in languages %}
             <a href="{% url 'locale_set' language.locale %}?next={{request.path}}?{{ request.GET.urlencode }}" {% if LANGUAGE_CODE == language.locale %} class="active" {% endif %}>{{language.locale|language_name_local}}</a>
           {% endfor %}

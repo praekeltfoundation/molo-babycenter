@@ -28,7 +28,13 @@
             {% image article.image width-45 height-45  %}
           </div>
           {% endif %}
-          <h2 class="article-list__title">{{article.title}}{% if article.subtitle %}:</h2><h4 class="article-list__subtitle">{{ article.subtitle }}</h4>{% else %}</h2>
+          <h2 class="article-list__title">
+            {{article.title}}
+              {% if article.subtitle %}:
+          </h2>
+          <h4 class="article-list__subtitle">
+              {{ article.subtitle }}</h4>
+          {% else %}</h2>
           {% endif %}
           <p class="article__date">{{self.first_published_at | date:"j F Y"}}</p>
       </a>
@@ -77,7 +83,7 @@
     {% for page in pages.end %}
       <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-  
+
     {% if articles_paginated.has_next %}
       <a href="?p={{ articles_paginated.next_page_number }}">{% trans "Next" %} &gt;</a>
     {% endif %}
