@@ -1,10 +1,9 @@
-molo.core==3.17.3
-molo.surveys==1.2.0
+molo.core==4.0.0
+molo.surveys==2.0.0
 gunicorn
 psycopg2
 django-extensions
 molo.usermetadata==1.0.2
 six>=1.9
-wagtailmedia==0.1.1
 celery<4.0
 django-google-analytics-app==2.1.4
