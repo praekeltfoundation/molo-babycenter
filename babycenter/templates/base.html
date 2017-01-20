@@ -42,10 +42,11 @@
           </script>
         {% block extra_css %}{% endblock %}
           {% block Facebook_pixel %}{% endblock %}
+      {% get_current_language as LANGUAGE_CODE %}
     </head>
 
-    <body  {% if LANGUAGE_CODE|language_bidi == True %}dir="rtl"{% endif %}>
-      <div dir="ltr" class="languages l-indent f-small">
+    <body {% if LANGUAGE_CODE|language_bidi == True %}dir="rtl"{% endif %}>
+      <div class="languages l-indent f-small">
           {% for language in languages %}
             <a href="{% url 'locale_set' language.locale %}?next={{request.path}}?{{ request.GET.urlencode }}" {% if LANGUAGE_CODE == language.locale %} class="active" {% endif %}>{{language.locale|language_name_local}}</a>
           {% endfor %}
@@ -80,7 +81,7 @@
 
       {% if settings.core.SiteSettings.ga_tag_manager %}
       <!-- Google Tag Manager -->
-      <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{settings.core.SiteSettings.ga_tag_manager}}"
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{settings.core.SiteSettings.ga_tag_manager}}{%if request.META.HTTP_X_IORG_FBS_UIP %}&freebasics_uip={{request.META.HTTP_X_IORG_FBS_UIP}}{%endif%}"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
