@@ -1,6 +1,7 @@
 import os
 
 from django.conf.urls import patterns, include, url
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
@@ -34,6 +35,12 @@ urlpatterns += patterns(
         template_name='robots.txt', content_type='text/plain')),
     url(r'^sitemap\.xml$', 'wagtail.contrib.wagtailsitemaps.views.sitemap'),
     url(r'', include('molo.core.urls')),
+    url(r'', include(wagtail_urls)),
+)
+
+urlpatterns += i18n_patterns(
+    '',
+
     url(r'', include(wagtail_urls)),
 )
 
