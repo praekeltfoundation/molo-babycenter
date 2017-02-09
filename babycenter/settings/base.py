@@ -213,7 +213,7 @@ LANGUAGES = global_settings.LANGUAGES + [
     ('ig', _('Igbo')),
     ('ha', _('Hausa')),
     ('am', _('Amharic')),
-    ('ml', _('Malay')),
+    ('ms', _('Malay')),
     ('gu', _('Gujarati')),
     ('fil', _('Filipino')),
     ('nqo', _('N\'ko')),
@@ -309,7 +309,7 @@ EXTRA_LANG_INFO = {
         'name': 'Amharic',
         'name_local': 'አማርኛ'
     },
-    'ml': {
+    'ms': {
         'bidi': False,
         'code': 'ms',
         'name': 'Malay',
