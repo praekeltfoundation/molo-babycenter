@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2016-08-17 10:16+0000\n"
+"PO-Revision-Date: 2017-02-03 11:05+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fil_PH\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1470146160.879975\n"
+"X-POOTLE-MTIME: 1486119954.188624\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:29
 msgid "Move"
-msgstr ""
+msgstr "Marami pa"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:32
 msgid "Copy"
@@ -411,3 +411,67 @@ msgstr ""
 #: babycenter/temp_ve/usermetadata/templates/persona.html:17
 msgid "Skip"
 msgstr ""
+
+#: babycenter/settings/base.py:227
+msgid "Bahasa"
+msgstr ""
+
+#: babycenter/settings/base.py:228
+msgid "Bengali"
+msgstr ""
+
+#: babycenter/settings/base.py:229
+msgid "Burmese"
+msgstr ""
+
+#: babycenter/settings/base.py:230
+msgid "Sinhalese"
+msgstr ""
+
+#: babycenter/settings/base.py:415
+msgid "January"
+msgstr "Enero"
+
+#: babycenter/settings/base.py:416
+msgid "February"
+msgstr "Pebrero"
+
+#: babycenter/settings/base.py:417
+msgid "March"
+msgstr "Marso"
+
+#: babycenter/settings/base.py:418
+msgid "April"
+msgstr "Abril"
+
+#: babycenter/settings/base.py:419
+msgid "May"
+msgstr "Mayo"
+
+#: babycenter/settings/base.py:420
+msgid "June"
+msgstr "Hunyo"
+
+#: babycenter/settings/base.py:421
+msgid "July"
+msgstr "Hulyo"
+
+#: babycenter/settings/base.py:422
+msgid "August"
+msgstr "Agosto"
+
+#: babycenter/settings/base.py:423
+msgid "September"
+msgstr "Setyembre"
+
+#: babycenter/settings/base.py:424
+msgid "October"
+msgstr "Oktubre"
+
+#: babycenter/settings/base.py:425
+msgid "November"
+msgstr "Nobyembre"
+
+#: babycenter/settings/base.py:426
+msgid "December"
+msgstr "Disyembre"
