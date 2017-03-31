@@ -3,48 +3,48 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 18:20+0000\n"
-"PO-Revision-Date: 2017-02-03 10:54+0000\n"
+"PO-Revision-Date: 2017-02-03 10:57+0000\n"
 "Last-Translator: Botswang <botswang@praekelt.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: amh_ET\n"
+"Language: ara_AE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1486119250.142660\n"
+"X-POOTLE-MTIME: 1486119426.039024\n"
 
 #: babycenter/settings/base.py:177
 msgid "Zulu"
-msgstr "Zulu"
+msgstr ""
 
 #: babycenter/settings/base.py:178
 msgid "Xhosa"
-msgstr "Xhosa"
+msgstr ""
 
 #: babycenter/settings/base.py:179
 msgid "Sotho"
-msgstr "Sotho"
+msgstr ""
 
 #: babycenter/settings/base.py:180
 msgid "Venda"
-msgstr "Venda"
+msgstr ""
 
 #: babycenter/settings/base.py:181
 msgid "Tswana"
-msgstr "Tswana"
+msgstr ""
 
 #: babycenter/settings/base.py:182
 msgid "Tsonga"
-msgstr "Tsonga"
+msgstr ""
 
 #: babycenter/settings/base.py:183
 msgid "Swati"
-msgstr "Swati"
+msgstr ""
 
 #: babycenter/settings/base.py:184
 msgid "Ndebele"
-msgstr "Ndebele"
+msgstr ""
 
 #: babycenter/templates/403.html:8
 msgid "Access Denied"
@@ -69,12 +69,12 @@ msgstr ""
 
 #: babycenter/templates/500.html:18
 msgid "Sorry, there seems to be an error. Please try again soon."
-msgstr "ለተፈጠረው ስህተት ይቅርታ እንጠይቃለን። እባክዎ በቶሎ ደግመው ይሞክሩ።"
+msgstr "للأسف، يبدو أن هناك خطأ قد حدث. يرجى إعادة المحاولة قريباً. "
 
 #: babycenter/templates/_base_navigation.html:4
 #: babycenter/templates/core/tags/breadcrumbs.html:6
 msgid "Home"
-msgstr "መነሻ"
+msgstr ""
 
 #: babycenter/templates/admin/import_from_git.html:8
 msgid "Import content"
@@ -118,37 +118,37 @@ msgstr ""
 
 #: babycenter/templates/core/article_page.html:50
 msgid "More Information"
-msgstr "ተጨማሪ መረጃ"
+msgstr "مزيد من المعلومات"
 
 #: babycenter/templates/core/article_page.html:61
 #: babycenter/templates/core/tags/section_listing_homepage.html:21
 msgid "More"
-msgstr "ተጨማሪ"
+msgstr "المزيد"
 
 #: babycenter/templates/core/tags/latest_listing_homepage.html:4
 msgid "Recommended"
-msgstr "ተጨማሪ አሳየኝ ስለ"
+msgstr "أرغب في معرفة المزيد عن"
 
 #: babycenter/templates/search/search_block.html:6
 msgid "Looking for something?"
-msgstr "ምን እየፈለጉ ነው?"
+msgstr "هل تبحثين عن شيء ما؟"
 
 #: babycenter/templates/search/search_block.html:7
 msgid "SEARCH"
-msgstr "ፈልግ"
+msgstr "بحث"
 
 #: babycenter/templates/search/search_results.html:39
 #: babycenter/templates/search/search_results.html:44
 msgid "Search"
-msgstr "ፈልግ"
+msgstr "بحث"
 
 #: babycenter/templates/search/search_results.html:40
 msgid "No search results for "
-msgstr "የፍለጋ ውጤት የለም"
+msgstr "لا توجد نتائج لبحث"
 
 #: babycenter/templates/search/search_results.html:43
 msgid "I am looking for"
-msgstr "የምፈልገው"
+msgstr "أنا أبحث عن"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:8
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:20
@@ -175,7 +175,7 @@ msgstr ""
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:29
 msgid "Move"
-msgstr "ተጨማሪ"
+msgstr "المزيد"
 
 #: babycenter/templates/wagtailadmin/pages/listing/_page_title_explore.html:32
 msgid "Copy"
@@ -259,19 +259,19 @@ msgstr ""
 
 #: babycenter/templates/core/section_page.html:39
 msgid "Prev"
-msgstr "ቀደም ብሎ የነበረ"
+msgstr "السابق"
 
 #: babycenter/templates/core/section_page.html:72
 msgid "Next"
-msgstr "ቀጣይ"
+msgstr "التالي"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:50
 msgid "View More"
-msgstr "ተጨማሪ"
+msgstr "المزيد"
 
 #: babycenter/templates/core/tags/section_listing_homepage.html:57
 msgid "More about"
-msgstr "ተጨማሪ"
+msgstr "المزيد"
 
 #: babycenter/temp_ve/core/cookiecutter/scaffold/{{cookiecutter.directory}}/{{cookiecutter.app_name}}/templates/base.html:113
 #: babycenter/temp_ve/core/test_templates/base.html:128
@@ -430,48 +430,48 @@ msgstr ""
 
 #: babycenter/settings/base.py:415
 msgid "January"
-msgstr "ጥር"
+msgstr "كانون الثاني"
 
 #: babycenter/settings/base.py:416
 msgid "February"
-msgstr "የካቲት"
+msgstr "شهر فبراير"
 
 #: babycenter/settings/base.py:417
 msgid "March"
-msgstr "መጋቢት"
+msgstr "مارس"
 
 #: babycenter/settings/base.py:418
 msgid "April"
-msgstr "ሚያዚያ"
+msgstr "أبريل"
 
 #: babycenter/settings/base.py:419
 msgid "May"
-msgstr "ግንቦት"
+msgstr "قد"
 
 #: babycenter/settings/base.py:420
 msgid "June"
-msgstr "ሰኔ"
+msgstr "يونيو"
 
 #: babycenter/settings/base.py:421
 msgid "July"
-msgstr "ሀምሌ"
+msgstr "يوليو"
 
 #: babycenter/settings/base.py:422
 msgid "August"
-msgstr "ነሐሴ"
+msgstr "أغسطس"
 
 #: babycenter/settings/base.py:423
 msgid "September"
-msgstr "መስከረም"
+msgstr "سبتمبر"
 
 #: babycenter/settings/base.py:424
 msgid "October"
-msgstr "ጥቅምት"
+msgstr "شهر اكتوبر"
 
 #: babycenter/settings/base.py:425
 msgid "November"
-msgstr "ህዳር"
+msgstr "شهر نوفمبر"
 
 #: babycenter/settings/base.py:426
 msgid "December"
-msgstr "ታህሳስ"
+msgstr "ديسمبر"
