@@ -13,6 +13,8 @@ install:
 script:
   - flake8
   - py.test
+  # Check that PO files don't inclue plural expressions
+  - "! grep -re 'plural=EXPRESSION' --include '*.po' locale/"
   # Check that the molo.core version in requirements.txt matches the version in the Docker image
   - \[ "$(sed -nE 's/^molo\.core==(.*)$/\1/p' requirements.txt)" = "$(sed -nE 's/^FROM .*:(.*)-onbuild$/\1/p' Dockerfile)" \]
 after_success:
