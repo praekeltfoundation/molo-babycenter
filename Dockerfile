@@ -1,4 +1,4 @@
-FROM praekeltfoundation/molo-bootstrap:4.4.8-onbuild
+FROM praekeltfoundation/molo-bootstrap:4.4.9-onbuild
 
 ENV DJANGO_SETTINGS_MODULE=babycenter.settings.docker \
     CELERY_APP=babycenter \
