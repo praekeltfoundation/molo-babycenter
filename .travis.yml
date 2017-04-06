@@ -14,5 +14,6 @@ install:
 script:
   - flake8 babycenter
   - py.test
+  - grep -Rq "plural=EXPRESSION" --include \*.po locale/
 after_success:
   - coveralls
