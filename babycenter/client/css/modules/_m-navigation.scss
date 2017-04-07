@@ -1,17 +1,25 @@
 .navigation {
   text-align: center;
   padding: 10px 16px;
-  a {
-    color: #666;
-    font-weight: bold;
-    &:after {
-      content: " | ";
-      color: #ddd;
-    }
-    &:last-child:after {
-      content: "";
-    }
+}
+.navigation-list {
+  margin: 0;
+  padding: 0;
+}
+.navigation-list__item {
+  list-style-type: none;
+  display: inline-block;
+  &:after {
+    content: " | ";
+    color: #ddd;
   }
+  &:last-child:after {
+    content: "";
+  }
+}
+.navigation-list__anchor {
+  color: #666;
+  font-weight: bold;
 }
 
 .navigation--footer {
