@@ -41,17 +41,20 @@
           }
           </script>
         {% block extra_css %}{% endblock %}
-          {% block Facebook_pixel %}{% endblock %}
+        {% block Facebook_pixel %}{% endblock %}
       {% get_current_language as LANGUAGE_CODE %}
+      {% if LANGUAGE_CODE|language_bidi == True %}
+        {% compress css %}
+          <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/{{ ENV }}/style-rtl.css">
+        {% endcompress %}
+      {% endif %}
     </head>
-
-    <body {% if LANGUAGE_CODE|language_bidi == True %}dir="rtl"{% endif %}>
+    <body {% if LANGUAGE_CODE|language_bidi == True %} dir="rtl"{% endif %}>
       <div class="languages l-indent f-small">
           {% for language in languages %}
             <a href="{% url 'locale_set' language.locale %}?next={{request.path}}?{{ request.GET.urlencode }}" {% if LANGUAGE_CODE == language.locale %} class="active" {% endif %}>{{language.locale|language_name_local}}</a>
           {% endfor %}
       </div>
-
       <div class="logo l-indent">
         <a href="/">
           {% if settings.core.SiteSettings.logo %}

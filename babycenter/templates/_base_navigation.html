@@ -1,10 +1,16 @@
 {% load i18n wagtailcore_tags core_tags %}
 
 <div class="navigation f-medium l-indent  {{extra_classes}}">
-  <a href="/">{% trans "Home" %}</a>
 
-  {% load_sections as sections %}
-  {% for section in sections %}
-    <a href="{% pageurl section %}">{{section.title}}</a>
-  {% endfor %}
+  <ul class="navigation-list">
+    <li class="navigation-list__item">
+      <a href="/" class="navigation-list__anchor">{% trans "Home" %}</a>&lrm;
+    </li>
+    {% load_sections as sections %}
+    {% for section in sections %}
+    <li class="navigation-list__item">
+      <a href="{% pageurl section %}" class="navigation-list__anchor">{{section.title}}</a>&lrm;
+    </li>
+    {% endfor %}
+  </ul>
 </div>

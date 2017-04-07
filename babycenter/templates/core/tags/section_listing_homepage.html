@@ -1,5 +1,4 @@
 {% load wagtailcore_tags wagtailimages_tags core_tags i18n %}
-
 {% for section in sections %}
   <div class="section-list section-list{{section.get_effective_extra_style_hints}}">
     {% load_descendant_articles_for_section section count=None featured_in_homepage=True as articles %}
@@ -8,7 +7,7 @@
         <a href="{% pageurl section %}">{{ section.title }}</a>
       </h2>
       <ul class="article-list">
-        {% for article in articles %} 
+        {% for article in articles %}
         {% get_translation article.get_parent_section as origin_section %}
           {% if origin_section = section %}
           <li class="article-list__item">
@@ -23,7 +22,6 @@
          {% endif %}
         {% endfor%}
       </ul>
-
       {% load_child_sections_for_section section as subsections %}
       {% for subsection in subsections %}
         <div class="section-list section-list--subsection section-list{{section.get_effective_extra_style_hints}}">
@@ -45,14 +43,12 @@
                 </li>
               {% endfor%}
             </ul>
-
           <a href="{% pageurl subsection %}" class="section-list__more--subsection section-list__more--subsection{{section.get_effective_extra_style_hints}}">
             {% trans "View More" %}
           </a>
           {% endif %}
         </div>
       {% endfor %}
-
       <a href="{% pageurl section %}" class="section-list__more section-list__more{{section.get_effective_extra_style_hints}}">
         {% trans "More about" %} {{section.title}}
       </a>

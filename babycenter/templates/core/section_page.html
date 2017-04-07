@@ -1,8 +1,6 @@
 {% extends "base.html" %}
-
 {% load core_tags i18n molo_survey_tags pagination %}
 {% load wagtailcore_tags wagtailimages_tags %}
-
 {% block content %}
   {% if self.get_parent_section %}
   {% get_translation self.get_parent_section as section %}
@@ -10,14 +8,11 @@
       <a href="{% pageurl section %}">{{ section }}</a>
     </h1>
   {% endif %}
-
 <!-- Not getting translated -->
   <h1 class="heading heading{{self.get_effective_extra_style_hints}} {% if section %}heading--subsection{{self.get_effective_extra_style_hints}}{% endif %}">
     {{ self.title }}
   </h1>
 <!-- Not getting translated -->
-
-
   {% load_child_articles_for_section self count=13 as articles %}
   <ul class="article-list">
   {% for article in articles %}
@@ -41,28 +36,21 @@
     </li>
   {% endfor %}
   </ul>
-
   {% if articles %}
   <div class="pagination">
-
     {% if articles_paginated.has_previous %}
       <a href="?p={{ articles_paginated.previous_page_number }}">&lt; {% trans "Prev" %}</a>
     {% endif %}
-
     {% get_pages articles_paginated as pages %}
-
      {% for page in pages.start %}
         <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-
     {% if pages.ellipses_before %}
       ...
     {% endif %}
-
     {% for page in pages.before_current %}
       <a href="?p={{ page }}">{{ page}}</a>
     {% endfor %}
-
     <span class="current">
       {% if articles_paginated.has_next %}
         {{ articles_paginated.number }}
@@ -70,26 +58,20 @@
         {{ articles_paginated.number }}
       {% endif %}
     </span>
-
     {% for page in pages.after_current %}
       <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-
     {% if pages.ellipses_after %}
       ...
     {% endif %}
-
-
     {% for page in pages.end %}
       <a href="?p={{ page }}">{{ page }}</a>
     {% endfor %}
-
     {% if articles_paginated.has_next %}
       <a href="?p={{ articles_paginated.next_page_number }}">{% trans "Next" %} &gt;</a>
     {% endif %}
   </div>
   {% endif %}
-
 {% load_child_sections_for_section self as sections %}
 {% if sections %}
   <div class="section-list section-list--subsection section-list{{self.get_effective_extra_style_hints}}">
@@ -97,7 +79,6 @@
       <h3 class="section__title section__title--subsection">
         <a href="{% pageurl section %}">{{section.title}}</a>
       </h3>
-
     {% load_descendant_articles_for_section section featured_in_section=True count=2 as featured_articles %}
     {% if featured_articles %}
       <ul class="article-list">
@@ -117,11 +98,9 @@
         {% endfor %}
       </ul>
     {% endif %}
-
   {% endfor %}
   </ul>
 {% endif %}
-
 {% surveys_list_for_pages page=self %}
 
 {% endblock %}
