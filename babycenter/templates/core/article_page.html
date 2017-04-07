@@ -2,26 +2,21 @@
 
 {% load static core_tags molo_survey_tags %}
 {% load wagtailcore_tags wagtailimages_tags i18n %}
-
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
-
 {% block content %}
 {% get_translation self.get_parent_section as section %}
   <h2 class="heading heading{{section.get_effective_extra_style_hints}}">
     <a href="{% pageurl section %}">{{section.title}}</a>
   </h2>
-
 <!--Not getting translated-->
 <div class="article article{{self.get_parent_section.get_effective_extra_style_hints}}">
   <h1 class="article__title">{{self.title}}</h1>
-
   {% if self.image %}
     <div class="article__image">
       {% image self.image width-288 as article_image %}
       <img src="{{ article_image.url }}" />
     </div>
   {% endif %}
-
   <div class="article-content">
   {% social_media_article %}
     {% for block in self.body %}
@@ -45,7 +40,6 @@
   </div>
 </div>
 <!--Not getting translated-->
-
 {% with section=self.get_parent_section %}
   <ul class="article__links article__links{{ section.get_effective_extra_style_hints }}">
   {% if self.body %}
@@ -65,12 +59,10 @@
     </li>
   </ul>
 {% endwith %}
-
 {% if settings.core.SiteSettings.enable_clickable_tags %}
     {% for tag in self.tags_list %}
         <a href="{% url 'tags_list' tag %}">{{tag}}</a>
     {% endfor %}
 {% endif %}
-
 {% surveys_list_for_pages page=self %}
 {% endblock %}
