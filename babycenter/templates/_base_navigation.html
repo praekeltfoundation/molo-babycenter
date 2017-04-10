@@ -4,12 +4,12 @@
 
   <ul class="navigation-list">
     <li class="navigation-list__item">
-      <a href="/" class="navigation-list__anchor">{% trans "Home" %}</a>&lrm;
+      <a href="/" class="navigation-list__anchor">{% trans "Home" %}</a>
     </li>
     {% load_sections as sections %}
     {% for section in sections %}
     <li class="navigation-list__item">
-      <a href="{% pageurl section %}" class="navigation-list__anchor">{{section.title}}</a>&lrm;
+      <a href="{% pageurl section %}" class="navigation-list__anchor">{{section.title}}</a>
     </li>
     {% endfor %}
   </ul>
