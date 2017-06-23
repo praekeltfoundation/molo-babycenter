@@ -3,15 +3,15 @@
   a {
     color: $orange;
   }
-
-  ul, ol, li {
-      list-style-position: inside;
+  ul, ol {
+    padding: 0 15px;
+    li {
+        list-style-position: outside;
+    }
   }
-
   ul li {
     list-style-type: disc;
   }
-
   ol li {
     list-style-type: decimal;
   }
