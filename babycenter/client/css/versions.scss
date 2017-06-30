@@ -1,48 +1,39 @@
-
-.versions-header {
-  padding-top: 60px;
-  background-color: #21e0d8;
-}
-
 .versions {
   color: black;
   display: table;
   border-collapse: separate;
   border-spacing: 2px;
   border-color: grey;
-}
-
-.versions table {
-      border: 1px solid black;
+  &-header {
+    padding-top: 60px;
+    background-color: #21e0d8;
   }
-
-.versions td {
-      border: 1px solid black;
-      padding: 5px;
-      font-size: 13px;
-      text-align: left;
+  //TABLE
+  table {
+    border: 1px solid black;
   }
-
-.versions th {
-      border: 1px solid black;
-      padding: 5px;
-      font-size: 13px;
-      text-align: left;
-      font-weight: bold;
+  td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 13px;
+    text-align: left;
   }
-
-.versions  a {
-    color: red;
-  }
-
-.versions .latest{
-    color: #20C320;
-  }
-
-.versions .plugin{
+  th {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 13px;
+    text-align: left;
     font-weight: bold;
   }
-
-.versions .not-installed{
+  a {color: red;}
+  //FEEDBACK
+  .latest {
+    color: #20C320;
+  }
+  .plugin {
+    font-weight: bold;
+  }
+  .not-installed {
     color: orange;
   }
+}
