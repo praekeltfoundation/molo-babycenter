@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags i18n%}
 
@@ -8,12 +7,25 @@
   <ul class="article-list">
   {% for page in search_results %}
     {% with parent_section=page.get_parent_section ancestor=page.get_parent_section.get_ancestors.last %}
-
     <li class="article-list__item article-list__item{{page.get_parent_section.get_effective_extra_style_hints}} l-indent l-indent--tall">
       <a href="{% pageurl page %}">
-        <div class="nav">
+        <div class="search--results nav">
           <h6 class="article-list__section f-small">{{parent_section.title}}</h6>
-          <h3 class="article-list__title">{{page.title}}{% if page.subtitle %}:</h3><p class="article-list__subtitle">{{page.subtitle}}</p>{% else %}</h3>
+          {% if page.title_highlight %}
+            <h3 class="search--results__title search--results__title-highlight">{{page.title_highlight|safe}}</h3>
+          {% else %}
+            <h3 class="search--results__title">{{page.title}}</h3>
+          {% endif %}
+          {% if page.subtitle_highlight or page.body_highlight %}:
+            <p class="search--results__subtitle highlight-description">
+              {% if page.subtitle_highlight %}
+                {{page.subtitle_highlight|safe}}
+              {% elif page.body_highlight %}
+                {{page.body_highlight|safe}}
+              {% endif %}
+            </p>
+          {% elif page.subtitle %}<span class="colon-sign">:</span>
+            <p class="search--results__subtitle">{{page.subtitle}}</p>
           {% endif %}
         </div>
       </a>
@@ -53,5 +65,3 @@
       {% include "search/search_block.html" %}
   {% endif %}
 {% endblock %}
-
-

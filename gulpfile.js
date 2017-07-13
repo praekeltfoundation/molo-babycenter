@@ -11,10 +11,10 @@ var gulp              =   require('gulp'),
     livereload        =   require('gulp-livereload');
 
 var sassPaths = [
-    'babycenter/client/css/style.scss',
-    'babycenter/client/css/style-rtl.scss',
-    'babycenter/client/css/state_320/state_320.scss',
-    'babycenter/client/css/versions.scss',
+    'babycenter/styles/babycenter/style.scss',
+    'babycenter/styles/babycenter/style-rtl.scss',
+    'babycenter/styles/babycenter/state_320/state_320.scss',
+    'babycenter/styles/babycenter/versions.scss',
 ];
 
 var sassDest = {
@@ -49,7 +49,7 @@ gulp.task('styles:dev', function() {
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('babycenter/client/css/*.scss', ['styles']);
+    gulp.watch('babycenter/styles/babycenter/*.scss', ['styles']);
 });
 
 gulp.task('styles', ['styles:dev', 'styles:prd']);

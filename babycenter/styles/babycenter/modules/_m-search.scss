@@ -1,0 +1,17 @@
+.search form {
+  text-align: center;
+}
+.search input[type="text"], input[type="search"] {
+  border: 1px #000 solid;
+  margin: 10px 0;
+  width: 80%;
+  padding: 5px 10px;
+}
+
+
+.search--results {
+  &__title {font-weight: bold; display: inline;}
+  .colon-sign {font-weight: bold;}
+  &__title-highlight,
+  .highlight-description {font-style: italic;}
+}
