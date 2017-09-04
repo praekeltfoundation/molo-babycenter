@@ -7,3 +7,5 @@ molo.usermetadata==1.0.2
 six>=1.9
 celery<4.0
 django-google-analytics-app==2.1.6
+django-storages
+boto
