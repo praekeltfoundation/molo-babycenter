@@ -52,7 +52,7 @@
     <body {% if LANGUAGE_CODE|language_bidi == True %} dir="rtl"{% endif %}>
       <div class="languages l-indent f-small">
           {% for language in languages %}
-            <a href="{% url 'locale_set' language.locale %}?next={{request.path}}?{{ request.GET.urlencode }}" {% if LANGUAGE_CODE == language.locale %} class="active" {% endif %}>{{language.locale|language_name_local}}</a>
+            <a href="{% url 'locale_set' language.locale %}?next={{request.path}}{% if request.GET.urlencode %}?{{ request.GET.urlencode }}{% endif %}" {% if LANGUAGE_CODE == language.locale %} class="active" {% endif %}>{{language.locale|language_name_local}}</a>
           {% endfor %}
       </div>
       <div class="logo l-indent">
