@@ -11,8 +11,10 @@ install:
   - pip install -r requirements-dev.txt
   - pip install coveralls
 script:
+  - which py.test
+  - which pytest
   - flake8
-  - py.test
+  - pytest
   # Check that PO files don't inclue plural expressions
   - "! grep -re 'plural=EXPRESSION' --include '*.po' locale/"
   # Check that the molo.core version in requirements.txt matches the version in the Docker image
